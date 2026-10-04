@@ -1,0 +1,161 @@
+{
+  "date": "2026-10-03",
+  "python": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]",
+  "runs": [
+    {
+      "args": [
+        "examples/run_network.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"source\": \"全部网络输入、权重和目标为原创教学设定\",\n  \"initial\": {\n    \"z\": [\n      2.5,\n      -0.5\n    ],\n    \"h\": [\n      2.5,\n      0.0\n    ],\n    \"output\": 5.5\n  },\n  \"initial_loss\": 2.25,\n  \"changed_weight_prediction\": 4.5,\n  \"changed_weight_loss\": 0.25,\n  \"gradients\": {\n    \"W1\": [\n      [\n        6.0,\n        -0.0\n      ],\n      [\n        12.0,\n        -0.0\n      ]\n    ],\n    \"b1\": [\n      6.0,\n      -0.0\n    ],\n    \"W2\": [\n      7.5,\n      0.0\n    ],\n    \"b2\": 3.0\n  },\n  \"one_update_parameters\": {\n    \"W1\": [\n      [\n        0.38,\n        -1.0\n      ],\n      [\n        0.76,\n        0.5\n      ]\n    ],\n    \"b1\": [\n      -0.12,\n      -0.5\n    ],\n    \"W2\": [\n      1.85,\n      -1.0\n    ],\n    \"b2\": 0.44\n  },\n  \"one_update\": {\n    \"step\": 1,\n    \"prediction\": 3.7329999999999997,\n    \"loss\": 0.07128900000000019,\n    \"z1\": 1.7799999999999998,\n    \"z2\": -0.5\n  },\n  \"last_update\": {\n    \"step\": 20,\n    \"prediction\": 3.999999999999999,\n    \"loss\": 7.888609052210118e-31,\n    \"z1\": 1.8989489530375294,\n    \"z2\": -0.5\n  },\n  \"learning_rate\": 0.02,\n  \"steps\": 20\n}\n",
+      "stderr": "",
+      "environment": "独立 .venv-mlcheck 的修图后运行"
+    },
+    {
+      "args": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_activation_breakpoint (test_network.NetworkTests.test_activation_breakpoint) ... ok\ntest_gradients_by_finite_difference (test_network.NetworkTests.test_gradients_by_finite_difference) ... ok\ntest_hand_forward (test_network.NetworkTests.test_hand_forward) ... ok\ntest_hand_gradient (test_network.NetworkTests.test_hand_gradient) ... ok\ntest_invalid (test_network.NetworkTests.test_invalid) ... ok\ntest_training_result_and_repeatability (test_network.NetworkTests.test_training_result_and_repeatability) ... ok\ntest_update_is_simultaneous_and_not_inplace (test_network.NetworkTests.test_update_is_simultaneous_and_not_inplace) ... ok\ntest_weight_change (test_network.NetworkTests.test_weight_change) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.089s\n\nOK\n"
+    },
+    {
+      "args": [
+        "-m",
+        "compileall",
+        "-q",
+        "examples",
+        "tests"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "errors": [
+    [
+      "elementwise",
+      {
+        "args": [
+          "examples\\errors\\elementwise.py"
+        ],
+        "exit_code": 1,
+        "stdout": "[[ 0.5 -2. ]\n [ 1.   1. ]]\n",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\21-neural-network\\examples\\errors\\elementwise.py\", line 5, in <module>\n    assert wrong.shape==(2,),'逐元素乘法没有计算每个隐藏节点的加权和'\nAssertionError: 逐元素乘法没有计算每个隐藏节点的加权和\n"
+      },
+      {
+        "args": [
+          "examples/fixed/elementwise.py"
+        ],
+        "exit_code": 0,
+        "stdout": "形状 (2,) 结果 [ 2.5 -0.5]\n",
+        "stderr": ""
+      }
+    ],
+    [
+      "matrix_shape",
+      {
+        "args": [
+          "examples\\errors\\matrix_shape.py"
+        ],
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\21-neural-network\\examples\\errors\\matrix_shape.py\", line 3, in <module>\n    print(x@weights)\n          ~^~~~~~~~\nValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 3 is different from 2)\n"
+      },
+      {
+        "args": [
+          "examples/fixed/matrix_shape.py"
+        ],
+        "exit_code": 0,
+        "stdout": "[ 2.5 -0.5]\n",
+        "stderr": ""
+      }
+    ]
+  ],
+  "notebook_code_cells": 0,
+  "notebook_executed_by": null,
+  "snippets": [
+    {
+      "document": "article.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "import numpy as np\n\nx = np.array([1.0, 2.0])\nW1 = np.array([[0.5, -1.0], [1.0, 0.5]])\nb1 = np.array([0.0, -0.5])\nW2 = np.array([2.0, -1.0])\nb2 = 0.5\nz = x @ W1 + b1\nh = np.maximum(0, z)\nprediction = h @ W2 + b2\nprint(\"加权和\", z)\nprint(\"激活后\", h)\nprint(\"预测\", prediction)\nprint(\"损失\", (prediction - 4) ** 2)\n"
+      ],
+      "exit_code": 0,
+      "stdout": "加权和 [ 2.5 -0.5]\n激活后 [2.5 0. ]\n预测 5.5\n损失 2.25\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 2,
+      "args": [
+        "-c",
+        "from examples.network_core import X, TARGET, initial_parameters, forward, loss\n\nparameters = initial_parameters()\nprint(\"原输出与损失\", forward(X, parameters)[\"output\"], loss(X, TARGET, parameters))\nparameters[\"W1\"][0, 0] = 0.0\nprint(\"改动后输出与损失\", forward(X, parameters)[\"output\"], loss(X, TARGET, parameters))\n"
+      ],
+      "exit_code": 0,
+      "stdout": "原输出与损失 5.5 2.25\n改动后输出与损失 4.5 0.25\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 3,
+      "args": [
+        "-c",
+        "import numpy as np\n\nx = np.array([-2.0, -1.0, 0.0, 1.0, 2.0])\nwith_activation = np.maximum(x, 0) + np.maximum(-x, 0)\nwithout_activation = x + (-x)\nprint(\"加入激活\", with_activation)\nprint(\"移除激活\", without_activation)\n"
+      ],
+      "exit_code": 0,
+      "stdout": "加入激活 [2. 1. 0. 1. 2.]\n移除激活 [0. 0. 0. 0. 0.]\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 4,
+      "args": [
+        "-c",
+        "from examples.network_core import X, TARGET, initial_parameters, gradients, update, forward, loss\n\nparameters = initial_parameters()\nnew_parameters = update(parameters, gradients(X, TARGET, parameters), rate=0.02)\nprint(\"新加权和\", forward(X, new_parameters)[\"z\"])\nprint(\"新预测\", forward(X, new_parameters)[\"output\"])\nprint(\"新损失\", loss(X, TARGET, new_parameters))\n"
+      ],
+      "exit_code": 0,
+      "stdout": "新加权和 [ 1.78 -0.5 ]\n新预测 3.7329999999999997\n新损失 0.07128900000000019\n",
+      "stderr": ""
+    },
+    {
+      "document": "exercises.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "from examples.network_core import initial_parameters, forward\n\nparameters = initial_parameters()\nprint(\"第二题\", forward([2, 1], parameters))\nparameters[\"b2\"] = parameters[\"b2\"] + 0.5\nprint(\"第三题\", forward([1, 2], parameters)[\"output\"])\n"
+      ],
+      "exit_code": 0,
+      "stdout": "第二题 {'z': array([ 2., -2.]), 'h': array([2., 0.]), 'output': 4.5}\n第三题 6.0\n",
+      "stderr": ""
+    },
+    {
+      "document": "exercises.md",
+      "number": 2,
+      "args": [
+        "-c",
+        "from examples.network_core import X, TARGET, initial_parameters, gradients, update\n\nparameters = initial_parameters()\nnew_parameters = update(parameters, gradients(X, TARGET, parameters), rate=0.02)\nprint(\"输出偏置\", new_parameters[\"b2\"])\nassert abs(float(new_parameters[\"b2\"]) - 0.44) < 1e-12\n"
+      ],
+      "exit_code": 0,
+      "stdout": "输出偏置 0.44\n",
+      "stderr": ""
+    }
+  ],
+  "final_editor_checks": {
+    "local_links": 26,
+    "png_files": [
+      "activation-effect.png",
+      "loss-updates.png",
+      "network-structure.png"
+    ],
+    "prose_hard_errors": 0,
+    "snippet_runtime": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]"
+  },
+  "visual_repair": "首次图形发现 x/h 下标缺字，改成 ASCII 编号并修正图注；修图后独立环境主入口及测试通过，数值未改动"
+}

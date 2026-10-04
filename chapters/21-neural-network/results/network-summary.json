@@ -1,0 +1,151 @@
+{
+  "source": "全部网络输入、权重和目标为原创教学设定",
+  "initial": {
+    "z": [
+      2.5,
+      -0.5
+    ],
+    "h": [
+      2.5,
+      0.0
+    ],
+    "output": 5.5
+  },
+  "initial_loss": 2.25,
+  "changed_weight_prediction": 4.5,
+  "changed_weight_loss": 0.25,
+  "gradients": {
+    "W1": [
+      [
+        6.0,
+        -0.0
+      ],
+      [
+        12.0,
+        -0.0
+      ]
+    ],
+    "b1": [
+      6.0,
+      -0.0
+    ],
+    "W2": [
+      7.5,
+      0.0
+    ],
+    "b2": 3.0
+  },
+  "one_update_parameters": {
+    "W1": [
+      [
+        0.38,
+        -1.0
+      ],
+      [
+        0.76,
+        0.5
+      ]
+    ],
+    "b1": [
+      -0.12,
+      -0.5
+    ],
+    "W2": [
+      1.85,
+      -1.0
+    ],
+    "b2": 0.44
+  },
+  "one_update": {
+    "step": 1,
+    "prediction": 3.7329999999999997,
+    "loss": 0.07128900000000019,
+    "z1": 1.7799999999999998,
+    "z2": -0.5
+  },
+  "last_update": {
+    "step": 20,
+    "prediction": 3.999999999999999,
+    "loss": 7.888609052210118e-31,
+    "z1": 1.8989489530375294,
+    "z2": -0.5
+  },
+  "gradient_comparison": [
+    {
+      "parameter": "W1",
+      "index": [
+        0,
+        0
+      ],
+      "analytic": 6.0,
+      "numeric": 6.000000000838668
+    },
+    {
+      "parameter": "W1",
+      "index": [
+        0,
+        1
+      ],
+      "analytic": -0.0,
+      "numeric": 0.0
+    },
+    {
+      "parameter": "W1",
+      "index": [
+        1,
+        0
+      ],
+      "analytic": 12.0,
+      "numeric": 12.000000000345068
+    },
+    {
+      "parameter": "W1",
+      "index": [
+        1,
+        1
+      ],
+      "analytic": -0.0,
+      "numeric": 0.0
+    },
+    {
+      "parameter": "b1",
+      "index": [
+        0
+      ],
+      "analytic": 6.0,
+      "numeric": 6.000000000838668
+    },
+    {
+      "parameter": "b1",
+      "index": [
+        1
+      ],
+      "analytic": -0.0,
+      "numeric": 0.0
+    },
+    {
+      "parameter": "W2",
+      "index": [
+        0
+      ],
+      "analytic": 7.5,
+      "numeric": 7.500000001048335
+    },
+    {
+      "parameter": "W2",
+      "index": [
+        1
+      ],
+      "analytic": 0.0,
+      "numeric": 0.0
+    },
+    {
+      "parameter": "b2",
+      "index": [],
+      "analytic": 3.0,
+      "numeric": 3.000000000419334
+    }
+  ],
+  "learning_rate": 0.02,
+  "steps": 20
+}
