@@ -1,0 +1,111 @@
+{
+  "torch": "2.9.0+cpu",
+  "device": "cpu",
+  "threads": 1,
+  "pretraining": {
+    "epochs": 30,
+    "updates": 480,
+    "batch_size": 64,
+    "learning_rate": 0.01,
+    "seconds": 1.7840151999989757,
+    "mode": "scratch",
+    "seed": 7,
+    "rows": 1000,
+    "classes": 10,
+    "train": {
+      "loss": 0.0060418033972382545,
+      "correct": 1000,
+      "rows": 1000,
+      "accuracy": 1.0
+    },
+    "independent_source_test": false
+  },
+  "target_seed": 42,
+  "target_train_rows": 120,
+  "target_test_rows": 200,
+  "target_epochs": 20,
+  "target_batch_size": 32,
+  "initial_target_heads_identical": true,
+  "test_used_for_training_or_selection": false,
+  "target_classes": [
+    "even",
+    "odd"
+  ],
+  "experiments": [
+    {
+      "mode": "scratch",
+      "epochs": 20,
+      "updates": 80,
+      "batch_size": 32,
+      "learning_rate": 0.01,
+      "seconds": 0.1063683000029414,
+      "train": {
+        "loss": 0.11609291285276413,
+        "correct": 116,
+        "rows": 120,
+        "accuracy": 0.9666666666666667
+      },
+      "features_unchanged": false,
+      "head_changed": true,
+      "trainable_first_10": 4274,
+      "trainable_last_10": 4274,
+      "test": {
+        "loss": 0.2259238362312317,
+        "correct": 183,
+        "rows": 200,
+        "accuracy": 0.915
+      },
+      "reload_logits_identical": true
+    },
+    {
+      "mode": "frozen",
+      "epochs": 20,
+      "updates": 80,
+      "batch_size": 32,
+      "learning_rate": 0.01,
+      "seconds": 0.07775209999817889,
+      "train": {
+        "loss": 0.2033282220363617,
+        "correct": 113,
+        "rows": 120,
+        "accuracy": 0.9416666666666667
+      },
+      "features_unchanged": true,
+      "head_changed": true,
+      "trainable_first_10": 66,
+      "trainable_last_10": 66,
+      "test": {
+        "loss": 0.21850013732910156,
+        "correct": 182,
+        "rows": 200,
+        "accuracy": 0.91
+      },
+      "reload_logits_identical": true
+    },
+    {
+      "mode": "fine_tune",
+      "epochs": 20,
+      "updates": 80,
+      "batch_size": 32,
+      "learning_rate": 0.01,
+      "seconds": 0.09604589999798918,
+      "train": {
+        "loss": 0.14977234601974487,
+        "correct": 113,
+        "rows": 120,
+        "accuracy": 0.9416666666666667
+      },
+      "features_unchanged": false,
+      "head_changed": true,
+      "trainable_first_10": 66,
+      "trainable_last_10": 4274,
+      "test": {
+        "loss": 0.19130946695804596,
+        "correct": 185,
+        "rows": 200,
+        "accuracy": 0.925
+      },
+      "reload_logits_identical": true
+    }
+  ]
+}
