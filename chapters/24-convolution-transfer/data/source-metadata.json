@@ -1,0 +1,21 @@
+{
+  "created_on": "2026-10-03",
+  "split_seed": 2026,
+  "original_sha256": "2707e088861342883e6326962ba38118dd8d02c96b4b2091dba530efdd291385",
+  "original_rows": 1797,
+  "role_counts": {
+    "pretrain": 1000,
+    "target_test": 200,
+    "target_train": 120,
+    "unused": 477
+  },
+  "target_mapping": {
+    "0": "even",
+    "1": "odd"
+  },
+  "pretrain_task": "10 digit classes",
+  "target_task": "even/odd",
+  "preprocessing": "PNG 0..255 -> rint(pixel*16/255)/16",
+  "license": "CC BY 4.0",
+  "attribution": "Alpaydin, E., & Kaynak, C. (1998). Optical Recognition of Handwritten Digits. UCI. DOI 10.24432/C50P49"
+}
