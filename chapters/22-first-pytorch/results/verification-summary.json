@@ -1,0 +1,190 @@
+{
+  "date": "2026-10-03",
+  "python": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]",
+  "runs": [
+    {
+      "args": [
+        "examples/run_training.py",
+        "--device",
+        "cpu"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"seed\": 42,\n  \"device\": \"cpu\",\n  \"torch\": \"2.9.0+cpu\",\n  \"dtype\": \"float32\",\n  \"epochs\": 120,\n  \"learning_rate\": 0.1,\n  \"batch_size\": 32,\n  \"train_rows\": 32,\n  \"test_rows\": 9,\n  \"initial_train_MSE\": 0.5539245009422302,\n  \"final_train_MSE\": 0.0015469396021217108,\n  \"test_MSE\": 0.0018987195799127221,\n  \"weight\": 2.009538173675537,\n  \"bias\": 1.0053625106811523,\n  \"demo_inputs\": [\n    -1,\n    0,\n    1\n  ],\n  \"demo_predictions\": [\n    -1.0041756629943848,\n    1.0053625106811523,\n    3.0149006843566895\n  ],\n  \"train_ids\": [\n    34,\n    18,\n    35,\n    27,\n    11,\n    0,\n    24,\n    28,\n    33,\n    16,\n    20,\n    36,\n    30,\n    2,\n    38,\n    12,\n    19,\n    6,\n    8,\n    14,\n    15,\n    4,\n    9,\n    21,\n    25,\n    39,\n    13,\n    40,\n    17,\n    3,\n    7,\n    23\n  ],\n  \"test_ids\": [\n    5,\n    26,\n    32,\n    22,\n    37,\n    10,\n    29,\n    31,\n    1\n  ],\n  \"training_elapsed_seconds\": 1.1968078000027162,\n  \"autograd_demo\": {\n    \"prediction\": 5.5,\n    \"loss\": 2.25,\n    \"gradients\": {\n      \"W1\": [\n        [\n          6.0,\n          0.0\n        ],\n        [\n          12.0,\n          0.0\n        ]\n      ],\n      \"b1\": [\n        6.0,\n        0.0\n      ],\n      \"W2\": [\n        7.5,\n        0.0\n      ],\n      \"b2\": 3.0\n    }\n  },\n  \"reload_predictions_equal\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_data_and_shapes (test_torch.TorchTests.test_data_and_shapes) ... ok\ntest_device_and_invalid (test_torch.TorchTests.test_device_and_invalid) ... ok\ntest_fit_and_metric_independent (test_torch.TorchTests.test_fit_and_metric_independent) ... ok\ntest_gradient_accumulation (test_torch.TorchTests.test_gradient_accumulation) ... ok\ntest_manual_gradient (test_torch.TorchTests.test_manual_gradient) ... ok\ntest_mode_and_grad_differ (test_torch.TorchTests.test_mode_and_grad_differ) ... ok\ntest_reproducibility (test_torch.TorchTests.test_reproducibility) ... ok\ntest_shared_memory (test_torch.TorchTests.test_shared_memory) ... ok\ntest_test_labels_do_not_participate (test_torch.TorchTests.test_test_labels_do_not_participate) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.979s\n\nOK\n"
+    },
+    {
+      "args": [
+        "-m",
+        "compileall",
+        "-q",
+        "examples",
+        "tests"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "errors": [
+    [
+      "accumulated_gradient",
+      {
+        "args": [
+          "examples\\errors\\accumulated_gradient.py"
+        ],
+        "exit_code": 1,
+        "stdout": "梯度 60.0\n",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\22-first-pytorch\\examples\\errors\\accumulated_gradient.py\", line 5, in <module>\n    assert w.grad.item()==30,'前一轮梯度没有清除'\nAssertionError: 前一轮梯度没有清除\n"
+      },
+      {
+        "args": [
+          "examples/fixed/accumulated_gradient.py"
+        ],
+        "exit_code": 0,
+        "stdout": "每轮清除后的梯度 30.0\n",
+        "stderr": ""
+      }
+    ],
+    [
+      "disabled_grad",
+      {
+        "args": [
+          "examples\\errors\\disabled_grad.py"
+        ],
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\22-first-pytorch\\examples\\errors\\disabled_grad.py\", line 4, in <module>\n    loss.backward()\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\review\\.venv-torch\\Lib\\site-packages\\torch\\_tensor.py\", line 625, in backward\n    torch.autograd.backward(\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\review\\.venv-torch\\Lib\\site-packages\\torch\\autograd\\__init__.py\", line 354, in backward\n    _engine_run_backward(\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\review\\.venv-torch\\Lib\\site-packages\\torch\\autograd\\graph.py\", line 841, in _engine_run_backward\n    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: element 0 of tensors does not require grad and does not have a grad_fn\n"
+      },
+      {
+        "args": [
+          "examples/fixed/disabled_grad.py"
+        ],
+        "exit_code": 0,
+        "stdout": "损失 25.0 梯度 30.0\n",
+        "stderr": ""
+      }
+    ],
+    [
+      "integer_input",
+      {
+        "args": [
+          "examples\\errors\\integer_input.py"
+        ],
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\22-first-pytorch\\examples\\errors\\integer_input.py\", line 4, in <module>\n    print(model(x))\n          ^^^^^^^^\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\review\\.venv-torch\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1775, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\review\\.venv-torch\\Lib\\site-packages\\torch\\nn\\modules\\module.py\", line 1786, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\review\\.venv-torch\\Lib\\site-packages\\torch\\nn\\modules\\linear.py\", line 134, in forward\n    return F.linear(input, self.weight, self.bias)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: mat1 and mat2 must have the same dtype, but got Long and Float\n"
+      },
+      {
+        "args": [
+          "examples/fixed/integer_input.py"
+        ],
+        "exit_code": 0,
+        "stdout": "tensor([[3.],\n        [5.]])\n",
+        "stderr": ""
+      }
+    ]
+  ],
+  "notebook_code_cells": 7,
+  "notebook_executed_by": "nbclient 与实际 ipykernel",
+  "snippets": [
+    {
+      "document": "article.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "import numpy as np\nimport torch\n\narray = np.array([1.0, 2.0], dtype=np.float32)\ntensor = torch.from_numpy(array)\nprint(tensor.shape, tensor.dtype, tensor.device)\ntensor[0] = 9.0\nprint(\"NumPy 数组\", array)\nindependent = tensor.clone()\nindependent[0] = 3.0\nprint(\"原张量\", tensor)\n"
+      ],
+      "exit_code": 0,
+      "stdout": "torch.Size([2]) torch.float32 cpu\nNumPy 数组 [9. 2.]\n原张量 tensor([9., 2.])\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 2,
+      "args": [
+        "-c",
+        "from examples.torch_core import autograd_demo\n\nresult = autograd_demo()\nprint(\"预测与损失\", result[\"prediction\"], result[\"loss\"])\nprint(\"W1 梯度\", result[\"gradients\"][\"W1\"])\nprint(\"W2 梯度\", result[\"gradients\"][\"W2\"])\nprint(\"输出偏置梯度\", result[\"gradients\"][\"b2\"])\n"
+      ],
+      "exit_code": 0,
+      "stdout": "预测与损失 5.5 2.25\nW1 梯度 [[6.0, 0.0], [12.0, 0.0]]\nW2 梯度 [7.5, 0.0]\n输出偏置梯度 3.0\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 3,
+      "args": [
+        "-c",
+        "import torch\n\nw = torch.tensor(2.0, requires_grad=True)\nfor _ in range(2):\n    (w * 3 - 1).square().backward()\nprint(\"累计两次\", w.grad.item())\nw.grad = None\n(w * 3 - 1).square().backward()\nprint(\"清除后再计算\", w.grad.item())\n"
+      ],
+      "exit_code": 0,
+      "stdout": "累计两次 60.0\n清除后再计算 30.0\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 4,
+      "args": [
+        "-c",
+        "import torch\n\ntorch.manual_seed(42)\nx = torch.tensor([[-1.0], [0.0], [1.0]])\ny = torch.tensor([[-1.0], [1.0], [3.0]])\nmodel = torch.nn.Linear(1, 1)\nloss_fn = torch.nn.MSELoss()\noptimizer = torch.optim.SGD(model.parameters(), lr=0.1)\nmodel.train()\nfor epoch in range(120):\n    optimizer.zero_grad(set_to_none=True)\n    prediction = model(x)\n    loss = loss_fn(prediction, y)\n    loss.backward()\n    optimizer.step()\nmodel.eval()\nwith torch.no_grad():\n    print(\"预测\", model(x).ravel().tolist())\n    print(\"最终损失\", loss_fn(model(x), y).item())\n"
+      ],
+      "exit_code": 0,
+      "stdout": "预测 [-0.9999995827674866, 0.9999999403953552, 2.999999523162842]\n最终损失 1.3500311979441904e-13\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 5,
+      "args": [
+        "-c",
+        "import torch\n\nmodel = torch.nn.Linear(1, 1)\nmodel.eval()\nprint(\"eval 仍记录求导\", model(torch.ones(1, 1)).requires_grad)\nwith torch.no_grad():\n    print(\"no_grad 下\", model(torch.ones(1, 1)).requires_grad)\n"
+      ],
+      "exit_code": 0,
+      "stdout": "eval 仍记录求导 True\nno_grad 下 False\n",
+      "stderr": ""
+    },
+    {
+      "document": "exercises.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "import torch\n\ntorch.manual_seed(42)\nx = torch.tensor([[-1.0], [0.0], [1.0]])\ny = torch.tensor([[-5.0], [-2.0], [1.0]])\nmodel = torch.nn.Linear(1, 1)\noptimizer = torch.optim.SGD(model.parameters(), lr=0.1)\nloss_fn = torch.nn.MSELoss()\nfor _ in range(120):\n    optimizer.zero_grad(set_to_none=True)\n    loss = loss_fn(model(x), y)\n    loss.backward()\n    optimizer.step()\nprint(\"权重\", model.weight.detach().item())\nprint(\"偏置\", model.bias.detach().item())\nassert abs(model.weight.detach().item() - 3) < 1e-4\nassert abs(model.bias.detach().item() + 2) < 1e-4\n"
+      ],
+      "exit_code": 0,
+      "stdout": "权重 2.9999990463256836\n偏置 -1.9999998807907104\n",
+      "stderr": ""
+    },
+    {
+      "document": "exercises.md",
+      "number": 2,
+      "args": [
+        "-c",
+        "from examples.torch_core import autograd_demo\n\nresult = autograd_demo()\nassert result[\"prediction\"] == 5.5\nassert result[\"loss\"] == 2.25\nassert result[\"gradients\"][\"b2\"] == 3.0\nprint(result)\n"
+      ],
+      "exit_code": 0,
+      "stdout": "{'prediction': 5.5, 'loss': 2.25, 'gradients': {'W1': [[6.0, 0.0], [12.0, 0.0]], 'b1': [6.0, 0.0], 'W2': [7.5, 0.0], 'b2': 3.0}}\n",
+      "stderr": ""
+    }
+  ],
+  "final_editor_checks": {
+    "local_links": 33,
+    "png_files": [
+      "fitted-line.png",
+      "training-loss.png"
+    ],
+    "prose_hard_errors": 0,
+    "snippet_runtime": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]"
+  }
+}
