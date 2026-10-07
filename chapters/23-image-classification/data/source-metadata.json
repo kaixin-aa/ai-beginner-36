@@ -1,0 +1,45 @@
+{
+  "exported_on": "2026-10-03",
+  "loader": "sklearn.datasets.load_digits",
+  "sklearn": "1.7.2",
+  "reference": "https://scikit-learn.org/1.7/modules/generated/sklearn.datasets.load_digits.html",
+  "repository": "https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits",
+  "citation": "Alpaydin, E. & Kaynak, C. (1998). Optical Recognition of Handwritten Digits. https://doi.org/10.24432/C50P49",
+  "license": "CC BY 4.0",
+  "rows": 1797,
+  "shape_per_image": [
+    8,
+    8
+  ],
+  "value_range": [
+    0,
+    16
+  ],
+  "class_counts": [
+    178,
+    182,
+    177,
+    183,
+    181,
+    182,
+    181,
+    179,
+    174,
+    180
+  ],
+  "train_rows": 1437,
+  "test_rows": 360,
+  "seed": 42,
+  "sha256": "2707e088861342883e6326962ba38118dd8d02c96b4b2091dba530efdd291385",
+  "sample_image": {
+    "source_index": 618,
+    "true_label": 5,
+    "split": "test",
+    "purpose": "公开测试记录的接口演示，非独立外部图片"
+  },
+  "changes": [
+    "保存库中1797条图片及标签，非UCI全部5620条",
+    "新增教学训练测试划分与编号，固定种子42",
+    "首条测试图片导出PNG灰度与原像素NPY"
+  ]
+}

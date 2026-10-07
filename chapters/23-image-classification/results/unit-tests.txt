@@ -1,0 +1,13 @@
+test_batch_steps_and_seed_reproducibility (test_chapter23.ImageTests.test_batch_steps_and_seed_reproducibility) ... ok
+test_cross_entropy_matches_log_softmax (test_chapter23.ImageTests.test_cross_entropy_matches_log_softmax) ... ok
+test_invalid_training_configuration (test_chapter23.ImageTests.test_invalid_training_configuration) ... ok
+test_network_output_and_parameter_count (test_chapter23.ImageTests.test_network_output_and_parameter_count) ... ok
+test_normalization_bounds_and_invalid_images (test_chapter23.ImageTests.test_normalization_bounds_and_invalid_images) ... ok
+test_png_npy_preprocessing_identical (test_chapter23.ImageTests.test_png_npy_preprocessing_identical) ... ok
+test_saved_model_and_probabilities (test_chapter23.ImageTests.test_saved_model_and_probabilities) ... ok
+test_snapshot_and_disjoint_split (test_chapter23.ImageTests.test_snapshot_and_disjoint_split) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.958s
+
+OK
