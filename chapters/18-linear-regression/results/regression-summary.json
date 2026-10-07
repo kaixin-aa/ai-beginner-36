@@ -1,0 +1,202 @@
+{
+  "random_state": 42,
+  "test_size": 0.2,
+  "train_rows": 159,
+  "test_rows": 40,
+  "scores": {
+    "baseline": {
+      "features": [
+        "engine_size"
+      ],
+      "train": {
+        "MAE": 5023.323286262411,
+        "RMSE": 6868.486209085562,
+        "R2": 0.0
+      },
+      "test": {
+        "MAE": 8316.0,
+        "RMSE": 11456.256771345963,
+        "R2": -0.16082550760414982
+      }
+    },
+    "single": {
+      "features": [
+        "engine_size"
+      ],
+      "train": {
+        "MAE": 2532.0025796169434,
+        "RMSE": 3432.2987193149343,
+        "R2": 0.7502830077453422
+      },
+      "test": {
+        "MAE": 4107.6321427379135,
+        "RMSE": 5515.41515438376,
+        "R2": 0.730946974087965
+      }
+    },
+    "multi": {
+      "features": [
+        "engine_size",
+        "curb_weight",
+        "horsepower"
+      ],
+      "train": {
+        "MAE": 2111.837111954888,
+        "RMSE": 3053.2073464894443,
+        "R2": 0.8023983638642582
+      },
+      "test": {
+        "MAE": 3615.895256463943,
+        "RMSE": 4999.50754735534,
+        "R2": 0.7789268897849286
+      }
+    }
+  },
+  "parameters": {
+    "single": {
+      "intercept": -6149.35945075567,
+      "coefficients": {
+        "engine_size": 150.55022234726968
+      }
+    },
+    "multi": {
+      "intercept": -11685.468026667662,
+      "coefficients": {
+        "engine_size": 78.77772245508308,
+        "curb_weight": 4.162663645065965,
+        "horsepower": 39.1564306403424
+      }
+    },
+    "baseline": {
+      "constant": 12386.308176100629
+    }
+  },
+  "worst_multi_test_rows": [
+    {
+      "sample_id": "auto-016",
+      "source_row": 17,
+      "make": "bmw",
+      "engine_size": 209,
+      "curb_weight": 3380,
+      "horsepower": 182.0,
+      "price": 41315.0,
+      "baseline_prediction": 12386.308176100629,
+      "baseline_residual": 28928.69182389937,
+      "baseline_absolute_error": 28928.69182389937,
+      "single_prediction": 25315.637019823695,
+      "single_residual": 15999.362980176305,
+      "single_absolute_error": 15999.362980176305,
+      "multi_prediction": 25975.34946330998,
+      "multi_residual": 15339.65053669002,
+      "multi_absolute_error": 15339.65053669002
+    },
+    {
+      "sample_id": "auto-127",
+      "source_row": 128,
+      "make": "porsche",
+      "engine_size": 194,
+      "curb_weight": 2756,
+      "horsepower": 207.0,
+      "price": 34028.0,
+      "baseline_prediction": 12386.308176100629,
+      "baseline_residual": 21641.69182389937,
+      "baseline_absolute_error": 21641.69182389937,
+      "single_prediction": 23057.383684614648,
+      "single_residual": 10970.616315385352,
+      "single_absolute_error": 10970.616315385352,
+      "multi_prediction": 23175.09227797113,
+      "multi_residual": 10852.907722028871,
+      "multi_absolute_error": 10852.907722028871
+    },
+    {
+      "sample_id": "auto-017",
+      "source_row": 18,
+      "make": "bmw",
+      "engine_size": 209,
+      "curb_weight": 3505,
+      "horsepower": 182.0,
+      "price": 36880.0,
+      "baseline_prediction": 12386.308176100629,
+      "baseline_residual": 24493.69182389937,
+      "baseline_absolute_error": 24493.69182389937,
+      "single_prediction": 25315.637019823695,
+      "single_residual": 11564.362980176305,
+      "single_absolute_error": 11564.362980176305,
+      "multi_prediction": 26495.682418943226,
+      "multi_residual": 10384.317581056774,
+      "multi_absolute_error": 10384.317581056774
+    },
+    {
+      "sample_id": "auto-126",
+      "source_row": 127,
+      "make": "porsche",
+      "engine_size": 194,
+      "curb_weight": 2756,
+      "horsepower": 207.0,
+      "price": 32528.0,
+      "baseline_prediction": 12386.308176100629,
+      "baseline_residual": 20141.69182389937,
+      "baseline_absolute_error": 20141.69182389937,
+      "single_prediction": 23057.383684614648,
+      "single_residual": 9470.616315385352,
+      "single_absolute_error": 9470.616315385352,
+      "multi_prediction": 23175.09227797113,
+      "multi_residual": 9352.907722028871,
+      "multi_absolute_error": 9352.907722028871
+    },
+    {
+      "sample_id": "auto-070",
+      "source_row": 71,
+      "make": "mercedes-benz",
+      "engine_size": 183,
+      "curb_weight": 3770,
+      "horsepower": 123.0,
+      "price": 31600.0,
+      "baseline_prediction": 12386.308176100629,
+      "baseline_residual": 19213.69182389937,
+      "baseline_absolute_error": 19213.69182389937,
+      "single_prediction": 21401.331238794683,
+      "single_residual": 10198.668761205317,
+      "single_absolute_error": 10198.668761205317,
+      "multi_prediction": 23240.338093273345,
+      "multi_residual": 8359.661906726655,
+      "multi_absolute_error": 8359.661906726655
+    }
+  ],
+  "test_price_range": [
+    5499.0,
+    41315.0
+  ],
+  "train_feature_ranges": {
+    "engine_size": [
+      61.0,
+      326.0
+    ],
+    "curb_weight": [
+      1488.0,
+      4066.0
+    ],
+    "horsepower": [
+      48.0,
+      262.0
+    ]
+  },
+  "negative_multi_predictions": 0,
+  "cleaning": {
+    "raw_rows": 205,
+    "complete_rows": 199,
+    "rejected_rows": 6,
+    "missing_counts_in_selected_fields": {
+      "engine_size": 0,
+      "curb_weight": 0,
+      "horsepower": 2,
+      "price": 4
+    },
+    "policy": "只删除本章所选特征或价格缺失的行，未填补标签；保留拒绝表",
+    "selected_features": [
+      "engine_size",
+      "curb_weight",
+      "horsepower"
+    ]
+  }
+}

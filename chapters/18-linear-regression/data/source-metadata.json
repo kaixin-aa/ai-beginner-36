@@ -1,0 +1,13 @@
+{
+  "downloaded_on": "2026-10-03",
+  "download_url": "https://archive.ics.uci.edu/static/public/10/automobile.zip",
+  "dataset_page": "https://archive.ics.uci.edu/dataset/10/automobile",
+  "citation": "Schlimmer, J. (1985). Automobile [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5B01C",
+  "license": "CC BY 4.0",
+  "archive_sha256": "0360d2379d2d505540f0c43bfe0ada96244ad2662faf9dada1629824948294ec",
+  "files_sha256": {
+    "imports-85.data": "125db8bd36a84801f7223faf54071d15f85f26c13a9a7aee63375ac46098fb7f",
+    "imports-85.names": "cc46be835f433f90334c2a7f4183ba4a48eb5077ece85458322a421eeba12ffc"
+  },
+  "raw_files_modified": false
+}

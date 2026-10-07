@@ -1,0 +1,7 @@
+sample_id,source_row,make,engine_size,curb_weight,horsepower,price,missing_fields
+auto-009,10,audi,131,3053,160.0,,price
+auto-044,45,isuzu,90,1874,70.0,,price
+auto-045,46,isuzu,90,1909,70.0,,price
+auto-129,130,porsche,203,3366,288.0,,price
+auto-130,131,renault,132,2579,,9295.0,horsepower
+auto-131,132,renault,132,2460,,9895.0,horsepower

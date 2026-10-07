@@ -1,0 +1,16 @@
+CELLS = [
+    ("markdown", "# 第 18 章公开汽车价格回归\nUCI Automobile，1985 历史资料。先运行 examples/run_regression.py 导出图片。保留原表量纲，未换算币种。"),
+    ("code", "from examples.regression_core import prepare_data, run_experiment, metrics, FEATURES\nfrom IPython.display import Image, display\nclean, rejected, cleaning = prepare_data()\nprint(cleaning)\nprint(rejected[['sample_id', 'missing_fields']].to_string(index=False))"),
+    ("markdown", "## 固定划分与均值基线\n三个模型预先指定，在同一训练与测试集上比较，不按测试分数反复选特征。"),
+    ("code", "models, train, test, summary = run_experiment(clean)\nprint('训练/测试', len(train), len(test))\nprint('编号无交集', set(train.sample_id).isdisjoint(test.sample_id))\nprint('训练均价与基线', train.price.mean(), summary['parameters']['baseline'])"),
+    ("markdown", "## 单特征与多特征参数\n系数对应字段次序。数值是原表单位下的条件关系，不是因果效应。"),
+    ("code", "print(summary['parameters'])\ndisplay(Image(filename='assets/single-feature-fit.png'))"),
+    ("markdown", "## 训练结果与测试结果都记录\nMAE 与 RMSE 沿用目标的原表量纲，R2 无量纲。"),
+    ("code", "for name, scores in summary['scores'].items():\n    for split in ['train', 'test']:\n        print(name, split, {k: round(v, 4) for k, v in scores[split].items()})\ndisplay(Image(filename='assets/actual-vs-predicted.png'))"),
+    ("markdown", "## 哪些记录误差大\n残差采用真实值减预测值。正值为低估，负值为高估。"),
+    ("code", "worst = test.sort_values('multi_absolute_error', ascending=False).head(5)\nprint(worst[['sample_id', 'make', 'price', 'multi_prediction', 'multi_residual']].to_string(index=False))\ndisplay(Image(filename='assets/multi-feature-residuals.png'))"),
+    ("markdown", "## 用真实逐条误差核对指标\n独立手算与工具输出比较。"),
+    ("code", "import numpy as np\nresidual = test.price.to_numpy() - test.multi_prediction.to_numpy()\nmanual_mae = np.abs(residual).mean()\nmanual_rmse = np.sqrt((residual**2).mean())\nmanual_r2 = 1 - (residual**2).sum()/((test.price-test.price.mean())**2).sum()\nprint(manual_mae, manual_rmse, manual_r2)\nnp.testing.assert_allclose([manual_mae, manual_rmse, manual_r2], list(summary['scores']['multi']['test'].values()))"),
+    ("markdown", "## 独立练习\n虚构两条预测，先手算误差。以下数字只用于指标练习。"),
+    ("code", "actual = np.array([10000, 20000])\npredicted = np.array([12000, 17000])\nprint(metrics(actual, predicted))\nassert metrics(actual, predicted)['MAE'] == 2500"),
+]
