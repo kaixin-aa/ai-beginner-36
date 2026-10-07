@@ -1,0 +1,22 @@
+{
+  "versions": {
+    "python": "3.12.2",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scipy": "1.18.1",
+    "scikit_learn": "1.7.2"
+  },
+  "features": [
+    "sepal_length_cm",
+    "sepal_width_cm",
+    "petal_length_cm",
+    "petal_width_cm"
+  ],
+  "target_names": [
+    "setosa",
+    "versicolor",
+    "virginica"
+  ],
+  "sha256": "325ba43694a7092b9ff0e873f369c35df1cfc0b75f3a1287cacfe21a3635a705",
+  "trusted_local_artifact_only": true
+}

@@ -1,0 +1,9 @@
+record_id,title,done,minutes,tag
+L01, 变量 , TRUE ,20, Python 
+L02,循环,false,15,python
+L03,列表,true,,PYTHON
+L02,循环,FALSE,15,PYTHON
+L04,字典,false,二十,AI
+L05,集合,true,40,ai
+L06,文本,false,-5,AI
+L01,变量,true,20,python

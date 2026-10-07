@@ -1,0 +1,3 @@
+AI helps us learn. Python helps us test.
+AI and Python help us learn.
+Don't skip tests.

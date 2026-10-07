@@ -1,0 +1,23 @@
+运行环境
+Windows-11-10.0.26200-SP0
+Python 3.12.2
+解释器 G:\Python\python.exe
+
+运行目录
+G:\002_work\003_博客\CSDN一万粉丝计划\AI零基础36讲\chapters\08-ai-assisted-programming\examples
+
+运行命令
+G:\Python\python.exe calculator_buggy.py
+
+实际输出
+Traceback (most recent call last):
+  File "G:\002_work\003_博客\CSDN一万粉丝计划\AI零基础36讲\chapters\08-ai-assisted-programming\examples\calculator_buggy.py", line 14, in <module>
+    print(calculate(8, "/", 0))
+          ^^^^^^^^^^^^^^^^^^^^
+  File "G:\002_work\003_博客\CSDN一万粉丝计划\AI零基础36讲\chapters\08-ai-assisted-programming\examples\calculator_buggy.py", line 9, in calculate
+    return left / right
+           ~~~~~^~~~~~~
+ZeroDivisionError: division by zero
+
+退出码
+1

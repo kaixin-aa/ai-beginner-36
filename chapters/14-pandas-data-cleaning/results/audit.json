@@ -1,0 +1,12 @@
+{
+  "input_rows": 8,
+  "duplicate_rows": 2,
+  "rejected_rows": 1,
+  "output_rows": 5,
+  "raw_missing_minutes": 1,
+  "invalid_minute_text_after_dedup": 1,
+  "clean_missing_minutes": 2,
+  "known_minutes_count": 3,
+  "known_minutes_total": 75.0,
+  "completed_rows": 3
+}

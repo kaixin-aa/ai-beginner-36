@@ -1,0 +1,51 @@
+{
+  "total_words": 17,
+  "unique_words": 11,
+  "frequencies": [
+    {
+      "word": "us",
+      "count": 3
+    },
+    {
+      "word": "ai",
+      "count": 2
+    },
+    {
+      "word": "helps",
+      "count": 2
+    },
+    {
+      "word": "learn",
+      "count": 2
+    },
+    {
+      "word": "python",
+      "count": 2
+    },
+    {
+      "word": "and",
+      "count": 1
+    },
+    {
+      "word": "don't",
+      "count": 1
+    },
+    {
+      "word": "help",
+      "count": 1
+    },
+    {
+      "word": "skip",
+      "count": 1
+    },
+    {
+      "word": "test",
+      "count": 1
+    },
+    {
+      "word": "tests",
+      "count": 1
+    }
+  ],
+  "source_file": "sample.txt"
+}

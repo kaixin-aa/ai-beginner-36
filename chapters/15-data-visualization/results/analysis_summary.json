@@ -1,0 +1,63 @@
+{
+  "input_rows": 5,
+  "known_minutes_rows": 3,
+  "missing_minutes_rows": 2,
+  "known_total": 75.0,
+  "known_mean": 25.0,
+  "known_median": 20.0,
+  "histogram_counts": [
+    0,
+    1,
+    1,
+    0,
+    1
+  ],
+  "histogram_edges": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    50
+  ],
+  "groups": [
+    {
+      "tag": "ai",
+      "records": 2,
+      "completed": 1,
+      "known_minutes": 1,
+      "known_total": 40.0,
+      "missing_minutes": 1,
+      "completion_rate": 0.5
+    },
+    {
+      "tag": "python",
+      "records": 3,
+      "completed": 2,
+      "known_minutes": 2,
+      "known_total": 35.0,
+      "missing_minutes": 1,
+      "completion_rate": 0.6666666666666666
+    }
+  ],
+  "scatter_points": [
+    {
+      "record_id": "L01",
+      "minutes": 20.0,
+      "done_code": 1
+    },
+    {
+      "record_id": "L02",
+      "minutes": 15.0,
+      "done_code": 0
+    },
+    {
+      "record_id": "L05",
+      "minutes": 40.0,
+      "done_code": 1
+    }
+  ],
+  "pearson_r": 0.6546536707079771,
+  "data_sha256": "edf45ba9758f0a3ab0f71ef46959dfaeb108f2c1fe69eed6bbe5326720e9ad7f",
+  "font": "Microsoft YaHei"
+}

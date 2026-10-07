@@ -1,0 +1,50 @@
+{
+  "random_state": 42,
+  "test_size": 0.2,
+  "stratified": true,
+  "train_rows": 120,
+  "test_rows": 30,
+  "train_class_counts": [
+    40,
+    40,
+    40
+  ],
+  "test_class_counts": [
+    10,
+    10,
+    10
+  ],
+  "train_accuracy": 0.9583333333333334,
+  "test_accuracy": 0.9333333333333333,
+  "test_correct": 28,
+  "test_wrong": 2,
+  "baseline_test_accuracy": 0.3333333333333333,
+  "fit_rows_in_scaler": 120,
+  "features": [
+    "sepal_length_cm",
+    "sepal_width_cm",
+    "petal_length_cm",
+    "petal_width_cm"
+  ],
+  "target_names": [
+    "setosa",
+    "versicolor",
+    "virginica"
+  ],
+  "dataset_sha256": "31aa6870aec68d5d92a43b631970f81e4738fd35319615425e27b99a65a299f6",
+  "reload_predictions_identical": true,
+  "single_input": {
+    "values": [
+      5.1,
+      3.5,
+      1.4,
+      0.2
+    ],
+    "unit": "cm",
+    "purpose": "沿用公开数据首行的教学输入，非独立新样本",
+    "prediction": {
+      "label": 0,
+      "name": "setosa"
+    }
+  }
+}

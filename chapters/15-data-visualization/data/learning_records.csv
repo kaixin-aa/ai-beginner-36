@@ -1,0 +1,6 @@
+record_id,title,done,minutes,tag,source_row,minutes_status
+L01,变量,True,20.0,python,2,known
+L02,循环,False,15.0,python,3,known
+L03,列表,True,,python,4,missing
+L04,字典,False,,ai,6,invalid_text
+L05,集合,True,40.0,ai,7,known

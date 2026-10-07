@@ -1,0 +1,24 @@
+{
+  "source": "sklearn.datasets.load_iris",
+  "scikit_learn_version": "1.7.2",
+  "reference": "https://scikit-learn.org/1.7/modules/generated/sklearn.datasets.load_iris.html",
+  "original_repository": "https://archive.ics.uci.edu/dataset/53/iris",
+  "features": [
+    "sepal_length_cm",
+    "sepal_width_cm",
+    "petal_length_cm",
+    "petal_width_cm"
+  ],
+  "unit": "cm",
+  "target_names": [
+    "setosa",
+    "versicolor",
+    "virginica"
+  ],
+  "rows": 150,
+  "sha256": "31aa6870aec68d5d92a43b631970f81e4738fd35319615425e27b99a65a299f6",
+  "modifications": [
+    "字段改为明确的英文名称，增加从0计数的教学编号",
+    "沿用scikit-learn修订的两个测量点，不等同于UCI早期文件"
+  ]
+}
