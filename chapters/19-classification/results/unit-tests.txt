@@ -1,0 +1,13 @@
+test_class_order (test_classification.ClassificationTests.test_class_order) ... ok
+test_invalid_inputs (test_classification.ClassificationTests.test_invalid_inputs) ... ok
+test_matrix_independent (test_classification.ClassificationTests.test_matrix_independent) ... ok
+test_probability_and_predict (test_classification.ClassificationTests.test_probability_and_predict) ... ok
+test_scaler_training_only (test_classification.ClassificationTests.test_scaler_training_only) ... ok
+test_single_and_batch (test_classification.ClassificationTests.test_single_and_batch) ... ok
+test_split_counts_and_ids (test_classification.ClassificationTests.test_split_counts_and_ids) ... ok
+test_two_features_separate (test_classification.ClassificationTests.test_two_features_separate) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.031s
+
+OK

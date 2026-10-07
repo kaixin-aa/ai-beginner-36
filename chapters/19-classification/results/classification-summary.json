@@ -1,0 +1,193 @@
+{
+  "random_state": 42,
+  "test_size": 0.2,
+  "stratified": true,
+  "train_rows": 120,
+  "test_rows": 30,
+  "train_class_counts": [
+    40,
+    40,
+    40
+  ],
+  "test_class_counts": [
+    10,
+    10,
+    10
+  ],
+  "train_accuracy": 0.9583333333333334,
+  "test_accuracy": 0.9333333333333333,
+  "test_correct": 28,
+  "test_wrong": 2,
+  "baseline_test_accuracy": 0.3333333333333333,
+  "fit_rows_in_scaler": 120,
+  "features": [
+    "sepal_length_cm",
+    "sepal_width_cm",
+    "petal_length_cm",
+    "petal_width_cm"
+  ],
+  "target_names": [
+    "setosa",
+    "versicolor",
+    "virginica"
+  ],
+  "confusion_matrix": [
+    [
+      10,
+      0,
+      0
+    ],
+    [
+      0,
+      9,
+      1
+    ],
+    [
+      0,
+      1,
+      9
+    ]
+  ],
+  "classes": [
+    0,
+    1,
+    2
+  ],
+  "all_class_counts": [
+    50,
+    50,
+    50
+  ],
+  "boundary_features": [
+    "petal_length_cm",
+    "petal_width_cm"
+  ],
+  "boundary_test_accuracy": 0.9333333333333333,
+  "wrong_rows": [
+    {
+      "sample_id": "iris-134",
+      "sepal_length_cm": 6.1,
+      "sepal_width_cm": 2.6,
+      "petal_length_cm": 5.6,
+      "petal_width_cm": 1.4,
+      "target": 2,
+      "prediction": 1,
+      "baseline_prediction": 0,
+      "correct": false,
+      "p_setosa": 0.0012904109045998938,
+      "p_versicolor": 0.5145247403053927,
+      "p_virginica": 0.48418484879000734,
+      "confidence": 0.5145247403053927,
+      "probability_gap": 0.03033989151538541
+    },
+    {
+      "sample_id": "iris-077",
+      "sepal_length_cm": 6.7,
+      "sepal_width_cm": 3.0,
+      "petal_length_cm": 5.0,
+      "petal_width_cm": 1.7,
+      "target": 1,
+      "prediction": 2,
+      "baseline_prediction": 0,
+      "correct": false,
+      "p_setosa": 0.00145404817005397,
+      "p_versicolor": 0.4416845435510184,
+      "p_virginica": 0.5568614082789276,
+      "confidence": 0.5568614082789276,
+      "probability_gap": 0.11517686472790922
+    }
+  ],
+  "lowest_gap_rows": [
+    {
+      "sample_id": "iris-134",
+      "sepal_length_cm": 6.1,
+      "sepal_width_cm": 2.6,
+      "petal_length_cm": 5.6,
+      "petal_width_cm": 1.4,
+      "target": 2,
+      "prediction": 1,
+      "baseline_prediction": 0,
+      "correct": false,
+      "p_setosa": 0.0012904109045998938,
+      "p_versicolor": 0.5145247403053927,
+      "p_virginica": 0.48418484879000734,
+      "confidence": 0.5145247403053927,
+      "probability_gap": 0.03033989151538541
+    },
+    {
+      "sample_id": "iris-077",
+      "sepal_length_cm": 6.7,
+      "sepal_width_cm": 3.0,
+      "petal_length_cm": 5.0,
+      "petal_width_cm": 1.7,
+      "target": 1,
+      "prediction": 2,
+      "baseline_prediction": 0,
+      "correct": false,
+      "p_setosa": 0.00145404817005397,
+      "p_versicolor": 0.4416845435510184,
+      "p_virginica": 0.5568614082789276,
+      "confidence": 0.5568614082789276,
+      "probability_gap": 0.11517686472790922
+    },
+    {
+      "sample_id": "iris-138",
+      "sepal_length_cm": 6.0,
+      "sepal_width_cm": 3.0,
+      "petal_length_cm": 4.8,
+      "petal_width_cm": 1.8,
+      "target": 2,
+      "prediction": 2,
+      "baseline_prediction": 0,
+      "correct": true,
+      "p_setosa": 0.005450747659742422,
+      "p_versicolor": 0.39858681983501,
+      "p_virginica": 0.5959624325052476,
+      "confidence": 0.5959624325052476,
+      "probability_gap": 0.19737561267023762
+    },
+    {
+      "sample_id": "iris-127",
+      "sepal_length_cm": 6.1,
+      "sepal_width_cm": 3.0,
+      "petal_length_cm": 4.9,
+      "petal_width_cm": 1.8,
+      "target": 2,
+      "prediction": 2,
+      "baseline_prediction": 0,
+      "correct": true,
+      "p_setosa": 0.0037983695055363023,
+      "p_versicolor": 0.3692201678769928,
+      "p_virginica": 0.6269814626174709,
+      "confidence": 0.6269814626174709,
+      "probability_gap": 0.2577612947404781
+    },
+    {
+      "sample_id": "iris-056",
+      "sepal_length_cm": 6.3,
+      "sepal_width_cm": 3.3,
+      "petal_length_cm": 4.7,
+      "petal_width_cm": 1.6,
+      "target": 1,
+      "prediction": 1,
+      "baseline_prediction": 0,
+      "correct": true,
+      "p_setosa": 0.018046740435139572,
+      "p_versicolor": 0.6755234755033602,
+      "p_virginica": 0.3064297840615002,
+      "confidence": 0.6755234755033602,
+      "probability_gap": 0.36909369144186005
+    }
+  ],
+  "model_sha256": "044c38ff0fbc52cd1a930069b7a79e9766b79d7cb903bffb39b653b3d3ac0d64",
+  "reload_probabilities_equal": true,
+  "single_demo": {
+    "label": 0,
+    "name": "setosa",
+    "probabilities": {
+      "setosa": 0.9808127381969151,
+      "versicolor": 0.019186992121988183,
+      "virginica": 2.696810968691848e-07
+    }
+  }
+}
