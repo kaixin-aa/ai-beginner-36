@@ -1,0 +1,158 @@
+{
+  "date": "2026-10-03",
+  "python": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]",
+  "runs": [
+    {
+      "args": [
+        "examples/run_evaluation.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"models\": [\n    {\n      \"task\": \"classification\",\n      \"model\": \"baseline\",\n      \"metric\": \"accuracy\",\n      \"train_score\": 0.3333333333333333,\n      \"cv_mean\": 0.3333333333333333,\n      \"cv_std\": 0.0,\n      \"historical_test_score\": 0.3333333333333333\n    },\n    {\n      \"task\": \"classification\",\n      \"model\": \"logistic\",\n      \"metric\": \"accuracy\",\n      \"train_score\": 0.9583333333333334,\n      \"cv_mean\": 0.9583333333333334,\n      \"cv_std\": 0.045643546458763846,\n      \"historical_test_score\": 0.9333333333333333\n    },\n    {\n      \"task\": \"classification\",\n      \"model\": \"tree_depth1\",\n      \"metric\": \"accuracy\",\n      \"train_score\": 0.6666666666666666,\n      \"cv_mean\": 0.6666666666666666,\n      \"cv_std\": 0.0,\n      \"historical_test_score\": 0.6666666666666666\n    },\n    {\n      \"task\": \"classification\",\n      \"model\": \"tree_full\",\n      \"metric\": \"accuracy\",\n      \"train_score\": 1.0,\n      \"cv_mean\": 0.9416666666666667,\n      \"cv_std\": 0.033333333333333354,\n      \"historical_test_score\": 0.9333333333333333\n    },\n    {\n      \"task\": \"regression\",\n      \"model\": \"baseline\",\n      \"metric\": \"MAE\",\n      \"train_score\": 5023.323286262411,\n      \"cv_mean\": 5025.547241316357,\n      \"cv_std\": 1050.645813161412,\n      \"historical_test_score\": 8316.0\n    },\n    {\n      \"task\": \"regression\",\n      \"model\": \"single\",\n      \"metric\": \"MAE\",\n      \"train_score\": 2532.0025796169434,\n      \"cv_mean\": 2549.7375638747876,\n      \"cv_std\": 133.7905595518426,\n      \"historical_test_score\": 4107.6321427379135\n    },\n    {\n      \"task\": \"regression\",\n      \"model\": \"multi\",\n      \"metric\": \"MAE\",\n      \"train_score\": 2111.837111954888,\n      \"cv_mean\": 2182.7966158013255,\n      \"cv_std\": 183.52273577507242,\n      \"historical_test_score\": 3615.895256463943\n    }\n  ],\n  \"thresholds\": [\n    {\n      \"threshold\": 0.5,\n      \"TN\": 5,\n      \"FP\": 1,\n      \"FN\": 2,\n      \"TP\": 2,\n      \"accuracy\": 0.7,\n      \"precision\": 0.6666666666666666,\n      \"recall\": 0.5,\n      \"F1\": 0.5714285714285714\n    },\n    {\n      \"threshold\": 0.25,\n      \"TN\": 3,\n      \"FP\": 3,\n      \"FN\": 1,\n      \"TP\": 3,\n      \"accuracy\": 0.6,\n      \"precision\": 0.5,\n      \"recall\": 0.75,\n      \"F1\": 0.6\n    }\n  ],\n  \"leakage\": {\n    \"source\": \"原创随机噪声教学实验\",\n    \"seed\": 7,\n    \"train_rows\": 300,\n    \"test_rows\": 100,\n    \"clean_train_accuracy\": 1.0,\n    \"clean_test_accuracy\": 0.52,\n    \"leaked_train_accuracy\": 1.0,\n    \"leaked_test_accuracy\": 1.0,\n    \"clean_features\": 6,\n    \"leaked_features\": 7\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_binary_hand_calculation (test_evaluation.EvaluationTests.test_binary_hand_calculation) ... ok\ntest_fold_disjoint_and_coverage (test_evaluation.EvaluationTests.test_fold_disjoint_and_coverage) ... ok\ntest_invalid_inputs (test_evaluation.EvaluationTests.test_invalid_inputs) ... ok\ntest_leakage_not_random_luck (test_evaluation.EvaluationTests.test_leakage_not_random_luck) ... ok\ntest_lower_threshold (test_evaluation.EvaluationTests.test_lower_threshold) ... ok\ntest_no_positive_prediction (test_evaluation.EvaluationTests.test_no_positive_prediction) ... ok\ntest_regression_historical_scores (test_evaluation.EvaluationTests.test_regression_historical_scores) ... ok\ntest_reproducible (test_evaluation.EvaluationTests.test_reproducible) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.097s\n\nOK\n"
+    },
+    {
+      "args": [
+        "-m",
+        "compileall",
+        "-q",
+        "examples",
+        "tests"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "errors": [
+    [
+      "leaked_feature",
+      {
+        "args": [
+          "examples\\errors\\leaked_feature.py"
+        ],
+        "exit_code": 1,
+        "stdout": "含答案列的测试准确率 1.0\n",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\20-model-reliability\\examples\\errors\\leaked_feature.py\", line 7, in <module>\n    assert r['leaked_features']==r['clean_features'],'检查失败，特征包含预测时拿不到的答案'\nAssertionError: 检查失败，特征包含预测时拿不到的答案\n"
+      },
+      {
+        "args": [
+          "examples/fixed/leaked_feature.py"
+        ],
+        "exit_code": 0,
+        "stdout": "移除答案列的测试准确率 0.52\n",
+        "stderr": ""
+      }
+    ],
+    [
+      "no_positive",
+      {
+        "args": [
+          "examples\\errors\\no_positive.py"
+        ],
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\20-model-reliability\\examples\\errors\\no_positive.py\", line 3, in <module>\n    print(true_positive/(true_positive+false_positive))\n          ~~~~~~~~~~~~~^^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nZeroDivisionError: division by zero\n"
+      },
+      {
+        "args": [
+          "examples/fixed/no_positive.py"
+        ],
+        "exit_code": 0,
+        "stdout": "{'TN': 1, 'FP': 0, 'FN': 1, 'TP': 0, 'accuracy': 0.5, 'precision': 0.0, 'recall': 0.0, 'F1': 0.0}\n",
+        "stderr": ""
+      }
+    ]
+  ],
+  "notebook_code_cells": 7,
+  "notebook_executed_by": "nbclient 与实际 ipykernel",
+  "snippets": [
+    {
+      "document": "article.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "from examples.evaluation_core import evaluate_existing\n\nrows, manifest = evaluate_existing()\nitem = manifest[\"iris_logistic\"]\nprint(\"原训练与历史测试\", len(item[\"outer_train_ids\"]), len(item[\"outer_test_ids\"]))\nfor fold in item[\"folds\"]:\n    print(fold[\"fold\"], len(fold[\"train_positions\"]), len(fold[\"validation_positions\"]), round(fold[\"score\"], 4))\n"
+      ],
+      "exit_code": 0,
+      "stdout": "原训练与历史测试 120 30\n1 96 24 1.0\n2 96 24 0.9583\n3 96 24 0.875\n4 96 24 0.9583\n5 96 24 1.0\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 2,
+      "args": [
+        "-c",
+        "from examples.evaluation_core import threshold_report\n\nfor threshold in [0.5, 0.25]:\n    print(threshold_report(threshold))\n"
+      ],
+      "exit_code": 0,
+      "stdout": "{'threshold': 0.5, 'TN': 5, 'FP': 1, 'FN': 2, 'TP': 2, 'accuracy': 0.7, 'precision': 0.6666666666666666, 'recall': 0.5, 'F1': 0.5714285714285714}\n{'threshold': 0.25, 'TN': 3, 'FP': 3, 'FN': 1, 'TP': 3, 'accuracy': 0.6, 'precision': 0.5, 'recall': 0.75, 'F1': 0.6}\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 3,
+      "args": [
+        "-c",
+        "from examples.evaluation_core import binary_report\n\nresult = binary_report([0] * 95 + [1] * 5, [0] * 100)\nprint(result)\n"
+      ],
+      "exit_code": 0,
+      "stdout": "{'TN': 95, 'FP': 0, 'FN': 5, 'TP': 0, 'accuracy': 0.95, 'precision': 0.0, 'recall': 0.0, 'F1': 0.0}\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 4,
+      "args": [
+        "-c",
+        "from examples.evaluation_core import leakage_experiment\n\nresult = leakage_experiment()\nfor key in [\"clean_train_accuracy\", \"clean_test_accuracy\", \"leaked_test_accuracy\"]:\n    print(key, result[key])\n"
+      ],
+      "exit_code": 0,
+      "stdout": "clean_train_accuracy 1.0\nclean_test_accuracy 0.52\nleaked_test_accuracy 1.0\n",
+      "stderr": ""
+    },
+    {
+      "document": "exercises.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "from examples.evaluation_core import binary_report\n\nprint(binary_report([1, 1, 1, 0, 0], [1, 0, 1, 1, 0]))\n"
+      ],
+      "exit_code": 0,
+      "stdout": "{'TN': 1, 'FP': 1, 'FN': 1, 'TP': 2, 'accuracy': 0.6, 'precision': 0.6666666666666666, 'recall': 0.6666666666666666, 'F1': 0.6666666666666666}\n",
+      "stderr": ""
+    },
+    {
+      "document": "exercises.md",
+      "number": 2,
+      "args": [
+        "-c",
+        "from examples.evaluation_core import leakage_experiment\n\nresult = leakage_experiment()\nprint(\"无交集\", set(result[\"train_ids\"]).isdisjoint(result[\"test_ids\"]))\nprint(\"泄漏与修复\", result[\"leaked_test_accuracy\"], result[\"clean_test_accuracy\"])\n"
+      ],
+      "exit_code": 0,
+      "stdout": "无交集 True\n泄漏与修复 1.0 0.52\n",
+      "stderr": ""
+    }
+  ],
+  "final_editor_checks": {
+    "local_links": 33,
+    "png_files": [
+      "leakage-demo.png",
+      "overfitting-comparison.png"
+    ],
+    "prose_hard_errors": 0,
+    "snippet_runtime": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]"
+  }
+}

@@ -1,0 +1,13 @@
+test_binary_hand_calculation (test_evaluation.EvaluationTests.test_binary_hand_calculation) ... ok
+test_fold_disjoint_and_coverage (test_evaluation.EvaluationTests.test_fold_disjoint_and_coverage) ... ok
+test_invalid_inputs (test_evaluation.EvaluationTests.test_invalid_inputs) ... ok
+test_leakage_not_random_luck (test_evaluation.EvaluationTests.test_leakage_not_random_luck) ... ok
+test_lower_threshold (test_evaluation.EvaluationTests.test_lower_threshold) ... ok
+test_no_positive_prediction (test_evaluation.EvaluationTests.test_no_positive_prediction) ... ok
+test_regression_historical_scores (test_evaluation.EvaluationTests.test_regression_historical_scores) ... ok
+test_reproducible (test_evaluation.EvaluationTests.test_reproducible) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.097s
+
+OK
