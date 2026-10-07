@@ -1,0 +1,5 @@
+# 实际后端依赖在 ../../projects/knowledge-assistant/requirements.txt。
+# 以下依赖只用于生成教学PDF与原创配图。
+reportlab==4.4.10
+matplotlib==3.10.7
+pillow==12.3.0

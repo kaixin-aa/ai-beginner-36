@@ -1,0 +1,338 @@
+{
+  "kind": "live_api",
+  "date": "2026-10-04T00:43:52.725691+08:00",
+  "provider": "deepseek",
+  "requested_model": "deepseek-flash",
+  "cases": [
+    {
+      "input": "我想入门 Python，每天只有20分钟",
+      "daily_minutes": 20,
+      "plan": {
+        "goal": "Python 入门",
+        "daily_minutes": 20,
+        "tasks": [
+          {
+            "title": "学习基础语法并练习变量与数据类型",
+            "minutes": 10
+          },
+          {
+            "title": "完成一个小练习（如简单计算器）",
+            "minutes": 10
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "valid": true,
+          "response": {
+            "kind": "live_api",
+            "provider": "deepseek",
+            "base_url": "https://api.deepseek.com",
+            "requested_model": "deepseek-flash",
+            "question": "我想入门 Python，每天只有20分钟",
+            "response_id": "bf24b69e-17d6-45b5-bfb1-a91f7de69b70",
+            "returned_model": "deepseek-flash",
+            "answer": "{\"goal\":\"Python 入门\",\"daily_minutes\":20,\"tasks\":[{\"title\":\"学习基础语法并练习变量与数据类型\",\"minutes\":10},{\"title\":\"完成一个小练习（如简单计算器）\",\"minutes\":10}]}",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 165,
+              "completion_tokens": 48,
+              "total_tokens": 213
+            },
+            "complete": true,
+            "elapsed_seconds": 1.5699
+          }
+        }
+      ],
+      "valid": true
+    },
+    {
+      "input": "复习英语词汇，安排30分钟",
+      "daily_minutes": 30,
+      "plan": {
+        "goal": "复习英语词汇",
+        "daily_minutes": 30,
+        "tasks": [
+          {
+            "title": "用闪卡复习旧词并标记生词",
+            "minutes": 10
+          },
+          {
+            "title": "学习并记忆新词",
+            "minutes": 12
+          },
+          {
+            "title": "用新词和旧词造句练习",
+            "minutes": 8
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "valid": true,
+          "response": {
+            "kind": "live_api",
+            "provider": "deepseek",
+            "base_url": "https://api.deepseek.com",
+            "requested_model": "deepseek-flash",
+            "question": "复习英语词汇，安排30分钟",
+            "response_id": "68d19222-f10c-4b20-8277-4ef4a3b65eda",
+            "returned_model": "deepseek-flash",
+            "answer": "{\"goal\":\"复习英语词汇\",\"daily_minutes\":30,\"tasks\":[{\"title\":\"用闪卡复习旧词并标记生词\",\"minutes\":10},{\"title\":\"学习并记忆新词\",\"minutes\":12},{\"title\":\"用新词和旧词造句练习\",\"minutes\":8}]}",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 164,
+              "completion_tokens": 61,
+              "total_tokens": 225
+            },
+            "complete": true,
+            "elapsed_seconds": 1.825
+          }
+        }
+      ],
+      "valid": true
+    },
+    {
+      "input": "我想理解线性回归，今天有25分钟",
+      "daily_minutes": 25,
+      "plan": {
+        "goal": "理解线性回归",
+        "daily_minutes": 25,
+        "tasks": [
+          {
+            "title": "观看线性回归概念讲解视频",
+            "minutes": 10
+          },
+          {
+            "title": "阅读线性回归公式与假设条件",
+            "minutes": 10
+          },
+          {
+            "title": "用自己的话总结线性回归核心思想",
+            "minutes": 5
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "valid": true,
+          "response": {
+            "kind": "live_api",
+            "provider": "deepseek",
+            "base_url": "https://api.deepseek.com",
+            "requested_model": "deepseek-flash",
+            "question": "我想理解线性回归，今天有25分钟",
+            "response_id": "9a16da2b-2767-4759-94da-83b7b8387ea3",
+            "returned_model": "deepseek-flash",
+            "answer": "{\"goal\":\"理解线性回归\",\"daily_minutes\":25,\"tasks\":[{\"title\":\"观看线性回归概念讲解视频\",\"minutes\":10},{\"title\":\"阅读线性回归公式与假设条件\",\"minutes\":10},{\"title\":\"用自己的话总结线性回归核心思想\",\"minutes\":5}]}",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 166,
+              "completion_tokens": 58,
+              "total_tokens": 224
+            },
+            "complete": true,
+            "elapsed_seconds": 1.4465
+          }
+        }
+      ],
+      "valid": true
+    },
+    {
+      "input": "用15分钟练习表格数据清洗",
+      "daily_minutes": 15,
+      "plan": {
+        "goal": "表格数据清洗",
+        "daily_minutes": 15,
+        "tasks": [
+          {
+            "title": "识别并处理缺失值",
+            "minutes": 5
+          },
+          {
+            "title": "去除重复行和异常值",
+            "minutes": 5
+          },
+          {
+            "title": "统一格式（日期、大小写、单位）",
+            "minutes": 5
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "valid": true,
+          "response": {
+            "kind": "live_api",
+            "provider": "deepseek",
+            "base_url": "https://api.deepseek.com",
+            "requested_model": "deepseek-flash",
+            "question": "用15分钟练习表格数据清洗",
+            "response_id": "ae42fb9c-e399-4a97-8ed1-b2cd68721311",
+            "returned_model": "deepseek-flash",
+            "answer": "{\"goal\":\"表格数据清洗\",\"daily_minutes\":15,\"tasks\":[{\"title\":\"识别并处理缺失值\",\"minutes\":5},{\"title\":\"去除重复行和异常值\",\"minutes\":5},{\"title\":\"统一格式（日期、大小写、单位）\",\"minutes\":5}]}",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 164,
+              "completion_tokens": 59,
+              "total_tokens": 223
+            },
+            "complete": true,
+            "elapsed_seconds": 1.7566
+          }
+        }
+      ],
+      "valid": true
+    },
+    {
+      "input": "复盘注意力计算，给我40分钟的安排",
+      "daily_minutes": 40,
+      "plan": {
+        "goal": "复盘注意力计算",
+        "daily_minutes": 40,
+        "tasks": [
+          {
+            "title": "回顾注意力机制核心公式与直觉",
+            "minutes": 10
+          },
+          {
+            "title": "手推缩放点积注意力计算过程",
+            "minutes": 10
+          },
+          {
+            "title": "复现多头注意力维度变换",
+            "minutes": 10
+          },
+          {
+            "title": "做3道注意力相关练习题并纠错",
+            "minutes": 10
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "valid": true,
+          "response": {
+            "kind": "live_api",
+            "provider": "deepseek",
+            "base_url": "https://api.deepseek.com",
+            "requested_model": "deepseek-flash",
+            "question": "复盘注意力计算，给我40分钟的安排",
+            "response_id": "2b56a31f-65ef-4ef9-bec1-e13a219bf629",
+            "returned_model": "deepseek-flash",
+            "answer": "{\"goal\":\"复盘注意力计算\",\"daily_minutes\":40,\"tasks\":[{\"title\":\"回顾注意力机制核心公式与直觉\",\"minutes\":10},{\"title\":\"手推缩放点积注意力计算过程\",\"minutes\":10},{\"title\":\"复现多头注意力维度变换\",\"minutes\":10},{\"title\":\"做3道注意力相关练习题并纠错\",\"minutes\":10}]}",
+            "finish_reason": "stop",
+            "usage": {
+              "prompt_tokens": 165,
+              "completion_tokens": 75,
+              "total_tokens": 240
+            },
+            "complete": true,
+            "elapsed_seconds": 1.6103
+          }
+        }
+      ],
+      "valid": true
+    }
+  ],
+  "multiturn": {
+    "before": {
+      "version": 1,
+      "history": [
+        {
+          "role": "user",
+          "content": "我想入门 Python，每天只有20分钟"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"goal\":\"Python 入门\",\"daily_minutes\":20,\"tasks\":[{\"title\":\"学习基础语法并练习变量与数据类型\",\"minutes\":10},{\"title\":\"完成一个小练习（如简单计算器）\",\"minutes\":10}]}"
+        }
+      ],
+      "last_plan": {
+        "goal": "Python 入门",
+        "daily_minutes": 20,
+        "tasks": [
+          {
+            "title": "学习基础语法并练习变量与数据类型",
+            "minutes": 10
+          },
+          {
+            "title": "完成一个小练习（如简单计算器）",
+            "minutes": 10
+          }
+        ]
+      },
+      "daily_minutes": 20
+    },
+    "after": {
+      "version": 1,
+      "history": [
+        {
+          "role": "user",
+          "content": "我想入门 Python，每天只有20分钟"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"goal\":\"Python 入门\",\"daily_minutes\":20,\"tasks\":[{\"title\":\"学习基础语法并练习变量与数据类型\",\"minutes\":10},{\"title\":\"完成一个小练习（如简单计算器）\",\"minutes\":10}]}"
+        },
+        {
+          "role": "user",
+          "content": "改成10分钟，保留动手代码练习"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"goal\":\"Python 入门\",\"daily_minutes\":10,\"tasks\":[{\"title\":\"学习基础语法（变量、数据类型、输入输出）\",\"minutes\":4},{\"title\":\"动手编写并运行一个简单代码练习\",\"minutes\":6}]}"
+        }
+      ],
+      "last_plan": {
+        "goal": "Python 入门",
+        "daily_minutes": 10,
+        "tasks": [
+          {
+            "title": "学习基础语法（变量、数据类型、输入输出）",
+            "minutes": 4
+          },
+          {
+            "title": "动手编写并运行一个简单代码练习",
+            "minutes": 6
+          }
+        ]
+      },
+      "daily_minutes": 10
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "valid": true,
+        "response": {
+          "kind": "live_api",
+          "provider": "deepseek",
+          "base_url": "https://api.deepseek.com",
+          "requested_model": "deepseek-flash",
+          "question": "改成10分钟，保留动手代码练习",
+          "response_id": "5cc3b55f-f85f-48da-9d0e-7647072ccc74",
+          "returned_model": "deepseek-flash",
+          "answer": "{\"goal\":\"Python 入门\",\"daily_minutes\":10,\"tasks\":[{\"title\":\"学习基础语法（变量、数据类型、输入输出）\",\"minutes\":4},{\"title\":\"动手编写并运行一个简单代码练习\",\"minutes\":6}]}",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 225,
+            "completion_tokens": 50,
+            "total_tokens": 275
+          },
+          "complete": true,
+          "elapsed_seconds": 1.9272
+        }
+      }
+    ],
+    "save_load_equal": true,
+    "session": "live-validation-session-20261004-004352-724694.json"
+  },
+  "complete": true,
+  "request_count": 6,
+  "total_tokens": 1400
+}

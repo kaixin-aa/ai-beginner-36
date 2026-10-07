@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "history": [
+    {
+      "role": "user",
+      "content": "我想入门 Python，每天只有20分钟"
+    },
+    {
+      "role": "assistant",
+      "content": "{\"goal\":\"Python 入门\",\"daily_minutes\":20,\"tasks\":[{\"title\":\"学习基础语法并练习变量与数据类型\",\"minutes\":10},{\"title\":\"完成一个小练习（如简单计算器）\",\"minutes\":10}]}"
+    },
+    {
+      "role": "user",
+      "content": "改成10分钟，保留动手代码练习"
+    },
+    {
+      "role": "assistant",
+      "content": "{\"goal\":\"Python 入门\",\"daily_minutes\":10,\"tasks\":[{\"title\":\"学习基础语法（变量、数据类型、输入输出）\",\"minutes\":4},{\"title\":\"动手编写并运行一个简单代码练习\",\"minutes\":6}]}"
+    }
+  ],
+  "last_plan": {
+    "goal": "Python 入门",
+    "daily_minutes": 10,
+    "tasks": [
+      {
+        "title": "学习基础语法（变量、数据类型、输入输出）",
+        "minutes": 4
+      },
+      {
+        "title": "动手编写并运行一个简单代码练习",
+        "minutes": 6
+      }
+    ]
+  },
+  "daily_minutes": 10
+}

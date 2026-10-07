@@ -1,0 +1,40 @@
+{
+  "kind": "offline_audit",
+  "records": [
+    {
+      "file": "live-agent-20261004-012759-970036.json",
+      "status": "completed",
+      "requests": 2,
+      "tokens": 1022,
+      "tools": [
+        "calculate"
+      ]
+    },
+    {
+      "file": "live-agent-20261004-012809-161416.json",
+      "status": "tool_limit",
+      "requests": 3,
+      "tokens": 2263,
+      "tools": [
+        "search_documents",
+        "search_documents",
+        "search_documents",
+        "search_documents"
+      ]
+    },
+    {
+      "file": "live-agent-20261004-013334-997823.json",
+      "status": "completed",
+      "requests": 3,
+      "tokens": 2779,
+      "tools": [
+        "search_documents",
+        "calculate"
+      ]
+    }
+  ],
+  "requests": 8,
+  "total_tokens": 6064,
+  "accepted": true,
+  "manual_source_check": "两数均在guide.md第11行。最终回答行号为片段范围，引用精度见验收说明。"
+}

@@ -1,0 +1,2 @@
+# 检索工具复用第31章 requirements.txt 和 requirements-cpu.txt。
+# 计算器、控制器及模型通信使用 Python 3.12 标准库。

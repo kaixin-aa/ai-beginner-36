@@ -1,0 +1,19 @@
+{
+  "kind": "live_api",
+  "provider": "deepseek",
+  "base_url": "https://api.deepseek.com",
+  "requested_model": "deepseek-flash",
+  "question": "用一句话解释 API",
+  "response_id": "1dcf5226-e3a6-470e-a55b-badf3a1d0a6b",
+  "returned_model": "deepseek-flash",
+  "answer": "API 是软件之间约定好的接口，让一个程序能向另一个程序请求数据或功能，而不用了解对方内部怎么实现。",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 21,
+    "completion_tokens": 29,
+    "total_tokens": 50
+  },
+  "complete": true,
+  "elapsed_seconds": 1.2725,
+  "recorded_at": "2026-10-04T00:41:51.812076+08:00"
+}

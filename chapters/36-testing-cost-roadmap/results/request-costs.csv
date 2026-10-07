@@ -1,0 +1,8 @@
+﻿source,case_id,original_status,prompt_tokens,completion_tokens,total_tokens,elapsed_seconds
+chapter34,book,answered,637,98,735,1.365
+chapter34,projector-duration,answered,636,87,723,1.4196
+chapter34,projector-return,invalid_answer,637,167,804,1.6503
+chapter34,monday,answered,640,95,735,2.0584
+chapter34,conflict,conflict,649,224,873,2.0068
+chapter34,missing,insufficient,636,29,665,0.9435
+chapter35-browser,projector-return-web,answered,431,114,545,1.4788

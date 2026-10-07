@@ -1,0 +1,10 @@
+[
+  {"split":"development","question":"柳叶学习室周末几点开门？","expected":"answered"},
+  {"split":"development","question":"火星火箭发动机燃料怎么配比？","expected":"empty"},
+  {"split":"test","question":"柳叶学习室的书能借多久？","expected":"answered","answer_contains":"14"},
+  {"split":"test","question":"柳叶学习室一次最多借几本书？","expected":"answered","answer_contains":"3"},
+  {"split":"test","question":"柳叶学习室周一开放吗？","expected":"answered","answer_contains":"闭"},
+  {"split":"test","question":"柳叶学习室10月8日的阅读分享几点开始？","expected":"conflict"},
+  {"split":"test","question":"柳叶学习室有免费无线网络吗？","expected":"insufficient"},
+  {"split":"test","question":"海王星的轨道周期是多少？","expected":"empty"}
+]

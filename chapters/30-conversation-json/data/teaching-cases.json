@@ -1,0 +1,12 @@
+[
+  {"input": "我想入门 Python，每天只有20分钟", "daily_minutes": 20,
+   "plan": {"goal": "入门 Python", "daily_minutes": 20, "tasks": [{"title": "阅读变量示例", "minutes": 8}, {"title": "改写并运行两行代码", "minutes": 12}]}},
+  {"input": "复习英语词汇，安排30分钟", "daily_minutes": 30,
+   "plan": {"goal": "复习英语词汇", "daily_minutes": 30, "tasks": [{"title": "回忆旧词", "minutes": 10}, {"title": "用五个词造句", "minutes": 15}, {"title": "记录忘记的词", "minutes": 5}]}},
+  {"input": "我想理解线性回归，今天有25分钟", "daily_minutes": 25,
+   "plan": {"goal": "理解线性回归", "daily_minutes": 25, "tasks": [{"title": "画三个点和一条直线", "minutes": 10}, {"title": "计算预测误差", "minutes": 15}]}},
+  {"input": "用15分钟练习表格数据清洗", "daily_minutes": 15,
+   "plan": {"goal": "练习数据清洗", "daily_minutes": 15, "tasks": [{"title": "找出空值和重复行", "minutes": 6}, {"title": "清洗并核对行数", "minutes": 9}]}},
+  {"input": "复盘注意力计算，给我40分钟的安排", "daily_minutes": 40,
+   "plan": {"goal": "复盘注意力计算", "daily_minutes": 40, "tasks": [{"title": "计算一行 QK 分数", "minutes": 15}, {"title": "求 Softmax 和加权结果", "minutes": 20}, {"title": "核对张量形状", "minutes": 5}]}}
+]

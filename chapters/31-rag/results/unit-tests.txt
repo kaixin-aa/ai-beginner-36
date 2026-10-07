@@ -1,0 +1,17 @@
+test_conflict_requires_two_files (test_chapter31.Chapter31Tests.test_conflict_requires_two_files) ... ok
+test_empty_index_does_not_call_model (test_chapter31.Chapter31Tests.test_empty_index_does_not_call_model) ... ok
+test_exact_source_positions (test_chapter31.Chapter31Tests.test_exact_source_positions) ... ok
+test_insufficient_and_missing_fields (test_chapter31.Chapter31Tests.test_insufficient_and_missing_fields) ... ok
+test_overlap_and_invalid_size (test_chapter31.Chapter31Tests.test_overlap_and_invalid_size) ... ok
+test_query_instruction_and_too_long (test_chapter31.Chapter31Tests.test_query_instruction_and_too_long) ... Token indices sequence length is longer than the specified maximum sequence length for this model (602 > 512). Running this sequence through the model will result in indexing errors
+ok
+test_quote_positions_are_exact (test_chapter31.Chapter31Tests.test_quote_positions_are_exact) ... ok
+test_search_against_independent_cosine (test_chapter31.Chapter31Tests.test_search_against_independent_cosine) ... ok
+test_stale_documents_and_revision (test_chapter31.Chapter31Tests.test_stale_documents_and_revision) ... ok
+test_unknown_citation_and_fabricated_quote (test_chapter31.Chapter31Tests.test_unknown_citation_and_fabricated_quote) ... ok
+test_vectors_dimension_norm_and_repeat (test_chapter31.Chapter31Tests.test_vectors_dimension_norm_and_repeat) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.187s
+
+OK

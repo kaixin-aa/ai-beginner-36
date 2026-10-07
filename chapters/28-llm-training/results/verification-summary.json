@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-03",
+  "python": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]",
+  "runs": [
+    {
+      "args": [
+        "examples/run_parameters.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"parameters_unchanged\": true,\n  \"temperature_rows\": [\n    {\n      \"temperature\": 0.5,\n      \"probabilities\": [\n        0.8668133321973347,\n        0.11731042782619835,\n        0.015876239976466762\n      ],\n      \"entropy_nats\": 0.44105744405816344\n    },\n    {\n      \"temperature\": 1.0,\n      \"probabilities\": [\n        0.6652409557748218,\n        0.2447284710547976,\n        0.09003057317038045\n      ],\n      \"entropy_nats\": 0.8323955818399389\n    },\n    {\n      \"temperature\": 2.0,\n      \"probabilities\": [\n        0.506480391055654,\n        0.3071958857184984,\n        0.1863237232258476\n      ],\n      \"entropy_nats\": 1.0201913367268314\n    }\n  ],\n  \"experiments\": [\n    {\n      \"name\": \"sample_t05\",\n      \"temperature\": 0.5,\n      \"greedy\": false,\n      \"top_k\": null,\n      \"runs\": 12,\n      \"unique_texts\": 2,\n      \"eos_stops\": 12,\n      \"counts\": {\n        \"小猫吃鱼。\": 7,\n        \"小猫喝水。\": 5\n      }\n    },\n    {\n      \"name\": \"sample_t10\",\n      \"temperature\": 1.0,\n      \"greedy\": false,\n      \"top_k\": null,\n      \"runs\": 12,\n      \"unique_texts\": 2,\n      \"eos_stops\": 12,\n      \"counts\": {\n        \"小猫吃鱼。\": 7,\n        \"小猫喝水。\": 5\n      }\n    },\n    {\n      \"name\": \"sample_t20\",\n      \"temperature\": 2.0,\n      \"greedy\": false,\n      \"top_k\": null,\n      \"runs\": 12,\n      \"unique_texts\": 6,\n      \"eos_stops\": 12,\n      \"counts\": {\n        \"小猫吃读。\": 1,\n        \"小猫吃鱼。\": 3,\n        \"小猫喝水。\": 5,\n        \"小猫吃鱼我\": 1,\n        \"小猫吃鱼。练今天。\": 1,\n        \"小猫雨鱼。习小读练下我。\": 1\n      }\n    },\n    {\n      \"name\": \"sample_t20_top2\",\n      \"temperature\": 2.0,\n      \"greedy\": false,\n      \"top_k\": 2,\n      \"runs\": 12,\n      \"unique_texts\": 2,\n      \"eos_stops\": 12,\n      \"counts\": {\n        \"小猫吃鱼。\": 7,\n        \"小猫喝水。\": 5\n      }\n    },\n    {\n      \"name\": \"greedy_t20\",\n      \"temperature\": 2.0,\n      \"greedy\": true,\n      \"top_k\": null,\n      \"runs\": 1,\n      \"unique_texts\": 1,\n      \"eos_stops\": 1,\n      \"counts\": {\n        \"小猫吃鱼。\": 1\n      }\n    }\n  ],\n  \"response_mask_demo\": {\n    \"prompt\": \"我学\",\n    \"response\": \"编程。\",\n    \"input_ids\": [\n      [\n        1,\n        16,\n        14,\n        25,\n        22,\n        3\n      ]\n    ],\n    \"targets\": [\n      [\n        -100,\n        -100,\n        25,\n        22,\n        3,\n        2\n      ]\n    ],\n    \"valid_response_targets\": 4,\n    \"loss_without_update\": 0.0016950509743764997\n  },\n  \"preference_minutes\": {\n    \"chosen\": 20,\n    \"rejected\": 90\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_01_temperature_independent_ratio (test_chapter28.Chapter28Tests.test_01_temperature_independent_ratio) ... ok\ntest_02_entropy_and_argmax (test_chapter28.Chapter28Tests.test_02_entropy_and_argmax) ... ok\ntest_03_sampling_seed_and_topk (test_chapter28.Chapter28Tests.test_03_sampling_seed_and_topk) ... ok\ntest_04_prompt_targets_excluded (test_chapter28.Chapter28Tests.test_04_prompt_targets_excluded) ... ok\ntest_05_preference_rubric (test_chapter28.Chapter28Tests.test_05_preference_rubric) ... ok\ntest_06_summary_weights_and_runs (test_chapter28.Chapter28Tests.test_06_summary_weights_and_runs) ... ok\ntest_07_greedy_temperature_invariance (test_chapter28.Chapter28Tests.test_07_greedy_temperature_invariance) ... ok\ntest_08_invalid_parameters (test_chapter28.Chapter28Tests.test_08_invalid_parameters) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.025s\n\nOK\n"
+    },
+    {
+      "args": [
+        "-m",
+        "compileall",
+        "-q",
+        "examples",
+        "tests"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "errors": [
+    [
+      "topk_range",
+      {
+        "args": [
+          "examples\\errors\\topk_range.py"
+        ],
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\28-llm-training\\examples\\errors\\topk_range.py\", line 6, in <module>\n    print(generate(model,tokenizer,\"小猫\",top_k=100))\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\27-transformer\\examples\\toy_transformer.py\", line 155, in generate\n    raise ValueError(\"top_k范围不正确\")\nValueError: top_k范围不正确\n"
+      },
+      {
+        "args": [
+          "examples/fixed/topk_range.py"
+        ],
+        "exit_code": 0,
+        "stdout": "小猫吃鱼。 eos\n",
+        "stderr": ""
+      }
+    ],
+    [
+      "zero_temperature",
+      {
+        "args": [
+          "examples\\errors\\zero_temperature.py"
+        ],
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\28-llm-training\\examples\\errors\\zero_temperature.py\", line 5, in <module>\n    print(probabilities_at_temperature([2,1,0],0))\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\28-llm-training\\examples\\training_core.py\", line 21, in probabilities_at_temperature\n    raise ValueError(\"需要有限一维分数和有限正温度\")\nValueError: 需要有限一维分数和有限正温度\n"
+      },
+      {
+        "args": [
+          "examples/fixed/zero_temperature.py"
+        ],
+        "exit_code": 0,
+        "stdout": "[0.866813 0.11731  0.015876]\n需要确定性最高分时使用贪心选择，不将除数设为0\n",
+        "stderr": ""
+      }
+    ]
+  ],
+  "notebook_code_cells": 0,
+  "notebook_executed_by": null,
+  "snippets": [
+    {
+      "document": "article.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "from examples.training_core import load_baseline, response_only_mask\nmodel, tokenizer = load_baseline()\nx, targets = response_only_mask(tokenizer, \"我学\", \"编程。\")\nprint(x.shape)\nprint(targets.tolist())\nprint(int((targets != -100).sum()))\n"
+      ],
+      "exit_code": 0,
+      "stdout": "torch.Size([1, 6])\n[[-100, -100, 25, 22, 3, 2]]\n4\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 2,
+      "args": [
+        "-c",
+        "from examples.training_core import load_teaching\npair = load_teaching()[\"preference_pair\"]\nfor name in [\"chosen\", \"rejected\"]:\n    print(name, sum(item[\"minutes\"] for item in pair[name]))\n"
+      ],
+      "exit_code": 0,
+      "stdout": "chosen 20\nrejected 90\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 3,
+      "args": [
+        "-c",
+        "from examples.training_core import probabilities_at_temperature\nfor temperature in [.5, 1, 2]:\n    p = probabilities_at_temperature([2, 1, 0], temperature)\n    print(temperature, p.numpy().round(6))\n"
+      ],
+      "exit_code": 0,
+      "stdout": "0.5 [0.866813 0.11731  0.015876]\n1 [0.665241 0.244728 0.090031]\n2 [0.50648  0.307196 0.186324]\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 4,
+      "args": [
+        "-c",
+        "import json\nfrom pathlib import Path\nresult = json.loads(Path(\"results/parameter-summary.json\").read_text(encoding=\"utf-8\"))\nprint(result[\"parameters_unchanged\"], result[\"baseline_file_unchanged\"])\nprint(result[\"instruction_training_done\"], result[\"preference_training_done\"])\n"
+      ],
+      "exit_code": 0,
+      "stdout": "True True\nFalse False\n",
+      "stderr": ""
+    },
+    {
+      "document": "exercises.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "from examples.training_core import probabilities_at_temperature\nprint([int(probabilities_at_temperature([2, 1, 0], temp).argmax()) for temp in [.5, 1, 2]])\n"
+      ],
+      "exit_code": 0,
+      "stdout": "[0, 0, 0]\n",
+      "stderr": ""
+    }
+  ],
+  "final_editor_checks": {
+    "local_links": 30,
+    "png_files": [
+      "temperature-probabilities.png",
+      "training-inference-flow.png"
+    ],
+    "prose_hard_errors": 0,
+    "snippet_runtime": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]"
+  }
+}

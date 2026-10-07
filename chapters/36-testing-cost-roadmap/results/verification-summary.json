@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-04",
+  "runs": [
+    {
+      "args": [
+        "examples/collect_results.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"price_checked_on\": \"2026-10-04\", \"price_source\": \"https://api-docs.deepseek.com/zh-cn/quick_start/pricing/?article_id=article_1779470751466_8\", \"model\": \"deepseek-flash\", \"period\": \"空闲时段，执行日期为周日\", \"rates_cny_per_million\": {\"input_cache_hit\": \"0.02\", \"input_cache_miss\": \"1\", \"output\": \"4\"}, \"requests\": 7, \"prompt_tokens\": 4266, \"completion_tokens\": 814, \"total_tokens\": 5080, \"estimated_cny_min\": \"0.00334132\", \"estimated_cny_max\": \"0.007522\", \"actual_debit_known\": false, \"reason\": \"记录没有缓存命中拆分，也未读取账单；范围按查询时公开价目估算，不能当成实际扣款。\", \"latency_seconds\": {\"n\": 7, \"median\": 1.4788, \"min\": 0.9435, \"max\": 2.0584}, \"new_api_requests_in_this_summary\": 0}\n{\"fixed_questions\": 7, \"current_expected_matches\": 7, \"original_expected_matches\": 6, \"backend_tests\": 15, \"web_tests\": 7, \"project_tests\": 22, \"fresh_environment_passed\": true, \"browser_actions_checked\": 9, \"real_api_requests\": 7, \"total_tokens\": 5080, \"online_deployment_performed\": false, \"container_built\": false, \"local_project_accepted\": true, \"new_api_requests\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "compileall",
+        "-q",
+        "examples"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "errors": [
+    [
+      "rounded_cost",
+      {
+        "args": [
+          "examples/errors/rounded_cost.py"
+        ],
+        "exit_code": 1,
+        "stdout": "错误显示 0.00\n",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\36-testing-cost-roadmap\\examples\\errors\\rounded_cost.py\", line 5, in <module>\n    assert Decimal(display)>0,'两位小数丢掉了小额估算，不能记录成实际0元'\nAssertionError: 两位小数丢掉了小额估算，不能记录成实际0元\n"
+      },
+      {
+        "args": [
+          "examples/fixed/rounded_cost.py"
+        ],
+        "exit_code": 0,
+        "stdout": "教学估算费用 0.004000 元，非实际扣款\n",
+        "stderr": ""
+      }
+    ],
+    [
+      "double_count",
+      {
+        "args": [
+          "examples/errors/double_count.py"
+        ],
+        "exit_code": 1,
+        "stdout": "错误合计 9615\n",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\36-testing-cost-roadmap\\examples\\errors\\double_count.py\", line 8, in <module>\n    assert wrong==5080,'离线核对不是新增模型请求，不能重复计入原用量'\nAssertionError: 离线核对不是新增模型请求，不能重复计入原用量\n"
+      },
+      {
+        "args": [
+          "examples/fixed/double_count.py"
+        ],
+        "exit_code": 0,
+        "stdout": "真实请求 7 Token 5080\n",
+        "stderr": ""
+      }
+    ]
+  ],
+  "acceptance": {
+    "chapter_local_complete": true,
+    "local_project_accepted": true,
+    "online_deployment_performed": false,
+    "new_api_requests": 0
+  },
+  "snippets": [
+    {
+      "document": "article.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "from collect_results import collect_usage\n\nrows = collect_usage()\nprint(\"真实请求\", len(rows))\nprint(\"输入\", sum(row[\"prompt_tokens\"] for row in rows))\nprint(\"输出\", sum(row[\"completion_tokens\"] for row in rows))\nprint(\"合计\", sum(row[\"total_tokens\"] for row in rows))\n"
+      ],
+      "exit_code": 0,
+      "stdout": "真实请求 7\n输入 4266\n输出 814\n合计 5080\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 2,
+      "args": [
+        "-c",
+        "from decimal import Decimal\n\ninput_tokens, output_tokens = 4266, 814\nlower = (Decimal(input_tokens) * Decimal(\"0.02\")\n         + Decimal(output_tokens) * 4) / 1_000_000\nupper = (Decimal(input_tokens) + Decimal(output_tokens) * 4) / 1_000_000\nprint(\"估算范围\", lower, upper, \"元\")\n"
+      ],
+      "exit_code": 0,
+      "stdout": "估算范围 0.00334132 0.007522 元\n",
+      "stderr": ""
+    },
+    {
+      "document": "exercises.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "from collect_results import collect_usage\n\nrows = collect_usage()\nassert len(rows) == 7\nassert sum(row[\"total_tokens\"] for row in rows) == 5080\nprint(\"7次真实请求，5080个Token，离线汇总没有新请求\")\n"
+      ],
+      "exit_code": 0,
+      "stdout": "7次真实请求，5080个Token，离线汇总没有新请求\n",
+      "stderr": ""
+    },
+    {
+      "document": "exercises.md",
+      "number": 2,
+      "args": [
+        "-c",
+        "from decimal import Decimal\n\nestimate = Decimal(\"0.004\")\nprint(f\"教学估算 {estimate:.6f} 元，非实际扣款\")\n"
+      ],
+      "exit_code": 0,
+      "stdout": "教学估算 0.004000 元，非实际扣款\n",
+      "stderr": ""
+    }
+  ],
+  "final_editor_checks": {
+    "local_links": 44,
+    "png_files": [
+      "learning-roadmap.png"
+    ],
+    "prose_hard_errors": 0,
+    "snippet_runtime": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]"
+  }
+}

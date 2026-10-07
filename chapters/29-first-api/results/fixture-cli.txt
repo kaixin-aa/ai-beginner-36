@@ -1,0 +1,5 @@
+本地教学响应
+API 让你的程序向另一套服务发送请求，并取得响应。
+输入 30 Token，输出 18 Token，合计 48 Token
+结束原因 stop
+记录文件 G:\002_work\003_博客\CSDN一万粉丝计划\AI零基础36讲\chapters\29-first-api\results\local-fixture.json

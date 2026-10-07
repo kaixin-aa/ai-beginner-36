@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "history": [
+    {
+      "role": "user",
+      "content": "我想入门 Python，每天只有20分钟"
+    },
+    {
+      "role": "assistant",
+      "content": "{\"goal\":\"入门 Python\",\"daily_minutes\":20,\"tasks\":[{\"title\":\"阅读变量示例\",\"minutes\":8},{\"title\":\"改写并运行两行代码\",\"minutes\":12}]}"
+    },
+    {
+      "role": "user",
+      "content": "改成10分钟，保留动手代码练习"
+    },
+    {
+      "role": "assistant",
+      "content": "{\"goal\":\"入门 Python\",\"daily_minutes\":10,\"tasks\":[{\"title\":\"改写变量示例\",\"minutes\":10}]}"
+    }
+  ],
+  "last_plan": {
+    "goal": "入门 Python",
+    "daily_minutes": 10,
+    "tasks": [
+      {
+        "title": "改写变量示例",
+        "minutes": 10
+      }
+    ]
+  },
+  "daily_minutes": 10
+}

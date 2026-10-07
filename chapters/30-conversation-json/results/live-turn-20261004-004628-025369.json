@@ -1,0 +1,40 @@
+{
+  "kind": "live_api",
+  "recorded_at": "2026-10-04T00:46:28.025870+08:00",
+  "question": "用20分钟复盘 Python 变量，只安排一项动手练习",
+  "daily_minutes": 20,
+  "attempts": [
+    {
+      "attempt": 1,
+      "valid": true,
+      "response": {
+        "kind": "live_api",
+        "provider": "deepseek",
+        "base_url": "https://api.deepseek.com",
+        "requested_model": "deepseek-flash",
+        "question": "用20分钟复盘 Python 变量，只安排一项动手练习",
+        "response_id": "947fc0d6-de92-493e-ac5e-378b6eafc290",
+        "returned_model": "deepseek-flash",
+        "answer": "{\"goal\":\"Python 变量复盘\",\"daily_minutes\":20,\"tasks\":[{\"title\":\"动手练习：创建、赋值并交换变量\",\"minutes\":20}]}",
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 170,
+          "completion_tokens": 34,
+          "total_tokens": 204
+        },
+        "complete": true,
+        "elapsed_seconds": 1.5973
+      }
+    }
+  ],
+  "plan": {
+    "goal": "Python 变量复盘",
+    "daily_minutes": 20,
+    "tasks": [
+      {
+        "title": "动手练习：创建、赋值并交换变量",
+        "minutes": 20
+      }
+    ]
+  }
+}

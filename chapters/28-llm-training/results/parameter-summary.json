@@ -1,0 +1,5246 @@
+{
+  "torch": "2.9.0+cpu",
+  "baseline_sha256": "be9e25291faca70da9dd116a0b8d349efe1e12643aede6766b37c07e47285b0a",
+  "baseline_file_unchanged": true,
+  "parameters_unchanged": true,
+  "instruction_training_done": false,
+  "preference_training_done": false,
+  "temperature_teaching_logits": [
+    2.0,
+    1.0,
+    0.0
+  ],
+  "temperature_rows": [
+    {
+      "temperature": 0.5,
+      "probabilities": [
+        0.8668133321973347,
+        0.11731042782619835,
+        0.015876239976466762
+      ],
+      "entropy_nats": 0.44105744405816344
+    },
+    {
+      "temperature": 1.0,
+      "probabilities": [
+        0.6652409557748218,
+        0.2447284710547976,
+        0.09003057317038045
+      ],
+      "entropy_nats": 0.8323955818399389
+    },
+    {
+      "temperature": 2.0,
+      "probabilities": [
+        0.506480391055654,
+        0.3071958857184984,
+        0.1863237232258476
+      ],
+      "entropy_nats": 1.0201913367268314
+    }
+  ],
+  "experiments": [
+    {
+      "name": "sample_t05",
+      "temperature": 0.5,
+      "greedy": false,
+      "top_k": null,
+      "runs": 12,
+      "unique_texts": 2,
+      "eos_stops": 12,
+      "counts": {
+        "小猫吃鱼。": 7,
+        "小猫喝水。": 5
+      },
+      "generations": [
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.5003088712692261,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5003088712692261
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4996908903121948
+                },
+                {
+                  "token": "编",
+                  "probability": 9.624882579828409e-08
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9999996423721313,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9999996423721313
+                },
+                {
+                  "token": "肉",
+                  "probability": 1.5691524879457575e-07
+                },
+                {
+                  "token": "米",
+                  "probability": 5.855386220332548e-08
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 1.0
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 1.9378088467192356e-08
+                },
+                {
+                  "token": "吃",
+                  "probability": 8.980283183745996e-09
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 1.0
+                },
+                {
+                  "token": "小",
+                  "probability": 1.2234014690193362e-08
+                },
+                {
+                  "token": "。",
+                  "probability": 1.136659211198321e-08
+                }
+              ]
+            }
+          ],
+          "temperature": 0.5,
+          "greedy": false,
+          "seed": 0,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.5003088712692261,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5003088712692261
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4996908903121948
+                },
+                {
+                  "token": "编",
+                  "probability": 9.624882579828409e-08
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9999996423721313,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9999996423721313
+                },
+                {
+                  "token": "肉",
+                  "probability": 1.5691524879457575e-07
+                },
+                {
+                  "token": "米",
+                  "probability": 5.855386220332548e-08
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 1.0
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 1.9378088467192356e-08
+                },
+                {
+                  "token": "吃",
+                  "probability": 8.980283183745996e-09
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 1.0
+                },
+                {
+                  "token": "小",
+                  "probability": 1.2234014690193362e-08
+                },
+                {
+                  "token": "。",
+                  "probability": 1.136659211198321e-08
+                }
+              ]
+            }
+          ],
+          "temperature": 0.5,
+          "greedy": false,
+          "seed": 1,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4996908903121948,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5003088712692261
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4996908903121948
+                },
+                {
+                  "token": "编",
+                  "probability": 9.624882579828409e-08
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 1.0
+                },
+                {
+                  "token": "雨",
+                  "probability": 4.520044072364726e-08
+                },
+                {
+                  "token": "码",
+                  "probability": 3.187025043871472e-08
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 1.0
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 7.490108977492582e-09
+                },
+                {
+                  "token": "学",
+                  "probability": 2.1529751315085832e-09
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 1.0
+                },
+                {
+                  "token": "小",
+                  "probability": 2.538466858936772e-08
+                },
+                {
+                  "token": "我",
+                  "probability": 9.446125659451354e-09
+                }
+              ]
+            }
+          ],
+          "temperature": 0.5,
+          "greedy": false,
+          "seed": 2,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4996908903121948,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5003088712692261
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4996908903121948
+                },
+                {
+                  "token": "编",
+                  "probability": 9.624882579828409e-08
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 1.0
+                },
+                {
+                  "token": "雨",
+                  "probability": 4.520044072364726e-08
+                },
+                {
+                  "token": "码",
+                  "probability": 3.187025043871472e-08
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 1.0
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 7.490108977492582e-09
+                },
+                {
+                  "token": "学",
+                  "probability": 2.1529751315085832e-09
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 1.0
+                },
+                {
+                  "token": "小",
+                  "probability": 2.538466858936772e-08
+                },
+                {
+                  "token": "我",
+                  "probability": 9.446125659451354e-09
+                }
+              ]
+            }
+          ],
+          "temperature": 0.5,
+          "greedy": false,
+          "seed": 3,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4996908903121948,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5003088712692261
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4996908903121948
+                },
+                {
+                  "token": "编",
+                  "probability": 9.624882579828409e-08
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 1.0
+                },
+                {
+                  "token": "雨",
+                  "probability": 4.520044072364726e-08
+                },
+                {
+                  "token": "码",
+                  "probability": 3.187025043871472e-08
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 1.0
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 7.490108977492582e-09
+                },
+                {
+                  "token": "学",
+                  "probability": 2.1529751315085832e-09
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 1.0
+                },
+                {
+                  "token": "小",
+                  "probability": 2.538466858936772e-08
+                },
+                {
+                  "token": "我",
+                  "probability": 9.446125659451354e-09
+                }
+              ]
+            }
+          ],
+          "temperature": 0.5,
+          "greedy": false,
+          "seed": 4,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.5003088712692261,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5003088712692261
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4996908903121948
+                },
+                {
+                  "token": "编",
+                  "probability": 9.624882579828409e-08
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9999996423721313,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9999996423721313
+                },
+                {
+                  "token": "肉",
+                  "probability": 1.5691524879457575e-07
+                },
+                {
+                  "token": "米",
+                  "probability": 5.855386220332548e-08
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 1.0
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 1.9378088467192356e-08
+                },
+                {
+                  "token": "吃",
+                  "probability": 8.980283183745996e-09
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 1.0
+                },
+                {
+                  "token": "小",
+                  "probability": 1.2234014690193362e-08
+                },
+                {
+                  "token": "。",
+                  "probability": 1.136659211198321e-08
+                }
+              ]
+            }
+          ],
+          "temperature": 0.5,
+          "greedy": false,
+          "seed": 5,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.5003088712692261,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5003088712692261
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4996908903121948
+                },
+                {
+                  "token": "编",
+                  "probability": 9.624882579828409e-08
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9999996423721313,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9999996423721313
+                },
+                {
+                  "token": "肉",
+                  "probability": 1.5691524879457575e-07
+                },
+                {
+                  "token": "米",
+                  "probability": 5.855386220332548e-08
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 1.0
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 1.9378088467192356e-08
+                },
+                {
+                  "token": "吃",
+                  "probability": 8.980283183745996e-09
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 1.0
+                },
+                {
+                  "token": "小",
+                  "probability": 1.2234014690193362e-08
+                },
+                {
+                  "token": "。",
+                  "probability": 1.136659211198321e-08
+                }
+              ]
+            }
+          ],
+          "temperature": 0.5,
+          "greedy": false,
+          "seed": 6,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.5003088712692261,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5003088712692261
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4996908903121948
+                },
+                {
+                  "token": "编",
+                  "probability": 9.624882579828409e-08
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9999996423721313,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9999996423721313
+                },
+                {
+                  "token": "肉",
+                  "probability": 1.5691524879457575e-07
+                },
+                {
+                  "token": "米",
+                  "probability": 5.855386220332548e-08
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 1.0
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 1.9378088467192356e-08
+                },
+                {
+                  "token": "吃",
+                  "probability": 8.980283183745996e-09
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 1.0
+                },
+                {
+                  "token": "小",
+                  "probability": 1.2234014690193362e-08
+                },
+                {
+                  "token": "。",
+                  "probability": 1.136659211198321e-08
+                }
+              ]
+            }
+          ],
+          "temperature": 0.5,
+          "greedy": false,
+          "seed": 7,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4996908903121948,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5003088712692261
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4996908903121948
+                },
+                {
+                  "token": "编",
+                  "probability": 9.624882579828409e-08
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 1.0
+                },
+                {
+                  "token": "雨",
+                  "probability": 4.520044072364726e-08
+                },
+                {
+                  "token": "码",
+                  "probability": 3.187025043871472e-08
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 1.0
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 7.490108977492582e-09
+                },
+                {
+                  "token": "学",
+                  "probability": 2.1529751315085832e-09
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 1.0
+                },
+                {
+                  "token": "小",
+                  "probability": 2.538466858936772e-08
+                },
+                {
+                  "token": "我",
+                  "probability": 9.446125659451354e-09
+                }
+              ]
+            }
+          ],
+          "temperature": 0.5,
+          "greedy": false,
+          "seed": 8,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.5003088712692261,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5003088712692261
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4996908903121948
+                },
+                {
+                  "token": "编",
+                  "probability": 9.624882579828409e-08
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9999996423721313,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9999996423721313
+                },
+                {
+                  "token": "肉",
+                  "probability": 1.5691524879457575e-07
+                },
+                {
+                  "token": "米",
+                  "probability": 5.855386220332548e-08
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 1.0
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 1.9378088467192356e-08
+                },
+                {
+                  "token": "吃",
+                  "probability": 8.980283183745996e-09
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 1.0
+                },
+                {
+                  "token": "小",
+                  "probability": 1.2234014690193362e-08
+                },
+                {
+                  "token": "。",
+                  "probability": 1.136659211198321e-08
+                }
+              ]
+            }
+          ],
+          "temperature": 0.5,
+          "greedy": false,
+          "seed": 9,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4996908903121948,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5003088712692261
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4996908903121948
+                },
+                {
+                  "token": "编",
+                  "probability": 9.624882579828409e-08
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 1.0
+                },
+                {
+                  "token": "雨",
+                  "probability": 4.520044072364726e-08
+                },
+                {
+                  "token": "码",
+                  "probability": 3.187025043871472e-08
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 1.0
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 7.490108977492582e-09
+                },
+                {
+                  "token": "学",
+                  "probability": 2.1529751315085832e-09
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 1.0
+                },
+                {
+                  "token": "小",
+                  "probability": 2.538466858936772e-08
+                },
+                {
+                  "token": "我",
+                  "probability": 9.446125659451354e-09
+                }
+              ]
+            }
+          ],
+          "temperature": 0.5,
+          "greedy": false,
+          "seed": 10,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.5003088712692261,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5003088712692261
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4996908903121948
+                },
+                {
+                  "token": "编",
+                  "probability": 9.624882579828409e-08
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9999996423721313,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9999996423721313
+                },
+                {
+                  "token": "肉",
+                  "probability": 1.5691524879457575e-07
+                },
+                {
+                  "token": "米",
+                  "probability": 5.855386220332548e-08
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 1.0
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 1.9378088467192356e-08
+                },
+                {
+                  "token": "吃",
+                  "probability": 8.980283183745996e-09
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 1.0,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 1.0
+                },
+                {
+                  "token": "小",
+                  "probability": 1.2234014690193362e-08
+                },
+                {
+                  "token": "。",
+                  "probability": 1.136659211198321e-08
+                }
+              ]
+            }
+          ],
+          "temperature": 0.5,
+          "greedy": false,
+          "seed": 11,
+          "top_k": null
+        }
+      ]
+    },
+    {
+      "name": "sample_t10",
+      "temperature": 1.0,
+      "greedy": false,
+      "top_k": null,
+      "runs": 12,
+      "unique_texts": 2,
+      "eos_stops": 12,
+      "counts": {
+        "小猫吃鱼。": 7,
+        "小猫喝水。": 5
+      },
+      "generations": [
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.49954909086227417,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.49954909086227417
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4992404580116272
+                },
+                {
+                  "token": "编",
+                  "probability": 0.0002191072708228603
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9978851675987244,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9978851675987244
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.00039528764318674803
+                },
+                {
+                  "token": "米",
+                  "probability": 0.00024146735086105764
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9992145299911499,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9992145299911499
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.00013909586414229125
+                },
+                {
+                  "token": "吃",
+                  "probability": 9.46899235714227e-05
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.9991637468338013,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.9991637468338013
+                },
+                {
+                  "token": "小",
+                  "probability": 0.00011051498586311936
+                },
+                {
+                  "token": "。",
+                  "probability": 0.00010652506171027198
+                }
+              ]
+            }
+          ],
+          "temperature": 1.0,
+          "greedy": false,
+          "seed": 0,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.49954909086227417,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.49954909086227417
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4992404580116272
+                },
+                {
+                  "token": "编",
+                  "probability": 0.0002191072708228603
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9978851675987244,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9978851675987244
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.00039528764318674803
+                },
+                {
+                  "token": "米",
+                  "probability": 0.00024146735086105764
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9992145299911499,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9992145299911499
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.00013909586414229125
+                },
+                {
+                  "token": "吃",
+                  "probability": 9.46899235714227e-05
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.9991637468338013,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.9991637468338013
+                },
+                {
+                  "token": "小",
+                  "probability": 0.00011051498586311936
+                },
+                {
+                  "token": "。",
+                  "probability": 0.00010652506171027198
+                }
+              ]
+            }
+          ],
+          "temperature": 1.0,
+          "greedy": false,
+          "seed": 1,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4992404580116272,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.49954909086227417
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4992404580116272
+                },
+                {
+                  "token": "编",
+                  "probability": 0.0002191072708228603
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 0.9988806843757629,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 0.9988806843757629
+                },
+                {
+                  "token": "雨",
+                  "probability": 0.00021236597967799753
+                },
+                {
+                  "token": "码",
+                  "probability": 0.00017832257435657084
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9995467066764832,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9995467066764832
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 8.650618838146329e-05
+                },
+                {
+                  "token": "学",
+                  "probability": 4.6379132982110605e-05
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.9991587400436401,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.9991587400436401
+                },
+                {
+                  "token": "小",
+                  "probability": 0.00015919162251520902
+                },
+                {
+                  "token": "我",
+                  "probability": 9.710941958473995e-05
+                }
+              ]
+            }
+          ],
+          "temperature": 1.0,
+          "greedy": false,
+          "seed": 2,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4992404580116272,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.49954909086227417
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4992404580116272
+                },
+                {
+                  "token": "编",
+                  "probability": 0.0002191072708228603
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 0.9988806843757629,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 0.9988806843757629
+                },
+                {
+                  "token": "雨",
+                  "probability": 0.00021236597967799753
+                },
+                {
+                  "token": "码",
+                  "probability": 0.00017832257435657084
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9995467066764832,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9995467066764832
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 8.650618838146329e-05
+                },
+                {
+                  "token": "学",
+                  "probability": 4.6379132982110605e-05
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.9991587400436401,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.9991587400436401
+                },
+                {
+                  "token": "小",
+                  "probability": 0.00015919162251520902
+                },
+                {
+                  "token": "我",
+                  "probability": 9.710941958473995e-05
+                }
+              ]
+            }
+          ],
+          "temperature": 1.0,
+          "greedy": false,
+          "seed": 3,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4992404580116272,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.49954909086227417
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4992404580116272
+                },
+                {
+                  "token": "编",
+                  "probability": 0.0002191072708228603
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 0.9988806843757629,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 0.9988806843757629
+                },
+                {
+                  "token": "雨",
+                  "probability": 0.00021236597967799753
+                },
+                {
+                  "token": "码",
+                  "probability": 0.00017832257435657084
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9995467066764832,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9995467066764832
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 8.650618838146329e-05
+                },
+                {
+                  "token": "学",
+                  "probability": 4.6379132982110605e-05
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.9991587400436401,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.9991587400436401
+                },
+                {
+                  "token": "小",
+                  "probability": 0.00015919162251520902
+                },
+                {
+                  "token": "我",
+                  "probability": 9.710941958473995e-05
+                }
+              ]
+            }
+          ],
+          "temperature": 1.0,
+          "greedy": false,
+          "seed": 4,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.49954909086227417,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.49954909086227417
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4992404580116272
+                },
+                {
+                  "token": "编",
+                  "probability": 0.0002191072708228603
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9978851675987244,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9978851675987244
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.00039528764318674803
+                },
+                {
+                  "token": "米",
+                  "probability": 0.00024146735086105764
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9992145299911499,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9992145299911499
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.00013909586414229125
+                },
+                {
+                  "token": "吃",
+                  "probability": 9.46899235714227e-05
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.9991637468338013,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.9991637468338013
+                },
+                {
+                  "token": "小",
+                  "probability": 0.00011051498586311936
+                },
+                {
+                  "token": "。",
+                  "probability": 0.00010652506171027198
+                }
+              ]
+            }
+          ],
+          "temperature": 1.0,
+          "greedy": false,
+          "seed": 5,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.49954909086227417,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.49954909086227417
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4992404580116272
+                },
+                {
+                  "token": "编",
+                  "probability": 0.0002191072708228603
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9978851675987244,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9978851675987244
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.00039528764318674803
+                },
+                {
+                  "token": "米",
+                  "probability": 0.00024146735086105764
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9992145299911499,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9992145299911499
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.00013909586414229125
+                },
+                {
+                  "token": "吃",
+                  "probability": 9.46899235714227e-05
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.9991637468338013,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.9991637468338013
+                },
+                {
+                  "token": "小",
+                  "probability": 0.00011051498586311936
+                },
+                {
+                  "token": "。",
+                  "probability": 0.00010652506171027198
+                }
+              ]
+            }
+          ],
+          "temperature": 1.0,
+          "greedy": false,
+          "seed": 6,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.49954909086227417,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.49954909086227417
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4992404580116272
+                },
+                {
+                  "token": "编",
+                  "probability": 0.0002191072708228603
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9978851675987244,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9978851675987244
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.00039528764318674803
+                },
+                {
+                  "token": "米",
+                  "probability": 0.00024146735086105764
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9992145299911499,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9992145299911499
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.00013909586414229125
+                },
+                {
+                  "token": "吃",
+                  "probability": 9.46899235714227e-05
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.9991637468338013,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.9991637468338013
+                },
+                {
+                  "token": "小",
+                  "probability": 0.00011051498586311936
+                },
+                {
+                  "token": "。",
+                  "probability": 0.00010652506171027198
+                }
+              ]
+            }
+          ],
+          "temperature": 1.0,
+          "greedy": false,
+          "seed": 7,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4992404580116272,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.49954909086227417
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4992404580116272
+                },
+                {
+                  "token": "编",
+                  "probability": 0.0002191072708228603
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 0.9988806843757629,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 0.9988806843757629
+                },
+                {
+                  "token": "雨",
+                  "probability": 0.00021236597967799753
+                },
+                {
+                  "token": "码",
+                  "probability": 0.00017832257435657084
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9995467066764832,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9995467066764832
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 8.650618838146329e-05
+                },
+                {
+                  "token": "学",
+                  "probability": 4.6379132982110605e-05
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.9991587400436401,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.9991587400436401
+                },
+                {
+                  "token": "小",
+                  "probability": 0.00015919162251520902
+                },
+                {
+                  "token": "我",
+                  "probability": 9.710941958473995e-05
+                }
+              ]
+            }
+          ],
+          "temperature": 1.0,
+          "greedy": false,
+          "seed": 8,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.49954909086227417,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.49954909086227417
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4992404580116272
+                },
+                {
+                  "token": "编",
+                  "probability": 0.0002191072708228603
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9978851675987244,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9978851675987244
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.00039528764318674803
+                },
+                {
+                  "token": "米",
+                  "probability": 0.00024146735086105764
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9992145299911499,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9992145299911499
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.00013909586414229125
+                },
+                {
+                  "token": "吃",
+                  "probability": 9.46899235714227e-05
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.9991637468338013,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.9991637468338013
+                },
+                {
+                  "token": "小",
+                  "probability": 0.00011051498586311936
+                },
+                {
+                  "token": "。",
+                  "probability": 0.00010652506171027198
+                }
+              ]
+            }
+          ],
+          "temperature": 1.0,
+          "greedy": false,
+          "seed": 9,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4992404580116272,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.49954909086227417
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4992404580116272
+                },
+                {
+                  "token": "编",
+                  "probability": 0.0002191072708228603
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 0.9988806843757629,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 0.9988806843757629
+                },
+                {
+                  "token": "雨",
+                  "probability": 0.00021236597967799753
+                },
+                {
+                  "token": "码",
+                  "probability": 0.00017832257435657084
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9995467066764832,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9995467066764832
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 8.650618838146329e-05
+                },
+                {
+                  "token": "学",
+                  "probability": 4.6379132982110605e-05
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.9991587400436401,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.9991587400436401
+                },
+                {
+                  "token": "小",
+                  "probability": 0.00015919162251520902
+                },
+                {
+                  "token": "我",
+                  "probability": 9.710941958473995e-05
+                }
+              ]
+            }
+          ],
+          "temperature": 1.0,
+          "greedy": false,
+          "seed": 10,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.49954909086227417,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.49954909086227417
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4992404580116272
+                },
+                {
+                  "token": "编",
+                  "probability": 0.0002191072708228603
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9978851675987244,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9978851675987244
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.00039528764318674803
+                },
+                {
+                  "token": "米",
+                  "probability": 0.00024146735086105764
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9992145299911499,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9992145299911499
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.00013909586414229125
+                },
+                {
+                  "token": "吃",
+                  "probability": 9.46899235714227e-05
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.9991637468338013,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.9991637468338013
+                },
+                {
+                  "token": "小",
+                  "probability": 0.00011051498586311936
+                },
+                {
+                  "token": "。",
+                  "probability": 0.00010652506171027198
+                }
+              ]
+            }
+          ],
+          "temperature": 1.0,
+          "greedy": false,
+          "seed": 11,
+          "top_k": null
+        }
+      ]
+    },
+    {
+      "name": "sample_t20",
+      "temperature": 2.0,
+      "greedy": false,
+      "top_k": null,
+      "runs": 12,
+      "unique_texts": 6,
+      "eos_stops": 12,
+      "counts": {
+        "小猫吃读。": 1,
+        "小猫吃鱼。": 3,
+        "小猫喝水。": 5,
+        "小猫吃鱼我": 1,
+        "小猫吃鱼。练今天。": 1,
+        "小猫雨鱼。习小读练下我。": 1
+      },
+      "generations": [
+        {
+          "prompt": "小猫",
+          "text": "小猫吃读。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.454428493976593,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.454428493976593
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4542880952358246
+                },
+                {
+                  "token": "编",
+                  "probability": 0.009517104364931583
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 27,
+              "selected_token": "读",
+              "selected_probability": 0.004721345845609903,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.8328816294670105
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.01657675765454769
+                },
+                {
+                  "token": "米",
+                  "probability": 0.012956037186086178
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃读",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.836849570274353,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.836849570274353
+                },
+                {
+                  "token": "学",
+                  "probability": 0.017649751156568527
+                },
+                {
+                  "token": "小",
+                  "probability": 0.014668828807771206
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃读。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.8860070705413818,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.8860070705413818
+                },
+                {
+                  "token": "。",
+                  "probability": 0.012409953400492668
+                },
+                {
+                  "token": "小",
+                  "probability": 0.008913930505514145
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 0,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.454428493976593,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.454428493976593
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4542880952358246
+                },
+                {
+                  "token": "编",
+                  "probability": 0.009517104364931583
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.8328816294670105,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.8328816294670105
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.01657675765454769
+                },
+                {
+                  "token": "米",
+                  "probability": 0.012956037186086178
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.8941797018051147,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.8941797018051147
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.010550001636147499
+                },
+                {
+                  "token": "吃",
+                  "probability": 0.00870457012206316
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.8848269581794739,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.8848269581794739
+                },
+                {
+                  "token": "小",
+                  "probability": 0.009305733256042004
+                },
+                {
+                  "token": "。",
+                  "probability": 0.009136207401752472
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 1,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4542880952358246,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.454428493976593
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4542880952358246
+                },
+                {
+                  "token": "编",
+                  "probability": 0.009517104364931583
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 0.8804637789726257,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 0.8804637789726257
+                },
+                {
+                  "token": "雨",
+                  "probability": 0.012837993912398815
+                },
+                {
+                  "token": "码",
+                  "probability": 0.011764077469706535
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9137747883796692,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9137747883796692
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.00850082840770483
+                },
+                {
+                  "token": "学",
+                  "probability": 0.006224420387297869
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.886656641960144,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.886656641960144
+                },
+                {
+                  "token": "小",
+                  "probability": 0.011191759258508682
+                },
+                {
+                  "token": "我",
+                  "probability": 0.008741157129406929
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 2,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4542880952358246,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.454428493976593
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4542880952358246
+                },
+                {
+                  "token": "编",
+                  "probability": 0.009517104364931583
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 0.8804637789726257,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 0.8804637789726257
+                },
+                {
+                  "token": "雨",
+                  "probability": 0.012837993912398815
+                },
+                {
+                  "token": "码",
+                  "probability": 0.011764077469706535
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9137747883796692,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9137747883796692
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.00850082840770483
+                },
+                {
+                  "token": "学",
+                  "probability": 0.006224420387297869
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.886656641960144,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.886656641960144
+                },
+                {
+                  "token": "小",
+                  "probability": 0.011191759258508682
+                },
+                {
+                  "token": "我",
+                  "probability": 0.008741157129406929
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 3,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4542880952358246,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.454428493976593
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4542880952358246
+                },
+                {
+                  "token": "编",
+                  "probability": 0.009517104364931583
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 0.8804637789726257,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 0.8804637789726257
+                },
+                {
+                  "token": "雨",
+                  "probability": 0.012837993912398815
+                },
+                {
+                  "token": "码",
+                  "probability": 0.011764077469706535
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9137747883796692,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9137747883796692
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.00850082840770483
+                },
+                {
+                  "token": "学",
+                  "probability": 0.006224420387297869
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.886656641960144,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.886656641960144
+                },
+                {
+                  "token": "小",
+                  "probability": 0.011191759258508682
+                },
+                {
+                  "token": "我",
+                  "probability": 0.008741157129406929
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 4,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼我",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.454428493976593,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.454428493976593
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4542880952358246
+                },
+                {
+                  "token": "编",
+                  "probability": 0.009517104364931583
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.8328816294670105,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.8328816294670105
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.01657675765454769
+                },
+                {
+                  "token": "米",
+                  "probability": 0.012956037186086178
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 16,
+              "selected_token": "我",
+              "selected_probability": 0.00521219102665782,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.8941797018051147
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.010550001636147499
+                },
+                {
+                  "token": "吃",
+                  "probability": 0.00870457012206316
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼我",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.6789711713790894,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.6789711713790894
+                },
+                {
+                  "token": "雨",
+                  "probability": 0.05122843757271767
+                },
+                {
+                  "token": "。",
+                  "probability": 0.034991007298231125
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 5,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.454428493976593,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.454428493976593
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4542880952358246
+                },
+                {
+                  "token": "编",
+                  "probability": 0.009517104364931583
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.8328816294670105,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.8328816294670105
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.01657675765454769
+                },
+                {
+                  "token": "米",
+                  "probability": 0.012956037186086178
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.8941797018051147,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.8941797018051147
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.010550001636147499
+                },
+                {
+                  "token": "吃",
+                  "probability": 0.00870457012206316
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.8848269581794739,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.8848269581794739
+                },
+                {
+                  "token": "小",
+                  "probability": 0.009305733256042004
+                },
+                {
+                  "token": "。",
+                  "probability": 0.009136207401752472
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 6,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.454428493976593,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.454428493976593
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4542880952358246
+                },
+                {
+                  "token": "编",
+                  "probability": 0.009517104364931583
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.8328816294670105,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.8328816294670105
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.01657675765454769
+                },
+                {
+                  "token": "米",
+                  "probability": 0.012956037186086178
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.8941797018051147,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.8941797018051147
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.010550001636147499
+                },
+                {
+                  "token": "吃",
+                  "probability": 0.00870457012206316
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.8848269581794739,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.8848269581794739
+                },
+                {
+                  "token": "小",
+                  "probability": 0.009305733256042004
+                },
+                {
+                  "token": "。",
+                  "probability": 0.009136207401752472
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 7,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4542880952358246,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.454428493976593
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4542880952358246
+                },
+                {
+                  "token": "编",
+                  "probability": 0.009517104364931583
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 0.8804637789726257,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 0.8804637789726257
+                },
+                {
+                  "token": "雨",
+                  "probability": 0.012837993912398815
+                },
+                {
+                  "token": "码",
+                  "probability": 0.011764077469706535
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9137747883796692,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9137747883796692
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.00850082840770483
+                },
+                {
+                  "token": "学",
+                  "probability": 0.006224420387297869
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.886656641960144,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.886656641960144
+                },
+                {
+                  "token": "小",
+                  "probability": 0.011191759258508682
+                },
+                {
+                  "token": "我",
+                  "probability": 0.008741157129406929
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 8,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。练今天。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.454428493976593,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.454428493976593
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4542880952358246
+                },
+                {
+                  "token": "编",
+                  "probability": 0.009517104364931583
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.8328816294670105,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.8328816294670105
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.01657675765454769
+                },
+                {
+                  "token": "米",
+                  "probability": 0.012956037186086178
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.8941797018051147,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.8941797018051147
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.010550001636147499
+                },
+                {
+                  "token": "吃",
+                  "probability": 0.00870457012206316
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 24,
+              "selected_token": "练",
+              "selected_probability": 0.0047541228123009205,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.8848269581794739
+                },
+                {
+                  "token": "小",
+                  "probability": 0.009305733256042004
+                },
+                {
+                  "token": "。",
+                  "probability": 0.009136207401752472
+                }
+              ]
+            },
+            {
+              "step": 5,
+              "prefix_before": "小猫吃鱼。练",
+              "input_tokens": 7,
+              "selected_id": 7,
+              "selected_token": "今",
+              "selected_probability": 0.014630666933953762,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.6228780746459961
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.17949742078781128
+                },
+                {
+                  "token": "下",
+                  "probability": 0.024846037849783897
+                }
+              ]
+            },
+            {
+              "step": 6,
+              "prefix_before": "小猫吃鱼。练今",
+              "input_tokens": 8,
+              "selected_id": 13,
+              "selected_token": "天",
+              "selected_probability": 0.04552517458796501,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.29984256625175476
+                },
+                {
+                  "token": "代",
+                  "probability": 0.14695888757705688
+                },
+                {
+                  "token": "鱼",
+                  "probability": 0.09769459813833237
+                }
+              ]
+            },
+            {
+              "step": 7,
+              "prefix_before": "小猫吃鱼。练今天",
+              "input_tokens": 9,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.21362920105457306,
+              "top3": [
+                {
+                  "token": "代",
+                  "probability": 0.2478189468383789
+                },
+                {
+                  "token": "。",
+                  "probability": 0.21362920105457306
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.14492329955101013
+                }
+              ]
+            },
+            {
+              "step": 8,
+              "prefix_before": "小猫吃鱼。练今天。",
+              "input_tokens": 10,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.8313169479370117,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.8313169479370117
+                },
+                {
+                  "token": "下",
+                  "probability": 0.021129462867975235
+                },
+                {
+                  "token": "。",
+                  "probability": 0.015569505281746387
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 9,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4542880952358246,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.454428493976593
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4542880952358246
+                },
+                {
+                  "token": "编",
+                  "probability": 0.009517104364931583
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 0.8804637789726257,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 0.8804637789726257
+                },
+                {
+                  "token": "雨",
+                  "probability": 0.012837993912398815
+                },
+                {
+                  "token": "码",
+                  "probability": 0.011764077469706535
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9137747883796692,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9137747883796692
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.00850082840770483
+                },
+                {
+                  "token": "学",
+                  "probability": 0.006224420387297869
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.886656641960144,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.886656641960144
+                },
+                {
+                  "token": "小",
+                  "probability": 0.011191759258508682
+                },
+                {
+                  "token": "我",
+                  "probability": 0.008741157129406929
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 10,
+          "top_k": null
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫雨鱼。习小读练下我。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 28,
+              "selected_token": "雨",
+              "selected_probability": 0.00815996527671814,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.454428493976593
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4542880952358246
+                },
+                {
+                  "token": "编",
+                  "probability": 0.009517104364931583
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫雨",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.45776787400245667,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.45776787400245667
+                },
+                {
+                  "token": "。",
+                  "probability": 0.1478443741798401
+                },
+                {
+                  "token": "天",
+                  "probability": 0.05576260760426521
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫雨鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.8952033519744873,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.8952033519744873
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.01077231951057911
+                },
+                {
+                  "token": "吃",
+                  "probability": 0.008349891752004623
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫雨鱼。",
+              "input_tokens": 6,
+              "selected_id": 5,
+              "selected_token": "习",
+              "selected_probability": 0.0032128694001585245,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.8848766088485718
+                },
+                {
+                  "token": "。",
+                  "probability": 0.009815963916480541
+                },
+                {
+                  "token": "小",
+                  "probability": 0.008928664959967136
+                }
+              ]
+            },
+            {
+              "step": 5,
+              "prefix_before": "小猫雨鱼。习",
+              "input_tokens": 7,
+              "selected_id": 15,
+              "selected_token": "小",
+              "selected_probability": 0.03614240884780884,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.5439746975898743
+                },
+                {
+                  "token": "代",
+                  "probability": 0.09653839468955994
+                },
+                {
+                  "token": "水",
+                  "probability": 0.03985711932182312
+                }
+              ]
+            },
+            {
+              "step": 6,
+              "prefix_before": "小猫雨鱼。习小",
+              "input_tokens": 8,
+              "selected_id": 27,
+              "selected_token": "读",
+              "selected_probability": 0.06571069359779358,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.4194237291812897
+                },
+                {
+                  "token": "代",
+                  "probability": 0.10799185931682587
+                },
+                {
+                  "token": "读",
+                  "probability": 0.06571069359779358
+                }
+              ]
+            },
+            {
+              "step": 7,
+              "prefix_before": "小猫雨鱼。习小读",
+              "input_tokens": 9,
+              "selected_id": 24,
+              "selected_token": "练",
+              "selected_probability": 0.0187393706291914,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.19820411503314972
+                },
+                {
+                  "token": "读",
+                  "probability": 0.10955028235912323
+                },
+                {
+                  "token": "小",
+                  "probability": 0.09599462896585464
+                }
+              ]
+            },
+            {
+              "step": 8,
+              "prefix_before": "小猫雨鱼。习小读练",
+              "input_tokens": 10,
+              "selected_id": 4,
+              "selected_token": "下",
+              "selected_probability": 0.0674571767449379,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.6617884635925293
+                },
+                {
+                  "token": "下",
+                  "probability": 0.0674571767449379
+                },
+                {
+                  "token": "晴",
+                  "probability": 0.030467579141259193
+                }
+              ]
+            },
+            {
+              "step": 9,
+              "prefix_before": "小猫雨鱼。习小读练下",
+              "input_tokens": 11,
+              "selected_id": 16,
+              "selected_token": "我",
+              "selected_probability": 0.015293721109628677,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.36833009123802185
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.2715594172477722
+                },
+                {
+                  "token": "雨",
+                  "probability": 0.09154992550611496
+                }
+              ]
+            },
+            {
+              "step": 10,
+              "prefix_before": "小猫雨鱼。习小读练下我",
+              "input_tokens": 12,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.4673217833042145,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.4673217833042145
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.14441539347171783
+                },
+                {
+                  "token": "吃",
+                  "probability": 0.05125841125845909
+                }
+              ]
+            },
+            {
+              "step": 11,
+              "prefix_before": "小猫雨鱼。习小读练下我。",
+              "input_tokens": 13,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.7023704648017883,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.7023704648017883
+                },
+                {
+                  "token": "狗",
+                  "probability": 0.03356369957327843
+                },
+                {
+                  "token": "练",
+                  "probability": 0.027925271540880203
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 11,
+          "top_k": null
+        }
+      ]
+    },
+    {
+      "name": "sample_t20_top2",
+      "temperature": 2.0,
+      "greedy": false,
+      "top_k": 2,
+      "runs": 12,
+      "unique_texts": 2,
+      "eos_stops": 12,
+      "counts": {
+        "小猫吃鱼。": 7,
+        "小猫喝水。": 5
+      },
+      "generations": [
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.5000772476196289,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5000772476196289
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4999227523803711
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9804854393005371,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9804854393005371
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.019514501094818115
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9883390665054321,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9883390665054321
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.011660943739116192
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.989592432975769,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.989592432975769
+                },
+                {
+                  "token": "小",
+                  "probability": 0.010407553054392338
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 0,
+          "top_k": 2
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.5000772476196289,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5000772476196289
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4999227523803711
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9804854393005371,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9804854393005371
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.019514501094818115
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9883390665054321,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9883390665054321
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.011660943739116192
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.989592432975769,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.989592432975769
+                },
+                {
+                  "token": "小",
+                  "probability": 0.010407553054392338
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 1,
+          "top_k": 2
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4999227523803711,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5000772476196289
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4999227523803711
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 0.985628604888916,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 0.985628604888916
+                },
+                {
+                  "token": "雨",
+                  "probability": 0.014371396042406559
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9907827973365784,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9907827973365784
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.009217231534421444
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.9875348806381226,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.9875348806381226
+                },
+                {
+                  "token": "小",
+                  "probability": 0.01246508676558733
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 2,
+          "top_k": 2
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4999227523803711,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5000772476196289
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4999227523803711
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 0.985628604888916,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 0.985628604888916
+                },
+                {
+                  "token": "雨",
+                  "probability": 0.014371396042406559
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9907827973365784,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9907827973365784
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.009217231534421444
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.9875348806381226,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.9875348806381226
+                },
+                {
+                  "token": "小",
+                  "probability": 0.01246508676558733
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 3,
+          "top_k": 2
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4999227523803711,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5000772476196289
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4999227523803711
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 0.985628604888916,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 0.985628604888916
+                },
+                {
+                  "token": "雨",
+                  "probability": 0.014371396042406559
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9907827973365784,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9907827973365784
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.009217231534421444
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.9875348806381226,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.9875348806381226
+                },
+                {
+                  "token": "小",
+                  "probability": 0.01246508676558733
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 4,
+          "top_k": 2
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.5000772476196289,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5000772476196289
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4999227523803711
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9804854393005371,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9804854393005371
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.019514501094818115
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9883390665054321,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9883390665054321
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.011660943739116192
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.989592432975769,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.989592432975769
+                },
+                {
+                  "token": "小",
+                  "probability": 0.010407553054392338
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 5,
+          "top_k": 2
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.5000772476196289,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5000772476196289
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4999227523803711
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9804854393005371,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9804854393005371
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.019514501094818115
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9883390665054321,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9883390665054321
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.011660943739116192
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.989592432975769,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.989592432975769
+                },
+                {
+                  "token": "小",
+                  "probability": 0.010407553054392338
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 6,
+          "top_k": 2
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.5000772476196289,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5000772476196289
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4999227523803711
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9804854393005371,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9804854393005371
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.019514501094818115
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9883390665054321,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9883390665054321
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.011660943739116192
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.989592432975769,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.989592432975769
+                },
+                {
+                  "token": "小",
+                  "probability": 0.010407553054392338
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 7,
+          "top_k": 2
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4999227523803711,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5000772476196289
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4999227523803711
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 0.985628604888916,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 0.985628604888916
+                },
+                {
+                  "token": "雨",
+                  "probability": 0.014371396042406559
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9907827973365784,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9907827973365784
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.009217231534421444
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.9875348806381226,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.9875348806381226
+                },
+                {
+                  "token": "小",
+                  "probability": 0.01246508676558733
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 8,
+          "top_k": 2
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.5000772476196289,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5000772476196289
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4999227523803711
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9804854393005371,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9804854393005371
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.019514501094818115
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9883390665054321,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9883390665054321
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.011660943739116192
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.989592432975769,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.989592432975769
+                },
+                {
+                  "token": "小",
+                  "probability": 0.010407553054392338
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 9,
+          "top_k": 2
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫喝水。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 12,
+              "selected_token": "喝",
+              "selected_probability": 0.4999227523803711,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5000772476196289
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4999227523803711
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫喝",
+              "input_tokens": 4,
+              "selected_id": 18,
+              "selected_token": "水",
+              "selected_probability": 0.985628604888916,
+              "top3": [
+                {
+                  "token": "水",
+                  "probability": 0.985628604888916
+                },
+                {
+                  "token": "雨",
+                  "probability": 0.014371396042406559
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫喝水",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9907827973365784,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9907827973365784
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.009217231534421444
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫喝水。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.9875348806381226,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.9875348806381226
+                },
+                {
+                  "token": "小",
+                  "probability": 0.01246508676558733
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 10,
+          "top_k": 2
+        },
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.5000772476196289,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.5000772476196289
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4999227523803711
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.9804854393005371,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.9804854393005371
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.019514501094818115
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.9883390665054321,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.9883390665054321
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.011660943739116192
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.989592432975769,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.989592432975769
+                },
+                {
+                  "token": "小",
+                  "probability": 0.010407553054392338
+                },
+                {
+                  "token": "<PAD>",
+                  "probability": 0.0
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": false,
+          "seed": 11,
+          "top_k": 2
+        }
+      ]
+    },
+    {
+      "name": "greedy_t20",
+      "temperature": 2.0,
+      "greedy": true,
+      "top_k": null,
+      "runs": 1,
+      "unique_texts": 1,
+      "eos_stops": 1,
+      "counts": {
+        "小猫吃鱼。": 1
+      },
+      "generations": [
+        {
+          "prompt": "小猫",
+          "text": "小猫吃鱼。",
+          "stop_reason": "eos",
+          "trace": [
+            {
+              "step": 1,
+              "prefix_before": "小猫",
+              "input_tokens": 3,
+              "selected_id": 11,
+              "selected_token": "吃",
+              "selected_probability": 0.454428493976593,
+              "top3": [
+                {
+                  "token": "吃",
+                  "probability": 0.454428493976593
+                },
+                {
+                  "token": "喝",
+                  "probability": 0.4542880952358246
+                },
+                {
+                  "token": "编",
+                  "probability": 0.009517104364931583
+                }
+              ]
+            },
+            {
+              "step": 2,
+              "prefix_before": "小猫吃",
+              "input_tokens": 4,
+              "selected_id": 29,
+              "selected_token": "鱼",
+              "selected_probability": 0.8328816294670105,
+              "top3": [
+                {
+                  "token": "鱼",
+                  "probability": 0.8328816294670105
+                },
+                {
+                  "token": "肉",
+                  "probability": 0.01657675765454769
+                },
+                {
+                  "token": "米",
+                  "probability": 0.012956037186086178
+                }
+              ]
+            },
+            {
+              "step": 3,
+              "prefix_before": "小猫吃鱼",
+              "input_tokens": 5,
+              "selected_id": 3,
+              "selected_token": "。",
+              "selected_probability": 0.8941797018051147,
+              "top3": [
+                {
+                  "token": "。",
+                  "probability": 0.8941797018051147
+                },
+                {
+                  "token": "<EOS>",
+                  "probability": 0.010550001636147499
+                },
+                {
+                  "token": "吃",
+                  "probability": 0.00870457012206316
+                }
+              ]
+            },
+            {
+              "step": 4,
+              "prefix_before": "小猫吃鱼。",
+              "input_tokens": 6,
+              "selected_id": 2,
+              "selected_token": "<EOS>",
+              "selected_probability": 0.8848269581794739,
+              "top3": [
+                {
+                  "token": "<EOS>",
+                  "probability": 0.8848269581794739
+                },
+                {
+                  "token": "小",
+                  "probability": 0.009305733256042004
+                },
+                {
+                  "token": "。",
+                  "probability": 0.009136207401752472
+                }
+              ]
+            }
+          ],
+          "temperature": 2.0,
+          "greedy": true,
+          "seed": 42,
+          "top_k": null
+        }
+      ]
+    }
+  ],
+  "response_mask_demo": {
+    "prompt": "我学",
+    "response": "编程。",
+    "input_ids": [
+      [
+        1,
+        16,
+        14,
+        25,
+        22,
+        3
+      ]
+    ],
+    "targets": [
+      [
+        -100,
+        -100,
+        25,
+        22,
+        3,
+        2
+      ]
+    ],
+    "valid_response_targets": 4,
+    "loss_without_update": 0.0016950509743764997
+  },
+  "preference_minutes": {
+    "chosen": 20,
+    "rejected": 90
+  },
+  "total_generated_runs": 49
+}

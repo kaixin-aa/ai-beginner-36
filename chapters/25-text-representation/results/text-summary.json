@@ -1,0 +1,349 @@
+{
+  "provenance": "原创虚构教学句子及人工指定向量，2026-10-03。没有训练或下载语义模型。",
+  "embedding_learned": false,
+  "sentences": [
+    {
+      "text": "我用电脑学习Python",
+      "tokens": [
+        "我",
+        "用",
+        "电脑",
+        "学习",
+        "Python"
+      ],
+      "ids": [
+        13,
+        20,
+        21,
+        10,
+        0
+      ],
+      "vector": [
+        0.6,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "text": "我在计算机上学编程",
+      "tokens": [
+        "我",
+        "在",
+        "计算机",
+        "上",
+        "学",
+        "编程"
+      ],
+      "ids": [
+        13,
+        7,
+        23,
+        1,
+        9,
+        22
+      ],
+      "vector": [
+        0.5,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "text": "我今天在电脑上买水果",
+      "tokens": [
+        "我",
+        "今天",
+        "在",
+        "电脑",
+        "上",
+        "买",
+        "水果"
+      ],
+      "ids": [
+        13,
+        6,
+        7,
+        21,
+        1,
+        5,
+        17
+      ],
+      "vector": [
+        0.14285714285714285,
+        0.0,
+        0.0,
+        0.2857142857142857
+      ]
+    },
+    {
+      "text": "小猫坐在桌子上",
+      "tokens": [
+        "小猫",
+        "坐",
+        "在",
+        "桌子",
+        "上"
+      ],
+      "ids": [
+        11,
+        8,
+        7,
+        16,
+        1
+      ],
+      "vector": [
+        0.0,
+        0.4,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "text": "猫咪趴在书桌旁",
+      "tokens": [
+        "猫咪",
+        "趴",
+        "在",
+        "书桌",
+        "旁"
+      ],
+      "ids": [
+        19,
+        24,
+        7,
+        4,
+        14
+      ],
+      "vector": [
+        0.0,
+        0.4,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "text": "今天下雨带雨伞",
+      "tokens": [
+        "今天",
+        "下雨",
+        "带",
+        "雨伞"
+      ],
+      "ids": [
+        6,
+        2,
+        12,
+        25
+      ],
+      "vector": [
+        0.0,
+        0.0,
+        0.5,
+        0.0
+      ]
+    },
+    {
+      "text": "猫在桌上",
+      "tokens": [
+        "猫",
+        "在",
+        "桌",
+        "上"
+      ],
+      "ids": [
+        18,
+        7,
+        15,
+        1
+      ],
+      "vector": [
+        0.0,
+        0.5,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "text": "猫不在桌上",
+      "tokens": [
+        "猫",
+        "不",
+        "在",
+        "桌",
+        "上"
+      ],
+      "ids": [
+        18,
+        3,
+        7,
+        15,
+        1
+      ],
+      "vector": [
+        0.0,
+        0.4,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "character_vocabulary": [
+    "P",
+    "h",
+    "n",
+    "o",
+    "t",
+    "y",
+    "上",
+    "下",
+    "不",
+    "习",
+    "书",
+    "买",
+    "今",
+    "伞",
+    "咪",
+    "在",
+    "坐",
+    "天",
+    "子",
+    "学",
+    "小",
+    "带",
+    "我",
+    "旁",
+    "机",
+    "果",
+    "桌",
+    "水",
+    "猫",
+    "用",
+    "电",
+    "程",
+    "算",
+    "编",
+    "脑",
+    "计",
+    "趴",
+    "雨"
+  ],
+  "pairs": [
+    {
+      "left": 0,
+      "right": 1,
+      "case": "换词表达",
+      "character_cosine": 0.19245008972987526,
+      "teaching_topic_cosine": 1.0
+    },
+    {
+      "left": 0,
+      "right": 2,
+      "case": "共享电脑但任务变化",
+      "character_cosine": 0.27386127875258304,
+      "teaching_topic_cosine": 0.447213595499958
+    },
+    {
+      "left": 0,
+      "right": 5,
+      "case": "主题无关",
+      "character_cosine": 0.0,
+      "teaching_topic_cosine": 0.0
+    },
+    {
+      "left": 3,
+      "right": 4,
+      "case": "近义场景",
+      "character_cosine": 0.4285714285714285,
+      "teaching_topic_cosine": 1.0
+    },
+    {
+      "left": 6,
+      "right": 7,
+      "case": "否定改变事实",
+      "character_cosine": 0.8944271909999159,
+      "teaching_topic_cosine": 1.0
+    }
+  ],
+  "bpe_rules": [
+    {
+      "step": 1,
+      "left": "l",
+      "right": "o",
+      "count": 8,
+      "merged": "lo"
+    },
+    {
+      "step": 2,
+      "left": "lo",
+      "right": "w",
+      "count": 8,
+      "merged": "low"
+    },
+    {
+      "step": 3,
+      "left": "e",
+      "right": "w",
+      "count": 6,
+      "merged": "ew"
+    },
+    {
+      "step": 4,
+      "left": "n",
+      "right": "ew",
+      "count": 6,
+      "merged": "new"
+    },
+    {
+      "step": 5,
+      "left": "e",
+      "right": "r",
+      "count": 4,
+      "merged": "er"
+    },
+    {
+      "step": 6,
+      "left": "e",
+      "right": "s",
+      "count": 2,
+      "merged": "es"
+    }
+  ],
+  "bpe_splits": {
+    "low": [
+      "low"
+    ],
+    "lower": [
+      "low",
+      "er"
+    ],
+    "lowest": [
+      "low",
+      "es",
+      "t"
+    ],
+    "new": [
+      "new"
+    ],
+    "newer": [
+      "new",
+      "er"
+    ],
+    "newest": [
+      "new",
+      "es",
+      "t"
+    ]
+  },
+  "new_word_lowest": [
+    "low",
+    "es",
+    "t"
+  ],
+  "new_word_newlow": [
+    "new",
+    "low"
+  ],
+  "bpe_base": "Unicode characters; within supplied words only; not a byte-level or production tokenizer"
+}

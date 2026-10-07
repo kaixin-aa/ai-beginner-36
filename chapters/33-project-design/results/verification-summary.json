@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-04",
+  "python": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]",
+  "runs": [
+    {
+      "args": [
+        "examples/skeleton_demo.py"
+      ],
+      "cwd": "G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\33-project-design",
+      "exit_code": 0,
+      "stdout": "骨架参数检查 3 种接收 4 种拒绝；空问题拒绝；业务模块仍待实现\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "knowledge_app"
+      ],
+      "cwd": "G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\projects\\knowledge-assistant",
+      "exit_code": 0,
+      "stdout": "{\n  \"stage\": \"design_skeleton\",\n  \"implemented\": [\n    \"上传参数边界\",\n    \"问题参数边界\",\n    \"引用数据格式\"\n  ],\n  \"modules\": {\n    \"ingestion\": {\n      \"chapter\": 34,\n      \"status\": \"planned\",\n      \"purpose\": \"校验与保存原文件，抽取带页码的文本\"\n    },\n    \"storage\": {\n      \"chapter\": 34,\n      \"status\": \"planned\",\n      \"purpose\": \"文档登记、哈希及删除范围\"\n    },\n    \"indexing\": {\n      \"chapter\": 34,\n      \"status\": \"planned\",\n      \"purpose\": \"带版本的切分、编码、索引更新\"\n    },\n    \"qa\": {\n      \"chapter\": 34,\n      \"status\": \"planned\",\n      \"purpose\": \"检索、真实生成与逐字引用核对\"\n    },\n    \"web\": {\n      \"chapter\": 35,\n      \"status\": \"planned\",\n      \"purpose\": \"本机上传、提问、引用及状态页面\"\n    }\n  },\n  \"default_listen\": \"127.0.0.1\",\n  \"external_publish\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "compileall",
+        "-q",
+        "knowledge_app"
+      ],
+      "cwd": "G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\projects\\knowledge-assistant",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "compileall",
+        "-q",
+        "examples"
+      ],
+      "cwd": "G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\33-project-design",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "examples/draw_design.py"
+      ],
+      "cwd": "G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\33-project-design",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "errors": [
+    [
+      "empty_question",
+      {
+        "args": [
+          "examples/errors/empty_question.py"
+        ],
+        "cwd": "G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\33-project-design",
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\33-project-design\\examples\\errors\\empty_question.py\", line 5, in <module>\n    AskRequest('   ')\n  File \"<string>\", line 4, in __init__\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\projects\\knowledge-assistant\\knowledge_app\\contracts.py\", line 46, in __post_init__\n    raise ValueError(\"问题必须为1至300字符\")\nValueError: 问题必须为1至300字符\n"
+      },
+      {
+        "args": [
+          "examples/fixed/empty_question.py"
+        ],
+        "cwd": "G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\33-project-design",
+        "exit_code": 0,
+        "stdout": "柳叶学习室周一开放吗？\n",
+        "stderr": ""
+      }
+    ],
+    [
+      "upload_path",
+      {
+        "args": [
+          "examples/errors/upload_path.py"
+        ],
+        "cwd": "G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\33-project-design",
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\33-project-design\\examples\\errors\\upload_path.py\", line 5, in <module>\n    FilePolicy().validate('../secret.txt',10)\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\projects\\knowledge-assistant\\knowledge_app\\contracts.py\", line 16, in validate\n    raise ValueError(\"只接收文件名，不接收路径\")\nValueError: 只接收文件名，不接收路径\n"
+      },
+      {
+        "args": [
+          "examples/fixed/upload_path.py"
+        ],
+        "cwd": "G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\33-project-design",
+        "exit_code": 0,
+        "stdout": ".txt\n",
+        "stderr": ""
+      }
+    ]
+  ],
+  "acceptance": {
+    "chapter_complete": true,
+    "design_skeleton_only": true
+  },
+  "live_api_requests": 0,
+  "snippets": [
+    {
+      "document": "article.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "from contracts_demo import FilePolicy\npolicy = FilePolicy()\nprint(policy.validate(\"notes.md\", 100))\ntry:\n    policy.validate(\"../secret.txt\", 100)\nexcept ValueError as error:\n    print(error)\n"
+      ],
+      "exit_code": 0,
+      "stdout": ".md\n只接收文件名，不接收路径\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 2,
+      "args": [
+        "-c",
+        "from contracts_demo import AskRequest\nprint(AskRequest(\"柳叶学习室周一开放吗？\").question)\ntry:\n    AskRequest(\"   \")\nexcept ValueError as error:\n    print(error)\n"
+      ],
+      "exit_code": 0,
+      "stdout": "柳叶学习室周一开放吗？\n问题必须为1至300字符\n",
+      "stderr": ""
+    },
+    {
+      "document": "exercises.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "from contracts_demo import FilePolicy\npolicy = FilePolicy()\ntry:\n    policy.validate(\"empty.txt\", 0)\nexcept ValueError as error:\n    print(error)\nprint(policy.validate(\"notes.txt\", 10))\n"
+      ],
+      "exit_code": 0,
+      "stdout": "文件必须非空且不超过1000000字节\n.txt\n",
+      "stderr": ""
+    },
+    {
+      "document": "exercises.md",
+      "number": 2,
+      "args": [
+        "-c",
+        "from contracts_demo import describe\nplan = describe()\nprint(plan[\"stage\"])\nprint(len(plan[\"implemented\"]))\nprint([item[\"status\"] for item in plan[\"modules\"].values()])\n"
+      ],
+      "exit_code": 0,
+      "stdout": "design_skeleton\n3\n['planned', 'planned', 'planned', 'planned', 'planned']\n",
+      "stderr": ""
+    }
+  ],
+  "final_editor_checks": {
+    "local_links": 30,
+    "png_files": [
+      "module-map.png",
+      "page-sketch.png",
+      "request-flow.png"
+    ],
+    "prose_hard_errors": 0,
+    "snippet_runtime": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]"
+  }
+}

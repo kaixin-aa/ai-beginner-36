@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-04",
+  "runs": [
+    {
+      "args": [
+        "examples/draw_flow.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "compileall",
+        "-q",
+        "examples"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "errors": [
+    [
+      "invalid_upload",
+      {
+        "args": [
+          "examples/errors/invalid_upload.py"
+        ],
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\35-web-deployment\\examples\\errors\\invalid_upload.py\", line 9, in <module>\n    urlopen(request)\n  File \"G:\\Python\\Lib\\urllib\\request.py\", line 215, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\Python\\Lib\\urllib\\request.py\", line 521, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\n  File \"G:\\Python\\Lib\\urllib\\request.py\", line 630, in http_response\n    response = self.parent.error(\n               ^^^^^^^^^^^^^^^^^^\n  File \"G:\\Python\\Lib\\urllib\\request.py\", line 559, in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\Python\\Lib\\urllib\\request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"G:\\Python\\Lib\\urllib\\request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 400: Bad Request\n"
+      },
+      {
+        "args": [
+          "examples/fixed/invalid_upload.py"
+        ],
+        "exit_code": 0,
+        "stdout": "响应 200 导入 notes.txt\n",
+        "stderr": ""
+      }
+    ],
+    [
+      "missing_token",
+      {
+        "args": [
+          "examples/errors/missing_token.py"
+        ],
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\35-web-deployment\\examples\\errors\\missing_token.py\", line 9, in <module>\n    urlopen(request)\n  File \"G:\\Python\\Lib\\urllib\\request.py\", line 215, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\Python\\Lib\\urllib\\request.py\", line 521, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\n  File \"G:\\Python\\Lib\\urllib\\request.py\", line 630, in http_response\n    response = self.parent.error(\n               ^^^^^^^^^^^^^^^^^^\n  File \"G:\\Python\\Lib\\urllib\\request.py\", line 559, in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\Python\\Lib\\urllib\\request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"G:\\Python\\Lib\\urllib\\request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 403: Forbidden\n"
+      },
+      {
+        "args": [
+          "examples/fixed/missing_token.py"
+        ],
+        "exit_code": 0,
+        "stdout": "响应 200 导入 notes.txt\n",
+        "stderr": ""
+      }
+    ]
+  ],
+  "browser_evidence": {
+    "kind": "actual_browser_check",
+    "browser": "Microsoft Edge headless",
+    "checks": [
+      "空问题提示",
+      "错误类型提示",
+      "PDF导入",
+      "索引更新",
+      "真实引用回答",
+      "展开原文",
+      "实际密钥未进入页面",
+      "请求失败提示，教学模拟",
+      "人工确认删除"
+    ],
+    "page_errors": [],
+    "real_api_requests": 1,
+    "real_answer": {
+      "status": "answered",
+      "answer": "先关闭电源，再归还到服务台；管理员核对设备编号并登记归还时间。",
+      "citations": [
+        {
+          "chunk_id": "c2139e5438f6a75a577e63499e8bbd3dec17c86f2a8a397811cbb073613c537d@2:0-92",
+          "document_id": "c2139e5438f6a75a577e63499e8bbd3dec17c86f2a8a397811cbb073613c537d",
+          "filename": "equipment.pdf",
+          "page": 2,
+          "line_start": 3,
+          "line_end": 4,
+          "char_start": 28,
+          "char_end": 74,
+          "quote": "柳叶学习室投影仪使用结束后，先关闭电源，再归还到服务台。\n管理员核对设备编号并登记归还时间。"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 431,
+        "completion_tokens": 114,
+        "total_tokens": 545
+      },
+      "elapsed_seconds": 1.4788,
+      "record_file": "5c696a0a89bf4359a14c8f69cdfe2586.json",
+      "model_called": true,
+      "request_attempted": true
+    },
+    "external_deployment": false,
+    "server_stopped_after_test": true
+  },
+  "fresh_environment": "fresh-environment.json",
+  "acceptance": {
+    "chapter_complete": false,
+    "local_accepted": true,
+    "online_deployment_performed": false,
+    "reason": "用户明确不对外发布，实际线上部署未执行"
+  },
+  "real_api_requests": 1,
+  "real_api_tokens": 545,
+  "snippets": [
+    {
+      "document": "article.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "import json\nfrom urllib.request import urlopen\nfrom web_fixture import fixture\nwith fixture() as (base, service):\n    with urlopen(base + \"/api/status\") as response:\n        status = json.loads(response.read())\n        print(response.status, len(status[\"documents\"]), status[\"index_ready\"])\n"
+      ],
+      "exit_code": 0,
+      "stdout": "200 0 False\n",
+      "stderr": ""
+    },
+    {
+      "document": "exercises.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "import json\nfrom urllib.request import Request, urlopen\nfrom web_fixture import fixture\nwith fixture() as (base, service):\n    request = Request(base + \"/api/documents\",\n        data=json.dumps({\"filename\": \"notes.txt\", \"content_base64\": \"QQ==\"}).encode(),\n        headers={\"Content-Type\": \"application/json\", \"X-Local-Token\": service.token})\n    with urlopen(request) as response:\n        result = json.loads(response.read())\n        print(response.status, result[\"document\"][\"filename\"])\n"
+      ],
+      "exit_code": 0,
+      "stdout": "200 notes.txt\n",
+      "stderr": ""
+    }
+  ],
+  "final_editor_checks": {
+    "local_links": 30,
+    "png_files": [
+      "web-answer.png",
+      "web-error.png",
+      "web-service-flow.png"
+    ],
+    "prose_hard_errors": 0,
+    "snippet_runtime": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]"
+  }
+}

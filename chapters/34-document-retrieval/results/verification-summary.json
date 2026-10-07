@@ -1,0 +1,331 @@
+{
+  "date": "2026-10-04",
+  "python": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]",
+  "runs": [
+    {
+      "args": [
+        "examples/recheck_answers.py"
+      ],
+      "cwd": "G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\34-document-retrieval",
+      "exit_code": 0,
+      "stdout": "修复后离线验证 [('book', True), ('projector-duration', True), ('projector-return', True), ('monday', True), ('conflict', True), ('missing', True), ('empty', True)]\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_backend.py",
+        "-v"
+      ],
+      "cwd": "G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\projects\\knowledge-assistant",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_bad_files_rejected_without_registration (test_backend.BackendTests.test_bad_files_rejected_without_registration) ... ok\ntest_chunks_are_contiguous_source_substrings (test_backend.BackendTests.test_chunks_are_contiguous_source_substrings) ... ok\ntest_citation_pdf_page_and_exact_position (test_backend.BackendTests.test_citation_pdf_page_and_exact_position) ... ok\ntest_conflict_requires_two_documents (test_backend.BackendTests.test_conflict_requires_two_documents) ... ok\ntest_deletion_removes_sources_indexes_and_related_logs (test_backend.BackendTests.test_deletion_removes_sources_indexes_and_related_logs) ... ok\ntest_distinct_quotes_in_same_chunk_are_accepted (test_backend.BackendTests.test_distinct_quotes_in_same_chunk_are_accepted) ... ok\ntest_duplicate_and_document_limit (test_backend.BackendTests.test_duplicate_and_document_limit) ... ok\ntest_empty_search_skips_model_and_empty_input (test_backend.BackendTests.test_empty_search_skips_model_and_empty_input) ... ok\ntest_failed_rebuild_preserves_active_version (test_backend.BackendTests.test_failed_rebuild_preserves_active_version) ... ok\ntest_index_reload_and_addition_invalidates (test_backend.BackendTests.test_index_reload_and_addition_invalidates) ... ok\ntest_modified_original_and_vectors_are_rejected (test_backend.BackendTests.test_modified_original_and_vectors_are_rejected) ... ok\ntest_pdf_page_and_encryption_limits (test_backend.BackendTests.test_pdf_page_and_encryption_limits) ... ok\ntest_request_failure_and_invalid_json_not_success (test_backend.BackendTests.test_request_failure_and_invalid_json_not_success) ... ok\ntest_two_page_pdf_keeps_page_numbers (test_backend.BackendTests.test_two_page_pdf_keeps_page_numbers) ... ok\ntest_utf8_bom_and_newlines (test_backend.BackendTests.test_utf8_bom_and_newlines) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.922s\n\nOK\n"
+    },
+    {
+      "args": [
+        "-m",
+        "compileall",
+        "-q",
+        "knowledge_app",
+        "scripts",
+        "tests"
+      ],
+      "cwd": "G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\projects\\knowledge-assistant",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "compileall",
+        "-q",
+        "examples"
+      ],
+      "cwd": "G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\34-document-retrieval",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "examples/draw_flow.py"
+      ],
+      "cwd": "G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\34-document-retrieval",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "errors": [
+    [
+      "image_pdf",
+      {
+        "args": [
+          "examples/errors/image_pdf.py"
+        ],
+        "cwd": "G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\34-document-retrieval",
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\34-document-retrieval\\examples\\errors\\image_pdf.py\", line 6, in <module>\n    parse_document('image-only.pdf',(ROOT/'data/invalid/image-only.pdf').read_bytes())\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\projects\\knowledge-assistant\\knowledge_app\\ingestion.py\", line 31, in parse_document\n    if not units:raise ValueError('没有可提取文字，扫描PDF请先另行处理')\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: 没有可提取文字，扫描PDF请先另行处理\n"
+      },
+      {
+        "args": [
+          "examples/fixed/image_pdf.py"
+        ],
+        "cwd": "G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\34-document-retrieval",
+        "exit_code": 0,
+        "stdout": "可提取文字页数 2 页码 [1, 2]\n",
+        "stderr": ""
+      }
+    ],
+    [
+      "stale_index",
+      {
+        "args": [
+          "examples/errors/stale_index.py"
+        ],
+        "cwd": "G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\34-document-retrieval",
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\34-document-retrieval\\examples\\errors\\stale_index.py\", line 14, in <module>\n    load_index(store,encoder)\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\projects\\knowledge-assistant\\knowledge_app\\indexing.py\", line 57, in load_index\n    if metadata['manifest']!=manifest(documents):raise ValueError('资料清单已变化，请更新索引')\n                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: 资料清单已变化，请更新索引\n"
+      },
+      {
+        "args": [
+          "examples/fixed/stale_index.py"
+        ],
+        "cwd": "G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\34-document-retrieval",
+        "exit_code": 0,
+        "stdout": "索引已更新 片段 3 向量形状 (3, 512)\n",
+        "stderr": ""
+      }
+    ]
+  ],
+  "live_evidence": {
+    "kind": "offline_revalidation",
+    "original_file": "live-project-20261004-022408-935901.json",
+    "new_api_requests": 0,
+    "original_request_count": 6,
+    "original_total_tokens": 4535,
+    "all_expected_matched": true,
+    "records": [
+      {
+        "case_id": "book",
+        "original_status": "answered",
+        "validated": {
+          "status": "answered",
+          "answer": "14天。",
+          "citations": [
+            {
+              "chunk_id": "bde5128f064d91e5796c6b53343c88444e8b1342f5aaf7f9c43c06d961b1123c@None:0-191",
+              "document_id": "bde5128f064d91e5796c6b53343c88444e8b1342f5aaf7f9c43c06d961b1123c",
+              "filename": "guide.md",
+              "page": null,
+              "line_start": 11,
+              "line_end": 11,
+              "char_start": 85,
+              "char_end": 112,
+              "quote": "柳叶学习室书籍借阅期限为14天，每人每次最多借3本书。"
+            }
+          ]
+        },
+        "expected_matched": true
+      },
+      {
+        "case_id": "projector-duration",
+        "original_status": "answered",
+        "validated": {
+          "status": "answered",
+          "answer": "90分钟",
+          "citations": [
+            {
+              "chunk_id": "c2139e5438f6a75a577e63499e8bbd3dec17c86f2a8a397811cbb073613c537d@1:0-86",
+              "document_id": "c2139e5438f6a75a577e63499e8bbd3dec17c86f2a8a397811cbb073613c537d",
+              "filename": "equipment.pdf",
+              "page": 1,
+              "line_start": 3,
+              "line_end": 3,
+              "char_start": 33,
+              "char_end": 52,
+              "quote": "柳叶学习室投影仪一次最长借用90分钟。"
+            }
+          ]
+        },
+        "expected_matched": true
+      },
+      {
+        "case_id": "projector-return",
+        "original_status": "invalid_answer",
+        "validated": {
+          "status": "answered",
+          "answer": "使用结束后，先关闭电源，再归还到服务台；管理员核对设备编号并登记归还时间。",
+          "citations": [
+            {
+              "chunk_id": "c2139e5438f6a75a577e63499e8bbd3dec17c86f2a8a397811cbb073613c537d@2:0-92",
+              "document_id": "c2139e5438f6a75a577e63499e8bbd3dec17c86f2a8a397811cbb073613c537d",
+              "filename": "equipment.pdf",
+              "page": 2,
+              "line_start": 3,
+              "line_end": 3,
+              "char_start": 28,
+              "char_end": 56,
+              "quote": "柳叶学习室投影仪使用结束后，先关闭电源，再归还到服务台。"
+            },
+            {
+              "chunk_id": "c2139e5438f6a75a577e63499e8bbd3dec17c86f2a8a397811cbb073613c537d@2:0-92",
+              "document_id": "c2139e5438f6a75a577e63499e8bbd3dec17c86f2a8a397811cbb073613c537d",
+              "filename": "equipment.pdf",
+              "page": 2,
+              "line_start": 4,
+              "line_end": 4,
+              "char_start": 57,
+              "char_end": 74,
+              "quote": "管理员核对设备编号并登记归还时间。"
+            }
+          ]
+        },
+        "expected_matched": true
+      },
+      {
+        "case_id": "monday",
+        "original_status": "answered",
+        "validated": {
+          "status": "answered",
+          "answer": "周一闭馆，不开放。",
+          "citations": [
+            {
+              "chunk_id": "bde5128f064d91e5796c6b53343c88444e8b1342f5aaf7f9c43c06d961b1123c@None:0-191",
+              "document_id": "bde5128f064d91e5796c6b53343c88444e8b1342f5aaf7f9c43c06d961b1123c",
+              "filename": "guide.md",
+              "page": null,
+              "line_start": 7,
+              "line_end": 7,
+              "char_start": 46,
+              "char_end": 74,
+              "quote": "柳叶学习室周二至周日每天9点开放，18点关闭。周一闭馆。"
+            }
+          ]
+        },
+        "expected_matched": true
+      },
+      {
+        "case_id": "conflict",
+        "original_status": "conflict",
+        "validated": {
+          "status": "conflict",
+          "answer": "资料冲突：通知A称14点开始，通知B称15点开始，且无版本优先级。",
+          "citations": [
+            {
+              "chunk_id": "ea60b65d58b3e4ed675c79e18a95ca2b4266a755ff0e171fbe3baed9c997ff09@None:0-95",
+              "document_id": "ea60b65d58b3e4ed675c79e18a95ca2b4266a755ff0e171fbe3baed9c997ff09",
+              "filename": "notice-a.txt",
+              "page": null,
+              "line_start": 3,
+              "line_end": 3,
+              "char_start": 23,
+              "char_end": 66,
+              "quote": "2026年10月8日的阅读分享活动14点开始，16点结束，地点为柳叶学习室二楼讨论室。"
+            },
+            {
+              "chunk_id": "f419c2628da64245c6291586ca3c3feece4236ee4989dc2ddbe4f5e779d46708@None:0-100",
+              "document_id": "f419c2628da64245c6291586ca3c3feece4236ee4989dc2ddbe4f5e779d46708",
+              "filename": "notice-b.md",
+              "page": null,
+              "line_start": 5,
+              "line_end": 5,
+              "char_start": 27,
+              "char_end": 70,
+              "quote": "2026年10月8日的阅读分享活动15点开始，17点结束，地点为柳叶学习室二楼讨论室。"
+            }
+          ]
+        },
+        "expected_matched": true
+      },
+      {
+        "case_id": "missing",
+        "original_status": "insufficient",
+        "validated": {
+          "status": "insufficient",
+          "answer": "资料中没有提到柳叶学习室的无线网络密码。",
+          "citations": []
+        },
+        "expected_matched": true
+      },
+      {
+        "case_id": "empty",
+        "original_status": "empty",
+        "validated": {
+          "status": "empty",
+          "answer": "未找到达到门槛的资料，无法据此回答。",
+          "citations": []
+        },
+        "expected_matched": true
+      }
+    ]
+  },
+  "acceptance": {
+    "chapter_complete": true,
+    "real_response_revalidated_without_new_calls": true
+  },
+  "snippets": [
+    {
+      "document": "article.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "from project_path import ROOT\nfrom knowledge_app.ingestion import parse_document\nunits = parse_document(\"notes.txt\", \"借书规则\\r\\n借阅期限为14天。\".encode(\"utf-8\"))\nprint(units)\n"
+      ],
+      "exit_code": 0,
+      "stdout": "[{'page': None, 'text': '借书规则\\n借阅期限为14天。'}]\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 2,
+      "args": [
+        "-c",
+        "from project_path import ROOT\nfrom knowledge_app.ingestion import parse_document\nunits = parse_document(\"equipment.pdf\", (ROOT / \"data/documents/equipment.pdf\").read_bytes())\nprint([unit[\"page\"] for unit in units])\nprint(\"90分钟\" in units[0][\"text\"])\nprint(\"服务台\" in units[1][\"text\"])\n"
+      ],
+      "exit_code": 0,
+      "stdout": "[1, 2]\nTrue\nTrue\n",
+      "stderr": ""
+    },
+    {
+      "document": "exercises.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "from project_path import ROOT\nfrom knowledge_app.ingestion import parse_document\nunits = parse_document(\"equipment.pdf\", (ROOT / \"data/documents/equipment.pdf\").read_bytes())\nprint([unit[\"page\"] for unit in units if \"先关闭电源\" in unit[\"text\"]])\n"
+      ],
+      "exit_code": 0,
+      "stdout": "[2]\n",
+      "stderr": ""
+    },
+    {
+      "document": "exercises.md",
+      "number": 2,
+      "args": [
+        "-c",
+        "import json\nfrom project_path import ROOT\nfrom knowledge_app.storage import Store\nfrom knowledge_app.indexing import split_documents\nfrom knowledge_app.qa import validate_answer\nstore = Store(ROOT / \"results/runtime\")\nhit = next(h for h in split_documents(store) if h[\"filename\"] == \"equipment.pdf\" and h[\"page\"] == 2)\ncites = [{\"chunk_id\": hit[\"chunk_id\"], \"quote\": quote} for quote in (\n    \"先关闭电源，再归还到服务台。\", \"管理员核对设备编号并登记归还时间。\")]\npayload = {\"status\": \"answered\", \"answer\": \"按规则归还。\", \"citations\": cites}\nprint(len(validate_answer(json.dumps(payload), [hit], store)[\"citations\"]))\npayload[\"citations\"].append(cites[0])\ntry:\n    validate_answer(json.dumps(payload), [hit], store)\nexcept ValueError as error:\n    print(error)\n"
+      ],
+      "exit_code": 0,
+      "stdout": "2\n同片段同原文引用重复\n",
+      "stderr": ""
+    }
+  ],
+  "final_editor_checks": {
+    "local_links": 32,
+    "png_files": [
+      "document-index-flow.png",
+      "pdf-citation-position.png"
+    ],
+    "prose_hard_errors": 0,
+    "snippet_runtime": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "date": "2026-10-03",
+  "python": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]",
+  "runs": [
+    {
+      "args": [
+        "examples/run_attention.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"pronoun_raw\": [\n    4.0,\n    0.0,\n    0.0,\n    2.0\n  ],\n  \"pronoun_weights\": [\n    0.7345767021916112,\n    0.04341770439005499,\n    0.04341770439005499,\n    0.17858788902827885\n  ],\n  \"pronoun_output\": [\n    0.91316459121989,\n    0.22200559341833384\n  ],\n  \"head2_weights\": [\n    0.04341770439005498,\n    0.04341770439005498,\n    0.17858788902827882,\n    0.7345767021916111\n  ],\n  \"causal_pronoun_weights\": [\n    0.8942852100422715,\n    0.05285739497886431,\n    0.05285739497886431,\n    0.0\n  ],\n  \"concat_shape\": [\n    4,\n    4\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_01_projection_and_shapes (test_chapter26.Chapter26Tests.test_01_projection_and_shapes) ... ok\ntest_02_independent_pronoun_hand_calculation (test_chapter26.Chapter26Tests.test_02_independent_pronoun_hand_calculation) ... ok\ntest_03_row_sums_and_nonnegative (test_chapter26.Chapter26Tests.test_03_row_sums_and_nonnegative) ... ok\ntest_04_stable_softmax_offset_invariance (test_chapter26.Chapter26Tests.test_04_stable_softmax_offset_invariance) ... ok\ntest_05_mask (test_chapter26.Chapter26Tests.test_05_mask) ... ok\ntest_06_v_changes_output_but_not_weights (test_chapter26.Chapter26Tests.test_06_v_changes_output_but_not_weights) ... ok\ntest_07_different_heads (test_chapter26.Chapter26Tests.test_07_different_heads) ... ok\ntest_08_permutation_without_positions (test_chapter26.Chapter26Tests.test_08_permutation_without_positions) ... ok\ntest_09_invalid_shape_and_all_masked_row (test_chapter26.Chapter26Tests.test_09_invalid_shape_and_all_masked_row) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.108s\n\nOK\n"
+    },
+    {
+      "args": [
+        "-m",
+        "compileall",
+        "-q",
+        "examples",
+        "tests"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "examples/check_torch.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"torch\": \"2.9.0+cpu\",\n  \"dtype\": \"float64\",\n  \"device\": \"cpu\",\n  \"dropout_p\": 0,\n  \"cases\": 4,\n  \"absolute_max_errors\": [\n    1.1102230246251565e-16,\n    2.7755575615628914e-17,\n    5.551115123125783e-17,\n    5.551115123125783e-17\n  ],\n  \"passed\": true\n}\n",
+      "stderr": ""
+    }
+  ],
+  "errors": [
+    [
+      "all_masked",
+      {
+        "args": [
+          "examples\\errors\\all_masked.py"
+        ],
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\26-attention\\examples\\errors\\all_masked.py\", line 6, in <module>\n    print(softmax_rows([[-np.inf,-np.inf]]))\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\26-attention\\examples\\attention_core.py\", line 17, in softmax_rows\n    raise ValueError(\"不能把某一行的所有位置都屏蔽\")\nValueError: 不能把某一行的所有位置都屏蔽\n"
+      },
+      {
+        "args": [
+          "examples/fixed/all_masked.py"
+        ],
+        "exit_code": 0,
+        "stdout": "[[1. 0.]]\n",
+        "stderr": ""
+      }
+    ],
+    [
+      "no_transpose",
+      {
+        "args": [
+          "examples\\errors\\no_transpose.py"
+        ],
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\26-attention\\examples\\errors\\no_transpose.py\", line 4, in <module>\n    print(q@k)\n          ~^~\nValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 4 is different from 2)\n"
+      },
+      {
+        "args": [
+          "examples/fixed/no_transpose.py"
+        ],
+        "exit_code": 0,
+        "stdout": "(4, 4)\n",
+        "stderr": ""
+      }
+    ]
+  ],
+  "notebook_code_cells": 0,
+  "notebook_executed_by": null,
+  "snippets": [
+    {
+      "document": "article.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "import numpy as np\nfrom examples.attention_core import load_data\ndata = load_data()\nx = np.array(data[\"x\"], dtype=float)\nprint(data[\"tokens\"])\nprint(x)\nprint(x.shape)\n"
+      ],
+      "exit_code": 0,
+      "stdout": "['小猫', '吃鱼', '它', '饱了']\n[[1. 0. 0. 0.]\n [0. 1. 0. 0.]\n [0. 0. 1. 0.]\n [0. 0. 0. 1.]]\n(4, 4)\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 2,
+      "args": [
+        "-c",
+        "from examples.attention_core import load_data, run_heads\nheads, concatenated, output = run_heads(load_data())\nfor name in [\"q\", \"k\", \"v\"]:\n    print(name, heads[0][name].shape)\nprint(heads[0][\"q\"][2])\n"
+      ],
+      "exit_code": 0,
+      "stdout": "q (4, 2)\nk (4, 2)\nv (4, 2)\n[2. 0.]\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 3,
+      "args": [
+        "-c",
+        "from examples.attention_core import load_data, run_heads\nhead = run_heads(load_data())[0][0]\nprint(head[\"raw\"][2])\nprint(head[\"scaled\"][2].round(6))\nprint(head[\"weights\"][2].round(6))\nprint(head[\"weights\"].sum(axis=1))\n"
+      ],
+      "exit_code": 0,
+      "stdout": "[4. 0. 0. 2.]\n[2.828427 0.       0.       1.414214]\n[0.734577 0.043418 0.043418 0.178588]\n[1. 1. 1. 1.]\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 4,
+      "args": [
+        "-c",
+        "from examples.attention_core import load_data, run_heads\nheads, joined, projected = run_heads(load_data())\nprint(heads[0][\"output\"].shape, heads[1][\"output\"].shape)\nprint(joined.shape, projected.shape)\nprint(heads[1][\"weights\"][2].round(6))\n"
+      ],
+      "exit_code": 0,
+      "stdout": "(4, 2) (4, 2)\n(4, 4) (4, 4)\n[0.043418 0.043418 0.178588 0.734577]\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 5,
+      "args": [
+        "-c",
+        "from examples.attention_core import load_data, run_heads\nhead = run_heads(load_data(), causal=True)[0][0]\nprint(head[\"weights\"][2].round(6))\nprint(head[\"weights\"][0])\n"
+      ],
+      "exit_code": 0,
+      "stdout": "[0.894285 0.052857 0.052857 0.      ]\n[1. 0. 0. 0.]\n",
+      "stderr": ""
+    },
+    {
+      "document": "exercises.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "import numpy as np\nfrom examples.attention_core import load_data, run_heads, attention\noriginal = run_heads(load_data())[0][0]\nchanged = attention(original[\"q\"], original[\"k\"], original[\"v\"] * 2)\nprint(np.array_equal(original[\"weights\"], changed[\"weights\"]))\nprint(np.allclose(changed[\"output\"], original[\"output\"] * 2))\n"
+      ],
+      "exit_code": 0,
+      "stdout": "True\nTrue\n",
+      "stderr": ""
+    }
+  ],
+  "final_editor_checks": {
+    "local_links": 30,
+    "png_files": [
+      "attention-links.png",
+      "attention-matrices.png"
+    ],
+    "prose_hard_errors": 0,
+    "snippet_runtime": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]"
+  }
+}

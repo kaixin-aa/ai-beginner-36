@@ -1,0 +1,19 @@
+{
+  "kind": "local_fixture",
+  "provider": "deepseek",
+  "base_url": "http://127.0.0.1:13717",
+  "requested_model": "teaching-fixture",
+  "question": "用一句话解释 API",
+  "response_id": "teaching-response-001",
+  "returned_model": "teaching-fixture",
+  "answer": "API 让你的程序向另一套服务发送请求，并取得响应。",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 30,
+    "completion_tokens": 18,
+    "total_tokens": 48
+  },
+  "complete": true,
+  "elapsed_seconds": 0.2625,
+  "recorded_at": "2026-10-04T00:50:33.361828+08:00"
+}

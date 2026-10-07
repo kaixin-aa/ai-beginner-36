@@ -1,0 +1,14 @@
+{
+  "torch": "2.9.0+cpu",
+  "dtype": "float64",
+  "device": "cpu",
+  "dropout_p": 0,
+  "cases": 4,
+  "absolute_max_errors": [
+    1.1102230246251565e-16,
+    2.7755575615628914e-17,
+    5.551115123125783e-17,
+    5.551115123125783e-17
+  ],
+  "passed": true
+}

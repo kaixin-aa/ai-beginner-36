@@ -1,0 +1,66 @@
+{
+  "stage": "design_skeleton",
+  "accepted_extensions": [
+    ".txt",
+    ".md",
+    ".pdf"
+  ],
+  "rejected_inputs": [
+    {
+      "filename": "empty.txt",
+      "reason": "文件必须非空且不超过1000000字节"
+    },
+    {
+      "filename": "../secret.txt",
+      "reason": "只接收文件名，不接收路径"
+    },
+    {
+      "filename": "program.exe",
+      "reason": "仅接收TXT、Markdown和PDF"
+    },
+    {
+      "filename": "huge.pdf",
+      "reason": "文件必须非空且不超过1000000字节"
+    }
+  ],
+  "empty_question_rejected": true,
+  "citation_sample_is_author_constructed": true,
+  "citation_filename": "guide.md",
+  "plan": {
+    "stage": "design_skeleton",
+    "implemented": [
+      "上传参数边界",
+      "问题参数边界",
+      "引用数据格式"
+    ],
+    "modules": {
+      "ingestion": {
+        "chapter": 34,
+        "status": "planned",
+        "purpose": "校验与保存原文件，抽取带页码的文本"
+      },
+      "storage": {
+        "chapter": 34,
+        "status": "planned",
+        "purpose": "文档登记、哈希及删除范围"
+      },
+      "indexing": {
+        "chapter": 34,
+        "status": "planned",
+        "purpose": "带版本的切分、编码、索引更新"
+      },
+      "qa": {
+        "chapter": 34,
+        "status": "planned",
+        "purpose": "检索、真实生成与逐字引用核对"
+      },
+      "web": {
+        "chapter": 35,
+        "status": "planned",
+        "purpose": "本机上传、提问、引用及状态页面"
+      }
+    },
+    "default_listen": "127.0.0.1",
+    "external_publish": false
+  }
+}

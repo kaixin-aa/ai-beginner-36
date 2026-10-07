@@ -1,0 +1,7 @@
+step,left,right,count,merged
+1,l,o,8,lo
+2,lo,w,8,low
+3,e,w,6,ew
+4,n,ew,6,new
+5,e,r,4,er
+6,e,s,2,es

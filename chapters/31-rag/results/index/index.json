@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+  "dimension": 512,
+  "documents": [
+    {
+      "source": "guide.md",
+      "sha256": "bde5128f064d91e5796c6b53343c88444e8b1342f5aaf7f9c43c06d961b1123c"
+    },
+    {
+      "source": "notice-a.txt",
+      "sha256": "ea60b65d58b3e4ed675c79e18a95ca2b4266a755ff0e171fbe3baed9c997ff09"
+    },
+    {
+      "source": "notice-b.md",
+      "sha256": "f419c2628da64245c6291586ca3c3feece4236ee4989dc2ddbe4f5e779d46708"
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "guide.md@0-140",
+      "source": "guide.md",
+      "start": 0,
+      "end": 140,
+      "line_start": 1,
+      "line_end": 13,
+      "text": "# 柳叶学习室教学资料\n\n以下规则为原创虚构教学资料，不对应真实机构。\n\n## 开放时间\n\n柳叶学习室周二至周日每天9点开放，18点关闭。周一闭馆。\n\n## 借书规则\n\n柳叶学习室书籍借阅期限为14天，每人每次最多借3本书。在到期前可以续借一次，续借增加7天。\n\n## 讨论室预约"
+    },
+    {
+      "chunk_id": "guide.md@110-190",
+      "source": "guide.md",
+      "start": 110,
+      "end": 190,
+      "line_start": 11,
+      "line_end": 15,
+      "text": "书。在到期前可以续借一次，续借增加7天。\n\n## 讨论室预约\n\n柳叶学习室的小组讨论室需要提前一天预约，每次最多连续使用2小时。预约时填写姓名、日期和使用时段。"
+    },
+    {
+      "chunk_id": "notice-a.txt@0-94",
+      "source": "notice-a.txt",
+      "start": 0,
+      "end": 94,
+      "line_start": 1,
+      "line_end": 4,
+      "text": "柳叶学习室教学通知A\n本通知为原创虚构资料。\n2026年10月8日的阅读分享活动14点开始，16点结束，地点为柳叶学习室二楼讨论室。\n通知A和通知B描述同一个活动，资料没有给出版本优先级。"
+    },
+    {
+      "chunk_id": "notice-b.md@0-99",
+      "source": "notice-b.md",
+      "start": 0,
+      "end": 99,
+      "line_start": 1,
+      "line_end": 7,
+      "text": "# 柳叶学习室教学通知B\n\n本通知为原创虚构资料。\n\n2026年10月8日的阅读分享活动15点开始，17点结束，地点为柳叶学习室二楼讨论室。\n\n通知A和通知B描述同一个活动，资料没有给出版本优先级。"
+    }
+  ],
+  "chunk_chars": 140,
+  "overlap_chars": 30
+}

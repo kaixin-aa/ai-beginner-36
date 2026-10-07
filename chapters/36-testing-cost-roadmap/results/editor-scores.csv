@@ -1,0 +1,8 @@
+﻿case_id,original_status,current_status,facts_match,status_match,citation_match,note
+book,answered,answered,1,1,1,编写助手按保存文件核对，非用户亲自评分
+projector-duration,answered,answered,1,1,1,编写助手按保存文件核对，非用户亲自评分
+projector-return,invalid_answer,answered,1,1,1,编写助手按保存文件核对，非用户亲自评分；修复后离线核对
+monday,answered,answered,1,1,1,编写助手按保存文件核对，非用户亲自评分
+conflict,conflict,conflict,1,1,1,编写助手按保存文件核对，非用户亲自评分
+missing,insufficient,insufficient,1,1,不适用,编写助手按保存文件核对，非用户亲自评分
+empty,empty,empty,1,1,不适用,编写助手按保存文件核对，非用户亲自评分

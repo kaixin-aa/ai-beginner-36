@@ -1,0 +1,336 @@
+{
+  "model": {
+    "repo": "BAAI/bge-small-zh-v1.5",
+    "revision": "7999e1d3359715c523056ef9478215996d62a620",
+    "snapshot": "review\\model-cache\\models--BAAI--bge-small-zh-v1.5\\snapshots\\7999e1d3359715c523056ef9478215996d62a620",
+    "source": "https://huggingface.co/BAAI/bge-small-zh-v1.5",
+    "license": "MIT",
+    "files": [
+      {
+        "name": "config.json",
+        "bytes": 776,
+        "sha256": "3853a7979202c348751b753e36f579c41d8da7d36af617d3d907e1fc9b441f2a"
+      },
+      {
+        "name": "model.safetensors",
+        "bytes": 95827648,
+        "sha256": "354763b9b1357bc9c44f62c6be2276321081ed2567773608c0d0785b61d5a026"
+      },
+      {
+        "name": "special_tokens_map.json",
+        "bytes": 125,
+        "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 439125,
+        "sha256": "48cea5d44424912a6fd1ea647bf4fe50b55ab8b1e5879c3275f80e339e8fae26"
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 367,
+        "sha256": "e6f3b96db926a37d4039995fbf5ad17de158dfb8f6343d607e4dbaad18d75f5a"
+      },
+      {
+        "name": "vocab.txt",
+        "bytes": 109540,
+        "sha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+      }
+    ],
+    "download_bytes": 96377581
+  },
+  "dimension": 512,
+  "chunk_count": 4,
+  "parameter_count": 23953920,
+  "threshold": 0.55,
+  "top_k": 3,
+  "records": [
+    {
+      "split": "development",
+      "question": "柳叶学习室周末几点开门？",
+      "expected": "answered",
+      "hits": [
+        {
+          "chunk_id": "guide.md@0-140",
+          "source": "guide.md",
+          "start": 0,
+          "end": 140,
+          "line_start": 1,
+          "line_end": 13,
+          "text": "# 柳叶学习室教学资料\n\n以下规则为原创虚构教学资料，不对应真实机构。\n\n## 开放时间\n\n柳叶学习室周二至周日每天9点开放，18点关闭。周一闭馆。\n\n## 借书规则\n\n柳叶学习室书籍借阅期限为14天，每人每次最多借3本书。在到期前可以续借一次，续借增加7天。\n\n## 讨论室预约",
+          "score": 0.6764365434646606
+        },
+        {
+          "chunk_id": "notice-b.md@0-99",
+          "source": "notice-b.md",
+          "start": 0,
+          "end": 99,
+          "line_start": 1,
+          "line_end": 7,
+          "text": "# 柳叶学习室教学通知B\n\n本通知为原创虚构资料。\n\n2026年10月8日的阅读分享活动15点开始，17点结束，地点为柳叶学习室二楼讨论室。\n\n通知A和通知B描述同一个活动，资料没有给出版本优先级。",
+          "score": 0.6134416460990906
+        },
+        {
+          "chunk_id": "notice-a.txt@0-94",
+          "source": "notice-a.txt",
+          "start": 0,
+          "end": 94,
+          "line_start": 1,
+          "line_end": 4,
+          "text": "柳叶学习室教学通知A\n本通知为原创虚构资料。\n2026年10月8日的阅读分享活动14点开始，16点结束，地点为柳叶学习室二楼讨论室。\n通知A和通知B描述同一个活动，资料没有给出版本优先级。",
+          "score": 0.6107776761054993
+        }
+      ],
+      "all_scores": [
+        0.6764365434646606,
+        0.5740755796432495,
+        0.6107776761054993,
+        0.6134416460990906
+      ]
+    },
+    {
+      "split": "development",
+      "question": "火星火箭发动机燃料怎么配比？",
+      "expected": "empty",
+      "hits": [],
+      "all_scores": [
+        0.23265160620212555,
+        0.27728503942489624,
+        0.2718331515789032,
+        0.27205055952072144
+      ]
+    },
+    {
+      "split": "test",
+      "question": "柳叶学习室的书能借多久？",
+      "expected": "answered",
+      "answer_contains": "14",
+      "hits": [
+        {
+          "chunk_id": "guide.md@0-140",
+          "source": "guide.md",
+          "start": 0,
+          "end": 140,
+          "line_start": 1,
+          "line_end": 13,
+          "text": "# 柳叶学习室教学资料\n\n以下规则为原创虚构教学资料，不对应真实机构。\n\n## 开放时间\n\n柳叶学习室周二至周日每天9点开放，18点关闭。周一闭馆。\n\n## 借书规则\n\n柳叶学习室书籍借阅期限为14天，每人每次最多借3本书。在到期前可以续借一次，续借增加7天。\n\n## 讨论室预约",
+          "score": 0.816461443901062
+        },
+        {
+          "chunk_id": "guide.md@110-190",
+          "source": "guide.md",
+          "start": 110,
+          "end": 190,
+          "line_start": 11,
+          "line_end": 15,
+          "text": "书。在到期前可以续借一次，续借增加7天。\n\n## 讨论室预约\n\n柳叶学习室的小组讨论室需要提前一天预约，每次最多连续使用2小时。预约时填写姓名、日期和使用时段。",
+          "score": 0.7815904021263123
+        },
+        {
+          "chunk_id": "notice-a.txt@0-94",
+          "source": "notice-a.txt",
+          "start": 0,
+          "end": 94,
+          "line_start": 1,
+          "line_end": 4,
+          "text": "柳叶学习室教学通知A\n本通知为原创虚构资料。\n2026年10月8日的阅读分享活动14点开始，16点结束，地点为柳叶学习室二楼讨论室。\n通知A和通知B描述同一个活动，资料没有给出版本优先级。",
+          "score": 0.6678212285041809
+        }
+      ],
+      "all_scores": [
+        0.816461443901062,
+        0.7815904021263123,
+        0.6678212285041809,
+        0.666865348815918
+      ]
+    },
+    {
+      "split": "test",
+      "question": "柳叶学习室一次最多借几本书？",
+      "expected": "answered",
+      "answer_contains": "3",
+      "hits": [
+        {
+          "chunk_id": "guide.md@0-140",
+          "source": "guide.md",
+          "start": 0,
+          "end": 140,
+          "line_start": 1,
+          "line_end": 13,
+          "text": "# 柳叶学习室教学资料\n\n以下规则为原创虚构教学资料，不对应真实机构。\n\n## 开放时间\n\n柳叶学习室周二至周日每天9点开放，18点关闭。周一闭馆。\n\n## 借书规则\n\n柳叶学习室书籍借阅期限为14天，每人每次最多借3本书。在到期前可以续借一次，续借增加7天。\n\n## 讨论室预约",
+          "score": 0.7442231774330139
+        },
+        {
+          "chunk_id": "guide.md@110-190",
+          "source": "guide.md",
+          "start": 110,
+          "end": 190,
+          "line_start": 11,
+          "line_end": 15,
+          "text": "书。在到期前可以续借一次，续借增加7天。\n\n## 讨论室预约\n\n柳叶学习室的小组讨论室需要提前一天预约，每次最多连续使用2小时。预约时填写姓名、日期和使用时段。",
+          "score": 0.6993842720985413
+        },
+        {
+          "chunk_id": "notice-a.txt@0-94",
+          "source": "notice-a.txt",
+          "start": 0,
+          "end": 94,
+          "line_start": 1,
+          "line_end": 4,
+          "text": "柳叶学习室教学通知A\n本通知为原创虚构资料。\n2026年10月8日的阅读分享活动14点开始，16点结束，地点为柳叶学习室二楼讨论室。\n通知A和通知B描述同一个活动，资料没有给出版本优先级。",
+          "score": 0.6320950984954834
+        }
+      ],
+      "all_scores": [
+        0.7442231774330139,
+        0.6993842720985413,
+        0.6320950984954834,
+        0.6251189708709717
+      ]
+    },
+    {
+      "split": "test",
+      "question": "柳叶学习室周一开放吗？",
+      "expected": "answered",
+      "answer_contains": "闭",
+      "hits": [
+        {
+          "chunk_id": "guide.md@0-140",
+          "source": "guide.md",
+          "start": 0,
+          "end": 140,
+          "line_start": 1,
+          "line_end": 13,
+          "text": "# 柳叶学习室教学资料\n\n以下规则为原创虚构教学资料，不对应真实机构。\n\n## 开放时间\n\n柳叶学习室周二至周日每天9点开放，18点关闭。周一闭馆。\n\n## 借书规则\n\n柳叶学习室书籍借阅期限为14天，每人每次最多借3本书。在到期前可以续借一次，续借增加7天。\n\n## 讨论室预约",
+          "score": 0.6735629439353943
+        },
+        {
+          "chunk_id": "notice-b.md@0-99",
+          "source": "notice-b.md",
+          "start": 0,
+          "end": 99,
+          "line_start": 1,
+          "line_end": 7,
+          "text": "# 柳叶学习室教学通知B\n\n本通知为原创虚构资料。\n\n2026年10月8日的阅读分享活动15点开始，17点结束，地点为柳叶学习室二楼讨论室。\n\n通知A和通知B描述同一个活动，资料没有给出版本优先级。",
+          "score": 0.5952118039131165
+        },
+        {
+          "chunk_id": "notice-a.txt@0-94",
+          "source": "notice-a.txt",
+          "start": 0,
+          "end": 94,
+          "line_start": 1,
+          "line_end": 4,
+          "text": "柳叶学习室教学通知A\n本通知为原创虚构资料。\n2026年10月8日的阅读分享活动14点开始，16点结束，地点为柳叶学习室二楼讨论室。\n通知A和通知B描述同一个活动，资料没有给出版本优先级。",
+          "score": 0.5938115119934082
+        }
+      ],
+      "all_scores": [
+        0.6735629439353943,
+        0.5643148422241211,
+        0.5938115119934082,
+        0.5952118039131165
+      ]
+    },
+    {
+      "split": "test",
+      "question": "柳叶学习室10月8日的阅读分享几点开始？",
+      "expected": "conflict",
+      "hits": [
+        {
+          "chunk_id": "notice-a.txt@0-94",
+          "source": "notice-a.txt",
+          "start": 0,
+          "end": 94,
+          "line_start": 1,
+          "line_end": 4,
+          "text": "柳叶学习室教学通知A\n本通知为原创虚构资料。\n2026年10月8日的阅读分享活动14点开始，16点结束，地点为柳叶学习室二楼讨论室。\n通知A和通知B描述同一个活动，资料没有给出版本优先级。",
+          "score": 0.7500556707382202
+        },
+        {
+          "chunk_id": "notice-b.md@0-99",
+          "source": "notice-b.md",
+          "start": 0,
+          "end": 99,
+          "line_start": 1,
+          "line_end": 7,
+          "text": "# 柳叶学习室教学通知B\n\n本通知为原创虚构资料。\n\n2026年10月8日的阅读分享活动15点开始，17点结束，地点为柳叶学习室二楼讨论室。\n\n通知A和通知B描述同一个活动，资料没有给出版本优先级。",
+          "score": 0.7460678815841675
+        },
+        {
+          "chunk_id": "guide.md@0-140",
+          "source": "guide.md",
+          "start": 0,
+          "end": 140,
+          "line_start": 1,
+          "line_end": 13,
+          "text": "# 柳叶学习室教学资料\n\n以下规则为原创虚构教学资料，不对应真实机构。\n\n## 开放时间\n\n柳叶学习室周二至周日每天9点开放，18点关闭。周一闭馆。\n\n## 借书规则\n\n柳叶学习室书籍借阅期限为14天，每人每次最多借3本书。在到期前可以续借一次，续借增加7天。\n\n## 讨论室预约",
+          "score": 0.7099230289459229
+        }
+      ],
+      "all_scores": [
+        0.7099230289459229,
+        0.5934979319572449,
+        0.7500556707382202,
+        0.7460678815841675
+      ]
+    },
+    {
+      "split": "test",
+      "question": "柳叶学习室有免费无线网络吗？",
+      "expected": "insufficient",
+      "hits": [
+        {
+          "chunk_id": "guide.md@0-140",
+          "source": "guide.md",
+          "start": 0,
+          "end": 140,
+          "line_start": 1,
+          "line_end": 13,
+          "text": "# 柳叶学习室教学资料\n\n以下规则为原创虚构教学资料，不对应真实机构。\n\n## 开放时间\n\n柳叶学习室周二至周日每天9点开放，18点关闭。周一闭馆。\n\n## 借书规则\n\n柳叶学习室书籍借阅期限为14天，每人每次最多借3本书。在到期前可以续借一次，续借增加7天。\n\n## 讨论室预约",
+          "score": 0.6172034740447998
+        },
+        {
+          "chunk_id": "notice-a.txt@0-94",
+          "source": "notice-a.txt",
+          "start": 0,
+          "end": 94,
+          "line_start": 1,
+          "line_end": 4,
+          "text": "柳叶学习室教学通知A\n本通知为原创虚构资料。\n2026年10月8日的阅读分享活动14点开始，16点结束，地点为柳叶学习室二楼讨论室。\n通知A和通知B描述同一个活动，资料没有给出版本优先级。",
+          "score": 0.5882070660591125
+        },
+        {
+          "chunk_id": "notice-b.md@0-99",
+          "source": "notice-b.md",
+          "start": 0,
+          "end": 99,
+          "line_start": 1,
+          "line_end": 7,
+          "text": "# 柳叶学习室教学通知B\n\n本通知为原创虚构资料。\n\n2026年10月8日的阅读分享活动15点开始，17点结束，地点为柳叶学习室二楼讨论室。\n\n通知A和通知B描述同一个活动，资料没有给出版本优先级。",
+          "score": 0.5810289978981018
+        }
+      ],
+      "all_scores": [
+        0.6172034740447998,
+        0.5255804061889648,
+        0.5882070660591125,
+        0.5810289978981018
+      ]
+    },
+    {
+      "split": "test",
+      "question": "海王星的轨道周期是多少？",
+      "expected": "empty",
+      "hits": [],
+      "all_scores": [
+        0.243522509932518,
+        0.2828570604324341,
+        0.2335481196641922,
+        0.23775088787078857
+      ]
+    }
+  ],
+  "vectors_reload_equal": true,
+  "elapsed_seconds": 0.2385811999993166
+}

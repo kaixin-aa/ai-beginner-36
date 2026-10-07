@@ -1,0 +1,10 @@
+{
+  "copied_on": "2026-10-03",
+  "source": "chapter27 locally trained 12-sentence model",
+  "sha256": "be9e25291faca70da9dd116a0b8d349efe1e12643aede6766b37c07e47285b0a",
+  "trained_stages": [
+    "chapter27 next-token toy training only"
+  ],
+  "instruction_finetuning_done": false,
+  "preference_training_done": false
+}

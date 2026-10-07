@@ -1,0 +1,16 @@
+test_arithmetic_without_eval (test_chapter32.Chapter32Tests.test_arithmetic_without_eval) ... ok
+test_bad_json_and_duplicate_id (test_chapter32.Chapter32Tests.test_bad_json_and_duplicate_id) ... ok
+test_batch_permission_check_has_no_partial_execution (test_chapter32.Chapter32Tests.test_batch_permission_check_has_no_partial_execution) ... ok
+test_duplicate_and_tool_limits (test_chapter32.Chapter32Tests.test_duplicate_and_tool_limits) ... ok
+test_forbidden_expressions_and_bounds (test_chapter32.Chapter32Tests.test_forbidden_expressions_and_bounds) ... ok
+test_http_tool_protocol (test_chapter32.Chapter32Tests.test_http_tool_protocol) ... ok
+test_malformed_response_rejected (test_chapter32.Chapter32Tests.test_malformed_response_rejected) ... ok
+test_real_local_search (test_chapter32.Chapter32Tests.test_real_local_search) ... ok
+test_step_deadline_and_truncated_limits (test_chapter32.Chapter32Tests.test_step_deadline_and_truncated_limits) ... ok
+test_tool_name_and_argument_whitelist (test_chapter32.Chapter32Tests.test_tool_name_and_argument_whitelist) ... ok
+test_tool_result_corresponds_to_call_id (test_chapter32.Chapter32Tests.test_tool_result_corresponds_to_call_id) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.444s
+
+OK

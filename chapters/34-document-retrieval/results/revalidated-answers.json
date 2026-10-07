@@ -1,0 +1,162 @@
+{
+  "kind": "offline_revalidation",
+  "original_file": "live-project-20261004-022408-935901.json",
+  "new_api_requests": 0,
+  "original_request_count": 6,
+  "original_total_tokens": 4535,
+  "all_expected_matched": true,
+  "records": [
+    {
+      "case_id": "book",
+      "original_status": "answered",
+      "validated": {
+        "status": "answered",
+        "answer": "14天。",
+        "citations": [
+          {
+            "chunk_id": "bde5128f064d91e5796c6b53343c88444e8b1342f5aaf7f9c43c06d961b1123c@None:0-191",
+            "document_id": "bde5128f064d91e5796c6b53343c88444e8b1342f5aaf7f9c43c06d961b1123c",
+            "filename": "guide.md",
+            "page": null,
+            "line_start": 11,
+            "line_end": 11,
+            "char_start": 85,
+            "char_end": 112,
+            "quote": "柳叶学习室书籍借阅期限为14天，每人每次最多借3本书。"
+          }
+        ]
+      },
+      "expected_matched": true
+    },
+    {
+      "case_id": "projector-duration",
+      "original_status": "answered",
+      "validated": {
+        "status": "answered",
+        "answer": "90分钟",
+        "citations": [
+          {
+            "chunk_id": "c2139e5438f6a75a577e63499e8bbd3dec17c86f2a8a397811cbb073613c537d@1:0-86",
+            "document_id": "c2139e5438f6a75a577e63499e8bbd3dec17c86f2a8a397811cbb073613c537d",
+            "filename": "equipment.pdf",
+            "page": 1,
+            "line_start": 3,
+            "line_end": 3,
+            "char_start": 33,
+            "char_end": 52,
+            "quote": "柳叶学习室投影仪一次最长借用90分钟。"
+          }
+        ]
+      },
+      "expected_matched": true
+    },
+    {
+      "case_id": "projector-return",
+      "original_status": "invalid_answer",
+      "validated": {
+        "status": "answered",
+        "answer": "使用结束后，先关闭电源，再归还到服务台；管理员核对设备编号并登记归还时间。",
+        "citations": [
+          {
+            "chunk_id": "c2139e5438f6a75a577e63499e8bbd3dec17c86f2a8a397811cbb073613c537d@2:0-92",
+            "document_id": "c2139e5438f6a75a577e63499e8bbd3dec17c86f2a8a397811cbb073613c537d",
+            "filename": "equipment.pdf",
+            "page": 2,
+            "line_start": 3,
+            "line_end": 3,
+            "char_start": 28,
+            "char_end": 56,
+            "quote": "柳叶学习室投影仪使用结束后，先关闭电源，再归还到服务台。"
+          },
+          {
+            "chunk_id": "c2139e5438f6a75a577e63499e8bbd3dec17c86f2a8a397811cbb073613c537d@2:0-92",
+            "document_id": "c2139e5438f6a75a577e63499e8bbd3dec17c86f2a8a397811cbb073613c537d",
+            "filename": "equipment.pdf",
+            "page": 2,
+            "line_start": 4,
+            "line_end": 4,
+            "char_start": 57,
+            "char_end": 74,
+            "quote": "管理员核对设备编号并登记归还时间。"
+          }
+        ]
+      },
+      "expected_matched": true
+    },
+    {
+      "case_id": "monday",
+      "original_status": "answered",
+      "validated": {
+        "status": "answered",
+        "answer": "周一闭馆，不开放。",
+        "citations": [
+          {
+            "chunk_id": "bde5128f064d91e5796c6b53343c88444e8b1342f5aaf7f9c43c06d961b1123c@None:0-191",
+            "document_id": "bde5128f064d91e5796c6b53343c88444e8b1342f5aaf7f9c43c06d961b1123c",
+            "filename": "guide.md",
+            "page": null,
+            "line_start": 7,
+            "line_end": 7,
+            "char_start": 46,
+            "char_end": 74,
+            "quote": "柳叶学习室周二至周日每天9点开放，18点关闭。周一闭馆。"
+          }
+        ]
+      },
+      "expected_matched": true
+    },
+    {
+      "case_id": "conflict",
+      "original_status": "conflict",
+      "validated": {
+        "status": "conflict",
+        "answer": "资料冲突：通知A称14点开始，通知B称15点开始，且无版本优先级。",
+        "citations": [
+          {
+            "chunk_id": "ea60b65d58b3e4ed675c79e18a95ca2b4266a755ff0e171fbe3baed9c997ff09@None:0-95",
+            "document_id": "ea60b65d58b3e4ed675c79e18a95ca2b4266a755ff0e171fbe3baed9c997ff09",
+            "filename": "notice-a.txt",
+            "page": null,
+            "line_start": 3,
+            "line_end": 3,
+            "char_start": 23,
+            "char_end": 66,
+            "quote": "2026年10月8日的阅读分享活动14点开始，16点结束，地点为柳叶学习室二楼讨论室。"
+          },
+          {
+            "chunk_id": "f419c2628da64245c6291586ca3c3feece4236ee4989dc2ddbe4f5e779d46708@None:0-100",
+            "document_id": "f419c2628da64245c6291586ca3c3feece4236ee4989dc2ddbe4f5e779d46708",
+            "filename": "notice-b.md",
+            "page": null,
+            "line_start": 5,
+            "line_end": 5,
+            "char_start": 27,
+            "char_end": 70,
+            "quote": "2026年10月8日的阅读分享活动15点开始，17点结束，地点为柳叶学习室二楼讨论室。"
+          }
+        ]
+      },
+      "expected_matched": true
+    },
+    {
+      "case_id": "missing",
+      "original_status": "insufficient",
+      "validated": {
+        "status": "insufficient",
+        "answer": "资料中没有提到柳叶学习室的无线网络密码。",
+        "citations": []
+      },
+      "expected_matched": true
+    },
+    {
+      "case_id": "empty",
+      "original_status": "empty",
+      "validated": {
+        "status": "empty",
+        "answer": "未找到达到门槛的资料，无法据此回答。",
+        "citations": []
+      },
+      "expected_matched": true
+    }
+  ]
+}

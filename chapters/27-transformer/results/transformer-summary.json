@@ -1,0 +1,434 @@
+{
+  "torch": "2.9.0+cpu",
+  "device": "cpu",
+  "threads": 1,
+  "seed": 42,
+  "steps": 300,
+  "optimizer": "Adam",
+  "learning_rate": 0.01,
+  "rows": 12,
+  "vocab_size": 31,
+  "parameters": 3535,
+  "nonpadding_targets": 71,
+  "batch_shape": [
+    12,
+    6
+  ],
+  "initial_train_loss": 3.7341673374176025,
+  "final_train_loss": 0.42114707827568054,
+  "seconds": 1.3619756999978563,
+  "independent_test": false,
+  "config": {
+    "width": 16,
+    "heads": 2,
+    "ff_width": 32,
+    "max_context": 16,
+    "norm_eps": 1e-05
+  },
+  "corpus_sha256": "30bc9eba455c38e432dc26e9114e4b8d9631f415100e6d9ae3bc8937370d83bf",
+  "reload_logits_identical": true,
+  "module_shapes": {
+    "ids": [
+      1,
+      3
+    ],
+    "token_embedding": [
+      1,
+      3,
+      16
+    ],
+    "position_embedding": [
+      1,
+      3,
+      16
+    ],
+    "embedding_sum": [
+      1,
+      3,
+      16
+    ],
+    "norm1": [
+      1,
+      3,
+      16
+    ],
+    "qkv_each": [
+      1,
+      2,
+      3,
+      8
+    ],
+    "head_output": [
+      1,
+      2,
+      3,
+      8
+    ],
+    "concat": [
+      1,
+      3,
+      16
+    ],
+    "attention_projection": [
+      1,
+      3,
+      16
+    ],
+    "residual1": [
+      1,
+      3,
+      16
+    ],
+    "norm2": [
+      1,
+      3,
+      16
+    ],
+    "ff_hidden": [
+      1,
+      3,
+      32
+    ],
+    "ff_output": [
+      1,
+      3,
+      16
+    ],
+    "residual2": [
+      1,
+      3,
+      16
+    ],
+    "final_norm": [
+      1,
+      3,
+      16
+    ],
+    "logits": [
+      1,
+      3,
+      31
+    ]
+  },
+  "generations": [
+    {
+      "prompt": "小猫",
+      "text": "小猫吃鱼。",
+      "stop_reason": "eos",
+      "trace": [
+        {
+          "step": 1,
+          "prefix_before": "小猫",
+          "input_tokens": 3,
+          "selected_id": 11,
+          "selected_token": "吃",
+          "selected_probability": 0.49954909086227417,
+          "top3": [
+            {
+              "token": "吃",
+              "probability": 0.49954909086227417
+            },
+            {
+              "token": "喝",
+              "probability": 0.4992404580116272
+            },
+            {
+              "token": "编",
+              "probability": 0.0002191072708228603
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "prefix_before": "小猫吃",
+          "input_tokens": 4,
+          "selected_id": 29,
+          "selected_token": "鱼",
+          "selected_probability": 0.9978851675987244,
+          "top3": [
+            {
+              "token": "鱼",
+              "probability": 0.9978851675987244
+            },
+            {
+              "token": "肉",
+              "probability": 0.00039528764318674803
+            },
+            {
+              "token": "米",
+              "probability": 0.00024146735086105764
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "prefix_before": "小猫吃鱼",
+          "input_tokens": 5,
+          "selected_id": 3,
+          "selected_token": "。",
+          "selected_probability": 0.9992145299911499,
+          "top3": [
+            {
+              "token": "。",
+              "probability": 0.9992145299911499
+            },
+            {
+              "token": "<EOS>",
+              "probability": 0.00013909586414229125
+            },
+            {
+              "token": "吃",
+              "probability": 9.46899235714227e-05
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "prefix_before": "小猫吃鱼。",
+          "input_tokens": 6,
+          "selected_id": 2,
+          "selected_token": "<EOS>",
+          "selected_probability": 0.9991637468338013,
+          "top3": [
+            {
+              "token": "<EOS>",
+              "probability": 0.9991637468338013
+            },
+            {
+              "token": "小",
+              "probability": 0.00011051498586311936
+            },
+            {
+              "token": "。",
+              "probability": 0.00010652506171027198
+            }
+          ]
+        }
+      ],
+      "temperature": 1.0,
+      "greedy": true,
+      "seed": 42,
+      "top_k": null
+    },
+    {
+      "prompt": "今天",
+      "text": "今天晴天。",
+      "stop_reason": "eos",
+      "trace": [
+        {
+          "step": 1,
+          "prefix_before": "今天",
+          "input_tokens": 3,
+          "selected_id": 17,
+          "selected_token": "晴",
+          "selected_probability": 0.4994705021381378,
+          "top3": [
+            {
+              "token": "晴",
+              "probability": 0.4994705021381378
+            },
+            {
+              "token": "下",
+              "probability": 0.4990943372249603
+            },
+            {
+              "token": "吃",
+              "probability": 0.00024640143965370953
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "prefix_before": "今天晴",
+          "input_tokens": 4,
+          "selected_id": 13,
+          "selected_token": "天",
+          "selected_probability": 0.9985413551330566,
+          "top3": [
+            {
+              "token": "天",
+              "probability": 0.9985413551330566
+            },
+            {
+              "token": "书",
+              "probability": 0.0002671872789505869
+            },
+            {
+              "token": "读",
+              "probability": 0.00020192816737107933
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "prefix_before": "今天晴天",
+          "input_tokens": 5,
+          "selected_id": 3,
+          "selected_token": "。",
+          "selected_probability": 0.9990257024765015,
+          "top3": [
+            {
+              "token": "。",
+              "probability": 0.9990257024765015
+            },
+            {
+              "token": "下",
+              "probability": 0.00029388151597231627
+            },
+            {
+              "token": "<EOS>",
+              "probability": 0.00019691491615958512
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "prefix_before": "今天晴天。",
+          "input_tokens": 6,
+          "selected_id": 2,
+          "selected_token": "<EOS>",
+          "selected_probability": 0.9990125894546509,
+          "top3": [
+            {
+              "token": "<EOS>",
+              "probability": 0.9990125894546509
+            },
+            {
+              "token": "。",
+              "probability": 0.0001480426435591653
+            },
+            {
+              "token": "雨",
+              "probability": 0.00013089022831991315
+            }
+          ]
+        }
+      ],
+      "temperature": 1.0,
+      "greedy": true,
+      "seed": 42,
+      "top_k": null
+    },
+    {
+      "prompt": "我",
+      "text": "我做练习。",
+      "stop_reason": "eos",
+      "trace": [
+        {
+          "step": 1,
+          "prefix_before": "我",
+          "input_tokens": 2,
+          "selected_id": 9,
+          "selected_token": "做",
+          "selected_probability": 0.24974508583545685,
+          "top3": [
+            {
+              "token": "做",
+              "probability": 0.24974508583545685
+            },
+            {
+              "token": "写",
+              "probability": 0.24967889487743378
+            },
+            {
+              "token": "读",
+              "probability": 0.24950869381427765
+            }
+          ]
+        },
+        {
+          "step": 2,
+          "prefix_before": "我做",
+          "input_tokens": 3,
+          "selected_id": 24,
+          "selected_token": "练",
+          "selected_probability": 0.998537540435791,
+          "top3": [
+            {
+              "token": "练",
+              "probability": 0.998537540435791
+            },
+            {
+              "token": "喝",
+              "probability": 0.0002602182503324002
+            },
+            {
+              "token": "<EOS>",
+              "probability": 0.000187863755854778
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "prefix_before": "我做练",
+          "input_tokens": 4,
+          "selected_id": 5,
+          "selected_token": "习",
+          "selected_probability": 0.9982532858848572,
+          "top3": [
+            {
+              "token": "习",
+              "probability": 0.9982532858848572
+            },
+            {
+              "token": "程",
+              "probability": 0.00036410021129995584
+            },
+            {
+              "token": "。",
+              "probability": 0.00025538273621350527
+            }
+          ]
+        },
+        {
+          "step": 4,
+          "prefix_before": "我做练习",
+          "input_tokens": 5,
+          "selected_id": 3,
+          "selected_token": "。",
+          "selected_probability": 0.9995338916778564,
+          "top3": [
+            {
+              "token": "。",
+              "probability": 0.9995338916778564
+            },
+            {
+              "token": "<EOS>",
+              "probability": 7.945922698127106e-05
+            },
+            {
+              "token": "学",
+              "probability": 5.1671242545126006e-05
+            }
+          ]
+        },
+        {
+          "step": 5,
+          "prefix_before": "我做练习。",
+          "input_tokens": 6,
+          "selected_id": 2,
+          "selected_token": "<EOS>",
+          "selected_probability": 0.9991145730018616,
+          "top3": [
+            {
+              "token": "<EOS>",
+              "probability": 0.9991145730018616
+            },
+            {
+              "token": "。",
+              "probability": 0.00023501628311350942
+            },
+            {
+              "token": "小",
+              "probability": 0.00015002861618995667
+            }
+          ]
+        }
+      ],
+      "temperature": 1.0,
+      "greedy": true,
+      "seed": 42,
+      "top_k": null
+    }
+  ]
+}

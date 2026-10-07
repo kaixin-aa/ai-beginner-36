@@ -1,0 +1,218 @@
+{
+  "date": "2026-10-04",
+  "python": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]",
+  "runs": [
+    {
+      "args": [
+        "examples/run_cases.py"
+      ],
+      "exit_code": 0,
+      "stdout": "教学回放 [('success', 'completed'), ('blocked', 'blocked'), ('repeated', 'repeated_tool'), ('invalid_arguments', 'blocked')]\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_arithmetic_without_eval (test_chapter32.Chapter32Tests.test_arithmetic_without_eval) ... ok\ntest_bad_json_and_duplicate_id (test_chapter32.Chapter32Tests.test_bad_json_and_duplicate_id) ... ok\ntest_batch_permission_check_has_no_partial_execution (test_chapter32.Chapter32Tests.test_batch_permission_check_has_no_partial_execution) ... ok\ntest_duplicate_and_tool_limits (test_chapter32.Chapter32Tests.test_duplicate_and_tool_limits) ... ok\ntest_forbidden_expressions_and_bounds (test_chapter32.Chapter32Tests.test_forbidden_expressions_and_bounds) ... ok\ntest_http_tool_protocol (test_chapter32.Chapter32Tests.test_http_tool_protocol) ... ok\ntest_malformed_response_rejected (test_chapter32.Chapter32Tests.test_malformed_response_rejected) ... ok\ntest_real_local_search (test_chapter32.Chapter32Tests.test_real_local_search) ... ok\ntest_step_deadline_and_truncated_limits (test_chapter32.Chapter32Tests.test_step_deadline_and_truncated_limits) ... ok\ntest_tool_name_and_argument_whitelist (test_chapter32.Chapter32Tests.test_tool_name_and_argument_whitelist) ... ok\ntest_tool_result_corresponds_to_call_id (test_chapter32.Chapter32Tests.test_tool_result_corresponds_to_call_id) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.444s\n\nOK\n"
+    },
+    {
+      "args": [
+        "-m",
+        "compileall",
+        "-q",
+        "examples",
+        "tests"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "examples/draw_flow.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "examples/audit_live.py"
+      ],
+      "exit_code": 0,
+      "stdout": "真实调用离线核对 8 6064\n",
+      "stderr": ""
+    }
+  ],
+  "errors": [
+    [
+      "unknown_tool",
+      {
+        "args": [
+          "examples\\errors\\unknown_tool.py"
+        ],
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\32-tools-agent\\examples\\errors\\unknown_tool.py\", line 5, in <module>\n    dispatch(\"write_file\",{\"path\":\"demo.txt\"},lambda _:None)\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\32-tools-agent\\examples\\tools.py\", line 53, in dispatch\n    if name not in(\"calculate\",\"search_documents\"):raise ValueError(\"工具未获授权\")\n                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: 工具未获授权\n"
+      },
+      {
+        "args": [
+          "examples/fixed/unknown_tool.py"
+        ],
+        "exit_code": 0,
+        "stdout": "{'value': 51}\n",
+        "stderr": ""
+      }
+    ],
+    [
+      "unsafe_expression",
+      {
+        "args": [
+          "examples\\errors\\unsafe_expression.py"
+        ],
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\32-tools-agent\\examples\\errors\\unsafe_expression.py\", line 6, in <module>\n    calculate(\"open('demo.txt','w')\")\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\32-tools-agent\\examples\\tools.py\", line 37, in calculate\n    return {\"value\":evaluate(tree.body)}\n                    ^^^^^^^^^^^^^^^^^^^\n  File \"G:\\002_work\\003_博客\\CSDN一万粉丝计划\\AI零基础36讲\\chapters\\32-tools-agent\\examples\\tools.py\", line 34, in evaluate\n    else:raise ValueError(\"只允许数值、括号和加减乘除\")\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: 只允许数值、括号和加减乘除\n"
+      },
+      {
+        "args": [
+          "examples/fixed/unsafe_expression.py"
+        ],
+        "exit_code": 0,
+        "stdout": "{'value': 21}\n",
+        "stderr": ""
+      }
+    ]
+  ],
+  "notebook_code_cells": 0,
+  "notebook_executed_by": null,
+  "live_evidence": {
+    "kind": "offline_audit",
+    "records": [
+      {
+        "file": "live-agent-20261004-012759-970036.json",
+        "status": "completed",
+        "requests": 2,
+        "tokens": 1022,
+        "tools": [
+          "calculate"
+        ]
+      },
+      {
+        "file": "live-agent-20261004-012809-161416.json",
+        "status": "tool_limit",
+        "requests": 3,
+        "tokens": 2263,
+        "tools": [
+          "search_documents",
+          "search_documents",
+          "search_documents",
+          "search_documents"
+        ]
+      },
+      {
+        "file": "live-agent-20261004-013334-997823.json",
+        "status": "completed",
+        "requests": 3,
+        "tokens": 2779,
+        "tools": [
+          "search_documents",
+          "calculate"
+        ]
+      }
+    ],
+    "requests": 8,
+    "total_tokens": 6064,
+    "accepted": true,
+    "manual_source_check": "两数均在guide.md第11行。最终回答行号为片段范围，引用精度见验收说明。"
+  },
+  "acceptance": {
+    "chapter_complete": true,
+    "bounded_real_tools_verified": true
+  },
+  "snippets": [
+    {
+      "document": "article.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "from tools import calculate\nprint(calculate(\"3*(8+9)\"))\n"
+      ],
+      "exit_code": 0,
+      "stdout": "{'value': 51}\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 2,
+      "args": [
+        "-c",
+        "from tools import calculate\ntry:\n    calculate(\"open('demo.txt','w')\")\nexcept ValueError as error:\n    print(error)\nprint(calculate(\"14+7\"))\n"
+      ],
+      "exit_code": 0,
+      "stdout": "只允许数值、括号和加减乘除\n{'value': 21}\n",
+      "stderr": ""
+    },
+    {
+      "document": "article.md",
+      "number": 3,
+      "args": [
+        "-c",
+        "from agent import run_agent\nfrom teaching_replay import Replay, tool_message, final_message\nclient = Replay([\n    tool_message(\"calculate\", {\"expression\": \"14+7\"}, \"calc_1\"),\n    final_message(\"计算结果为21。\"),\n])\nresult = run_agent(\"算一下14加7\", client, lambda query: {\"hits\": []})\nprint(result[\"status\"], result[\"tool_count\"], result[\"answer\"])\n"
+      ],
+      "exit_code": 0,
+      "stdout": "completed 1 计算结果为21。\n",
+      "stderr": ""
+    },
+    {
+      "document": "exercises.md",
+      "number": 1,
+      "args": [
+        "-c",
+        "from tools import calculate\nprint(calculate(\"-10/4\"))\ntry:\n    calculate(\"2**100\")\nexcept ValueError as error:\n    print(error)\n"
+      ],
+      "exit_code": 0,
+      "stdout": "{'value': -2.5}\n只允许数值、括号和加减乘除\n",
+      "stderr": ""
+    },
+    {
+      "document": "exercises.md",
+      "number": 2,
+      "args": [
+        "-c",
+        "from agent import run_agent\nfrom teaching_replay import Replay, tool_message\nresult = run_agent(\"写一个文件\", Replay([\n    tool_message(\"write_file\", {\"path\": \"demo.txt\"})\n]), lambda query: {\"hits\": []})\nprint(result[\"status\"], result[\"tool_count\"])\n"
+      ],
+      "exit_code": 0,
+      "stdout": "blocked 0\n",
+      "stderr": ""
+    },
+    {
+      "document": "exercises.md",
+      "number": 3,
+      "args": [
+        "-c",
+        "from agent import run_agent\nfrom teaching_replay import Replay, tool_message\nresult = run_agent(\"计算\", Replay([\n    tool_message(\"calculate\", {\"expression\": \"1+1\"}, \"a\"),\n    tool_message(\"calculate\", {\"expression\": \"1+1\"}, \"b\"),\n]), lambda query: {\"hits\": []})\nprint(result[\"status\"], result[\"tool_count\"])\n"
+      ],
+      "exit_code": 0,
+      "stdout": "repeated_tool 1\n",
+      "stderr": ""
+    }
+  ],
+  "final_editor_checks": {
+    "local_links": 33,
+    "png_files": [
+      "tool-cycle.png",
+      "tool-limits.png"
+    ],
+    "prose_hard_errors": 0,
+    "snippet_runtime": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]"
+  }
+}

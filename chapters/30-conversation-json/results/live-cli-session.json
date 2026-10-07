@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "history": [
+    {
+      "role": "user",
+      "content": "用20分钟复盘 Python 变量，只安排一项动手练习"
+    },
+    {
+      "role": "assistant",
+      "content": "{\"goal\":\"Python 变量复盘\",\"daily_minutes\":20,\"tasks\":[{\"title\":\"动手练习：创建、赋值并交换变量\",\"minutes\":20}]}"
+    }
+  ],
+  "last_plan": {
+    "goal": "Python 变量复盘",
+    "daily_minutes": 20,
+    "tasks": [
+      {
+        "title": "动手练习：创建、赋值并交换变量",
+        "minutes": 20
+      }
+    ]
+  },
+  "daily_minutes": 20
+}

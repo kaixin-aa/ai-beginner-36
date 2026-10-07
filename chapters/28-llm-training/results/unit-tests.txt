@@ -1,0 +1,13 @@
+test_01_temperature_independent_ratio (test_chapter28.Chapter28Tests.test_01_temperature_independent_ratio) ... ok
+test_02_entropy_and_argmax (test_chapter28.Chapter28Tests.test_02_entropy_and_argmax) ... ok
+test_03_sampling_seed_and_topk (test_chapter28.Chapter28Tests.test_03_sampling_seed_and_topk) ... ok
+test_04_prompt_targets_excluded (test_chapter28.Chapter28Tests.test_04_prompt_targets_excluded) ... ok
+test_05_preference_rubric (test_chapter28.Chapter28Tests.test_05_preference_rubric) ... ok
+test_06_summary_weights_and_runs (test_chapter28.Chapter28Tests.test_06_summary_weights_and_runs) ... ok
+test_07_greedy_temperature_invariance (test_chapter28.Chapter28Tests.test_07_greedy_temperature_invariance) ... ok
+test_08_invalid_parameters (test_chapter28.Chapter28Tests.test_08_invalid_parameters) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.025s
+
+OK

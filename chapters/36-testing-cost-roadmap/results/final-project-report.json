@@ -1,0 +1,16 @@
+{
+  "fixed_questions": 7,
+  "current_expected_matches": 7,
+  "original_expected_matches": 6,
+  "backend_tests": 15,
+  "web_tests": 7,
+  "project_tests": 22,
+  "fresh_environment_passed": true,
+  "browser_actions_checked": 9,
+  "real_api_requests": 7,
+  "total_tokens": 5080,
+  "online_deployment_performed": false,
+  "container_built": false,
+  "local_project_accepted": true,
+  "new_api_requests": 0
+}

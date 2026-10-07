@@ -1,0 +1,18 @@
+{
+  "model": "teaching-fixture",
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是中文入门教程助手。请简短、具体地回答。"
+    },
+    {
+      "role": "user",
+      "content": "用一句话解释 API"
+    }
+  ],
+  "max_tokens": 256,
+  "stream": false,
+  "thinking": {
+    "type": "disabled"
+  }
+}

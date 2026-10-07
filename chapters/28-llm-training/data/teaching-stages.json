@@ -1,0 +1,17 @@
+{
+  "provenance": "2026-10-03 原创虚构教学记录，只演示数据组织，不曾执行指令或偏好训练。",
+  "instruction_examples": [
+    {"instruction":"给我一个20分钟读书计划", "response":[{"task":"阅读","minutes":10},{"task":"摘记","minutes":8},{"task":"回顾","minutes":2}]},
+    {"instruction":"把计划时间相加", "response":"10加8加2等于20分钟。"}
+  ],
+  "preference_pair": {
+    "prompt":"给我一个20分钟读书计划",
+    "chosen":[{"task":"阅读","minutes":10},{"task":"摘记","minutes":8},{"task":"回顾","minutes":2}],
+    "rejected":[{"task":"阅读","minutes":40},{"task":"摘记","minutes":30},{"task":"回顾","minutes":20}],
+    "criterion":"满足总时长20分钟；由本章设置，未开展用户评分或标注实验"
+  },
+  "temperature_logits":[2.0,1.0,0.0],
+  "temperatures":[0.5,1.0,2.0],
+  "sampling_prompt":"小猫",
+  "sample_seeds":[0,1,2,3,4,5,6,7,8,9,10,11]
+}

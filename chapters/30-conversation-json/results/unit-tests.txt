@@ -1,0 +1,16 @@
+test_exhausted_repair_never_mutates_state (test_chapter30.Chapter30Tests.test_exhausted_repair_never_mutates_state) ... ok
+test_five_inputs (test_chapter30.Chapter30Tests.test_five_inputs) ... ok
+test_history_and_budget_invalid_before_call (test_chapter30.Chapter30Tests.test_history_and_budget_invalid_before_call) ... ok
+test_history_trims_whole_pairs_and_keeps_latest (test_chapter30.Chapter30Tests.test_history_trims_whole_pairs_and_keeps_latest) ... ok
+test_http_adapter_sends_history_and_json_option (test_chapter30.Chapter30Tests.test_http_adapter_sends_history_and_json_option) ... ok
+test_invalid_json_and_missing_fields (test_chapter30.Chapter30Tests.test_invalid_json_and_missing_fields) ... ok
+test_invalid_types_totals_and_extra_fields (test_chapter30.Chapter30Tests.test_invalid_types_totals_and_extra_fields) ... ok
+test_multiturn_budget_and_history (test_chapter30.Chapter30Tests.test_multiturn_budget_and_history) ... ok
+test_network_errors_are_not_retried (test_chapter30.Chapter30Tests.test_network_errors_are_not_retried) ... ok
+test_session_roundtrip_and_corruption_preserved (test_chapter30.Chapter30Tests.test_session_roundtrip_and_corruption_preserved) ... ok
+test_successful_repair_only_saves_valid_pair (test_chapter30.Chapter30Tests.test_successful_repair_only_saves_valid_pair) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.286s
+
+OK

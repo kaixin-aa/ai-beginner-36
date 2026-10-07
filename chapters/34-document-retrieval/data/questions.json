@@ -1,0 +1,9 @@
+[
+  {"id":"book","question":"柳叶学习室的书可以借多少天？","expected_status":"answered","expected_terms":["14"],"expected_filename":"guide.md"},
+  {"id":"projector-duration","question":"柳叶学习室投影仪一次最长借用多少分钟？","expected_status":"answered","expected_terms":["90"],"expected_filename":"equipment.pdf","expected_page":1},
+  {"id":"projector-return","question":"柳叶学习室投影仪使用结束后，应当怎样归还？","expected_status":"answered","expected_terms":["关闭电源","服务台"],"expected_filename":"equipment.pdf","expected_page":2},
+  {"id":"monday","question":"柳叶学习室周一开放吗？","expected_status":"answered","expected_terms":["闭馆"],"expected_filename":"guide.md"},
+  {"id":"conflict","question":"柳叶学习室2026年10月8日阅读分享活动几点开始？","expected_status":"conflict","expected_terms":["14","15"]},
+  {"id":"missing","question":"柳叶学习室的无线网络密码是什么？","expected_status":"insufficient","expected_terms":[]},
+  {"id":"empty","question":"海王星的轨道周期是多少？","expected_status":"empty","expected_terms":[]}
+]

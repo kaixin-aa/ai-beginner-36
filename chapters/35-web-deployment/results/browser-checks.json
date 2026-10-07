@@ -1,0 +1,45 @@
+{
+  "kind": "actual_browser_check",
+  "browser": "Microsoft Edge headless",
+  "checks": [
+    "空问题提示",
+    "错误类型提示",
+    "PDF导入",
+    "索引更新",
+    "真实引用回答",
+    "展开原文",
+    "实际密钥未进入页面",
+    "请求失败提示，教学模拟",
+    "人工确认删除"
+  ],
+  "page_errors": [],
+  "real_api_requests": 1,
+  "real_answer": {
+    "status": "answered",
+    "answer": "先关闭电源，再归还到服务台；管理员核对设备编号并登记归还时间。",
+    "citations": [
+      {
+        "chunk_id": "c2139e5438f6a75a577e63499e8bbd3dec17c86f2a8a397811cbb073613c537d@2:0-92",
+        "document_id": "c2139e5438f6a75a577e63499e8bbd3dec17c86f2a8a397811cbb073613c537d",
+        "filename": "equipment.pdf",
+        "page": 2,
+        "line_start": 3,
+        "line_end": 4,
+        "char_start": 28,
+        "char_end": 74,
+        "quote": "柳叶学习室投影仪使用结束后，先关闭电源，再归还到服务台。\n管理员核对设备编号并登记归还时间。"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 431,
+      "completion_tokens": 114,
+      "total_tokens": 545
+    },
+    "elapsed_seconds": 1.4788,
+    "record_file": "5c696a0a89bf4359a14c8f69cdfe2586.json",
+    "model_called": true,
+    "request_attempted": true
+  },
+  "external_deployment": false,
+  "server_stopped_after_test": true
+}

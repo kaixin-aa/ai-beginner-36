@@ -1,0 +1,96 @@
+{
+  "original_record": "live-rag-20261004-011026-845879.json",
+  "api_repeated": false,
+  "citation_count": 5,
+  "records": [
+    {
+      "question": "柳叶学习室的书能借多久？",
+      "validated": {
+        "status": "answered",
+        "answer": "柳叶学习室书籍借阅期限为14天，在到期前可以续借一次，续借增加7天。",
+        "citations": [
+          {
+            "chunk_id": "guide.md@0-140",
+            "quote": "柳叶学习室书籍借阅期限为14天，每人每次最多借3本书。在到期前可以续借一次，续借增加7天。",
+            "source": "guide.md",
+            "line_start": 11,
+            "line_end": 11,
+            "quote_start": 85,
+            "quote_end": 130
+          }
+        ]
+      }
+    },
+    {
+      "question": "柳叶学习室一次最多借几本书？",
+      "validated": {
+        "status": "answered",
+        "answer": "柳叶学习室每人每次最多借3本书。",
+        "citations": [
+          {
+            "chunk_id": "guide.md@0-140",
+            "quote": "每人每次最多借3本书",
+            "source": "guide.md",
+            "line_start": 11,
+            "line_end": 11,
+            "quote_start": 101,
+            "quote_end": 111
+          }
+        ]
+      }
+    },
+    {
+      "question": "柳叶学习室周一开放吗？",
+      "validated": {
+        "status": "answered",
+        "answer": "不开放，柳叶学习室周一闭馆。",
+        "citations": [
+          {
+            "chunk_id": "guide.md@0-140",
+            "quote": "柳叶学习室周二至周日每天9点开放，18点关闭。周一闭馆。",
+            "source": "guide.md",
+            "line_start": 7,
+            "line_end": 7,
+            "quote_start": 46,
+            "quote_end": 74
+          }
+        ]
+      }
+    },
+    {
+      "question": "柳叶学习室10月8日的阅读分享几点开始？",
+      "validated": {
+        "status": "conflict",
+        "answer": "资料中关于柳叶学习室10月8日阅读分享活动的开始时间存在矛盾：通知A称14点开始，通知B称15点开始，且资料明确说明两者描述同一个活动、没有版本优先级。因此无法确定唯一开始时间。",
+        "citations": [
+          {
+            "chunk_id": "notice-a.txt@0-94",
+            "quote": "2026年10月8日的阅读分享活动14点开始，16点结束，地点为柳叶学习室二楼讨论室。",
+            "source": "notice-a.txt",
+            "line_start": 3,
+            "line_end": 3,
+            "quote_start": 23,
+            "quote_end": 66
+          },
+          {
+            "chunk_id": "notice-b.md@0-99",
+            "quote": "2026年10月8日的阅读分享活动15点开始，17点结束，地点为柳叶学习室二楼讨论室。",
+            "source": "notice-b.md",
+            "line_start": 5,
+            "line_end": 5,
+            "quote_start": 27,
+            "quote_end": 70
+          }
+        ]
+      }
+    },
+    {
+      "question": "柳叶学习室有免费无线网络吗？",
+      "validated": {
+        "status": "insufficient",
+        "answer": "资料未提供柳叶学习室是否有免费无线网络的信息。",
+        "citations": []
+      }
+    }
+  ]
+}
